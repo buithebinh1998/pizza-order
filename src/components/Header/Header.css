@@ -1,0 +1,43 @@
+.header{
+    width: 100%;
+    background: #71a5ec;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.header div{
+    margin: 0px 10px;
+}
+
+.header img{
+    margin: 0px 10px;
+}
+
+#menu-button {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 10px;
+}
+
+#logo{
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+}
+
+.header div:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.header img:hover{
+    cursor: pointer;
+}
+
+
