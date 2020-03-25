@@ -1,0 +1,26 @@
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+    background: linear-gradient(to right,#012333,#074969);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer div{
+    margin: 0 20px;
+}
+
+.img-corner{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.hotline{
+    margin-left: 300px;
+    margin-right: 0px;
+    font-size: 25px;
+}
