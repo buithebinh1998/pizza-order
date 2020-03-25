@@ -24,7 +24,6 @@ class Header extends Component {
                 <span>/</span>
                 <div>SIGN IN</div>
                 <img src={imgCart} alt=""/>
-                {/* {menu} */}
                 <div style={{marginRight:"20px"}} id={id}
                     onClick={this.menuTransformHandler}>
                     <div id="bar1"></div>
