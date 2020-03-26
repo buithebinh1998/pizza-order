@@ -1,11 +1,12 @@
 import React from 'react'
-import Header from '../Header/Header'
-import Carosel from '../Homepage/Carosel/Carosel'
-import Footer from '../Footer/Footer'
+import Header from '../../components/Header/Header'
+import Carosel from '../../components/Carosel/Carosel'
+import Footer from '../../components/Footer/Footer'
 import './Homepage.css'
 import category from '../../assets/img/category.jpg'
 import promotion from '../../assets/img/promotion.jpg'
 import voucher from '../../assets/img/voucher.jpg'
+import {NavLink} from 'react-router-dom'
 const Homepage = () => {
     return(
         <div>
@@ -20,7 +21,7 @@ const Homepage = () => {
                 <div>
                     <img src={category} alt=""/>
                     <div>CATEGORY</div>
-                    <button>SEE MORE</button>
+                    <NavLink to='/productpage'><button>SEE MORE</button></NavLink>
                 </div>
                 <div>
                     <img className="img-blur" src={voucher} alt=""/>

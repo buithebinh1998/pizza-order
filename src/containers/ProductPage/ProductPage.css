@@ -1,0 +1,40 @@
+.product-page{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-category{
+    flex-basis: 50%;
+    position: relative;
+    height: 500px;
+}
+
+.product-category div{
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.product-category button{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    min-width: 150px;
+    min-height: 60px;
+    color: white;
+    border-radius: 1px;
+    font-size: 20px;
+    background-color: #1bab30;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.product-category button:hover{
+    cursor: pointer;
+    background-color: red;
+}

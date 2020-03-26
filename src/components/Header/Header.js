@@ -3,6 +3,7 @@ import imgUser from "../../assets/img/header_user.png";
 import imgCart from "../../assets/img/header_cart.png";
 import logo from "../../assets/img/logoPycozza.png";
 import './Header.css'
+import {NavLink} from 'react-router-dom'
 class Header extends Component {
     state = {
         menuState: false,
@@ -18,7 +19,10 @@ class Header extends Component {
         
         return(
             <div className="header">
-                <img id="logo"src={logo} alt=""/>
+                <NavLink to='/'>
+                    <img id="logo" src={logo} alt=""/>
+                </NavLink>
+                <h2 id="logoname">PYCOZZA</h2>
                 <img src={imgUser} alt=""/>
                 <div>SIGN UP</div>
                 <span>/</span>
