@@ -1,0 +1,55 @@
+.pizza{
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.pizza img{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pizza-name{
+    position: absolute;
+    font-weight: bold;
+    font-size: 32px;
+    top: 60%;
+    left: 50%;
+    color: #04354c;
+    transform: translate(-50%,-50%);
+    font-family: 'Montserratt';
+}
+
+.pizza-desc{
+    position: absolute;
+    font-size: 16px;
+    top: 70%;
+    left: 50%;
+    color: #04354c;
+    transform: translate(-50%,-50%);
+    font-family: 'Montserratt';
+}
+
+.pizza-price{
+    position: absolute;
+    font-weight: bold;
+    font-size: 18px;
+    top: 80%;
+    left: 50%;
+    color: #04354c;
+    transform: translate(-50%,-50%);
+    font-family: 'Montserratt';
+}
+
+.pizza button{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    color: #04354c;
+    transform: translate(-50%,-50%);
+    font-family: 'Montserratt';
+}
+

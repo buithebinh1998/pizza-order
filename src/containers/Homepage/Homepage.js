@@ -16,17 +16,19 @@ const Homepage = () => {
                 <div>
                     <img src={promotion} alt=""/>
                     <div>PROMOTION</div>
-                    <button>SEE MORE</button>
+                    <button>SEE NOW</button>
                 </div>
                 <div>
                     <img src={category} alt=""/>
                     <div>CATEGORY</div>
-                    <NavLink to='/productpage'><button>SEE MORE</button></NavLink>
+                    {/* <NavLink to='/productpage'> */}
+                        <button>SEE NOW</button>
+                    {/* </NavLink> */}
                 </div>
                 <div>
                     <img className="img-blur" src={voucher} alt=""/>
                     <div>VOUCHER</div>
-                    <button>SEE MORE</button>
+                    <button>SEE NOW</button>
                 </div>
             </div>
             <Footer/>

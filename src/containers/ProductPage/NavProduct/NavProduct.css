@@ -1,0 +1,22 @@
+.nav-product{
+    display: flex;
+    justify-content: center;
+}
+.nav-product ul{
+    display:flex;
+    list-style-type: none;
+    width: 90%;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    padding-left: 0;
+}
+
+.nav-product ul li:hover{
+    color: red;
+    cursor: pointer;
+}

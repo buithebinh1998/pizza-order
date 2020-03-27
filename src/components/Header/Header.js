@@ -19,9 +19,9 @@ class Header extends Component {
         
         return(
             <div className="header">
-                <NavLink to='/'>
+                {/* <NavLink to='/'> */}
                     <img id="logo" src={logo} alt=""/>
-                </NavLink>
+                {/* </NavLink> */}
                 <h2 id="logoname">PYCOZZA</h2>
                 <img src={imgUser} alt=""/>
                 <div>SIGN UP</div>

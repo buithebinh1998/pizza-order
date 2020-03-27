@@ -7,9 +7,9 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-          <Switch>
-            <Route path = '/' exact component={Homepage}/>
-            <Route path = '/productpage' component={ProductPage}/>
+        <Switch>
+          <Route path = '/' exact component={Homepage}/>
+          <Route path = '/productpage' component={ProductPage}/>
         </Switch>
       </div>
     );
