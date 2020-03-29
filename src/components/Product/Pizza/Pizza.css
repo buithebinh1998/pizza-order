@@ -13,9 +13,10 @@
 }
 
 .pizza-name{
+    text-align: center;
     position: absolute;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 24px;
     top: 60%;
     left: 50%;
     color: #04354c;
@@ -25,8 +26,9 @@
 
 .pizza-desc{
     position: absolute;
-    font-size: 16px;
-    top: 70%;
+    text-align: center;
+    font-size: 14px;
+    top: 75%;
     left: 50%;
     color: #04354c;
     transform: translate(-50%,-50%);
@@ -36,8 +38,8 @@
 .pizza-price{
     position: absolute;
     font-weight: bold;
-    font-size: 18px;
-    top: 80%;
+    font-size: 16px;
+    top: 90%;
     left: 50%;
     color: #04354c;
     transform: translate(-50%,-50%);
@@ -46,7 +48,7 @@
 
 .pizza button{
     position: absolute;
-    top: 90%;
+    top: 95%;
     left: 50%;
     color: #04354c;
     transform: translate(-50%,-50%);
