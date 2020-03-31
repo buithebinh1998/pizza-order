@@ -21,9 +21,9 @@ const Homepage = () => {
                 <div>
                     <img src={category} alt=""/>
                     <div>CATEGORY</div>
-                    {/* <NavLink to='/productpage'> */}
+                    <NavLink to='/productpage'>
                         <button>SEE NOW</button>
-                    {/* </NavLink> */}
+                    </NavLink>
                 </div>
                 <div>
                     <img className="img-blur" src={voucher} alt=""/>

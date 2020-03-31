@@ -16,7 +16,12 @@
     padding-left: 0;
 }
 
-.nav-product ul li:hover{
-    color: red;
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color:red;
     cursor: pointer;
 }
