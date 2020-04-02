@@ -22,11 +22,11 @@ const productPage = () => {
                 </div>
                 <div className="product-category" style={{backgroundImage:`url(${beverage})`, backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
                     <div>BEVERAGE</div>
-                    <NavLink to='/sidedishpage'><button>SEE MORE</button></NavLink>
+                    <NavLink to='/beveragepage'><button>SEE MORE</button></NavLink>
                 </div>
                 <div className="product-category" style={{backgroundImage:`url(${dessert})`, backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
                     <div>DESSERT</div>
-                    <NavLink to='/sidedishpage'><button>SEE MORE</button></NavLink>
+                    <NavLink to='/dessertpage'><button>SEE MORE</button></NavLink>
                 </div>
             </div>
             <Footer/>

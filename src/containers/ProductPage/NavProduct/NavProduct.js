@@ -5,9 +5,9 @@ const NavProduct = (props) => (
     <div className="nav-product">
         <ul>
             <NavLink to='/pizzapage'><li>PIZZA</li></NavLink> 
-            <li><NavLink to='/sidedishpage'>SIDE DISH</NavLink> </li>
-            <li><NavLink to='/pizzapage'>BEVERAGE</NavLink> </li>
-            <li><NavLink to='/pizzapage'>DESSERT</NavLink> </li>
+            <NavLink to='/sidedishpage'><li>SIDE DISH</li></NavLink>
+            <NavLink to='/beveragepage'><li>BEVERAGE</li></NavLink>
+            <NavLink to='/dessertpage'><li>DESSERT</li></NavLink>
         </ul>
     </div>
 )
