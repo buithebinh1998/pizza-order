@@ -7,6 +7,8 @@ import PizzaPage from './containers/ProductPage/ItemPage/PizzaPage'
 import SideDishPage from './containers/ProductPage/ItemPage/SideDishPage'
 import BeveragePage from './containers/ProductPage/ItemPage/BeveragePage'
 import DessertPage from './containers/ProductPage/ItemPage/DessertPage'
+import RegisterPage from './containers/AuthenticationPage/RegisterPage/RegisterPage'
+import LoginPage from './containers/AuthenticationPage/LoginPage/LoginPage'
 class App extends Component {
   render(){
     return (
@@ -18,6 +20,8 @@ class App extends Component {
           <Route path = '/sidedishpage' component={SideDishPage}/>
           <Route path = '/beveragepage' component={BeveragePage}/>
           <Route path = '/dessertpage' component={DessertPage}/>
+          <Route path = '/registerpage' component={RegisterPage}/>
+          <Route path = '/loginpage' component={LoginPage}/>
         </Switch>
       </div>
     );

@@ -24,9 +24,9 @@ class Header extends Component {
                 </NavLink>
                 <h2 id="logoname">PYCOZZA</h2>
                 <img src={imgUser} alt=""/>
-                <div>SIGN UP</div>
+                <NavLink to='/registerpage'><div>SIGN UP</div></NavLink>
                 <span>/</span>
-                <div>SIGN IN</div>
+                <NavLink to='/loginpage'><div>SIGN IN</div></NavLink>
                 <img src={imgCart} alt=""/>
                 <div style={{marginRight:"20px"}} id={id}
                     onClick={this.menuTransformHandler}>
