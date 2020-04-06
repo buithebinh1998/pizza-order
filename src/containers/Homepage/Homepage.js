@@ -21,7 +21,7 @@ const Homepage = () => {
                 <div>
                     <img src={category} alt=""/>
                     <div>CATEGORY</div>
-                    <NavLink to='/productpage'>
+                    <NavLink to='/category'>
                         <button>SEE NOW</button>
                     </NavLink>
                 </div>

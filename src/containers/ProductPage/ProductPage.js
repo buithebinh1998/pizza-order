@@ -14,19 +14,19 @@ const productPage = () => {
             <div className="product-page">
                 <div className="product-category" style={{backgroundImage:`url(${pizza})`, backgroundSize:"cover", backgroundRepeat:"no-repeat"} }>
                     <div>PIZZA</div>
-                    <NavLink to='/pizzapage'><button>SEE MORE</button></NavLink> 
+                    <NavLink to='/category/pizza'><button>SEE MORE</button></NavLink> 
                 </div>
                 <div className="product-category" style={{backgroundImage:`url(${sidedish})`, backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
                     <div>SIDE DISH</div>
-                    <NavLink to='/sidedishpage'><button>SEE MORE</button></NavLink> 
+                    <NavLink to='/category/sidedish'><button>SEE MORE</button></NavLink> 
                 </div>
                 <div className="product-category" style={{backgroundImage:`url(${beverage})`, backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
                     <div>BEVERAGE</div>
-                    <NavLink to='/beveragepage'><button>SEE MORE</button></NavLink>
+                    <NavLink to='/category/beverage'><button>SEE MORE</button></NavLink>
                 </div>
                 <div className="product-category" style={{backgroundImage:`url(${dessert})`, backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
                     <div>DESSERT</div>
-                    <NavLink to='/dessertpage'><button>SEE MORE</button></NavLink>
+                    <NavLink to='/category/dessert'><button>SEE MORE</button></NavLink>
                 </div>
             </div>
             <Footer/>

@@ -5,7 +5,7 @@ import Footer from '../../../components/Footer/Footer'
 class LoginPage extends Component{
     render(){
         return(
-            <div>
+            <div style={{backgroundColor: 'rgba(0, 123, 255, 0.09)'}}>
                 <Header/>
                 <LoginForm/>
                 <Footer/>

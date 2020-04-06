@@ -44,7 +44,7 @@
     font-weight: bold;
     font-size: 22px;
     text-align: center;
-    top: 82%;
+    top: 81%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -55,7 +55,7 @@
 
 .item button{
     position: absolute;
-    top: 89%;
+    top: 88%;
     left: 50%;
     color: white;
     margin-left: auto;
@@ -65,8 +65,8 @@
     font-size: 20px;
     font-family: 'Montserratt';
     background-color: #04354c;
-    min-width: 250px;
-    min-height: 35px;
+    width: 250px;
+    height: 40px;
     border-radius: 10px;
 }
 
@@ -78,12 +78,12 @@
 
 .item:hover .item-name, .item:hover .item-desc{
     color:white;
-    transition: all .4s ease;
+    transition: all .2s ease;
 }
 
 .item:hover .item-price{
     color: yellow;
-    transition: all .4s ease;
+    transition: all .2s ease;
 }
 
 .item:hover button{
