@@ -50,7 +50,17 @@
     margin-left: 0;
 }
 
-.header div:hover{
+a{
+    text-decoration: none;
+    color: white;
+}
+    
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.header a:hover{
     color: red;
     cursor: pointer;
 }
@@ -58,5 +68,11 @@
 .header img:hover{
     cursor: pointer;
 }
+
+.header div:hover{
+    cursor: pointer;
+}
+
+
 
 

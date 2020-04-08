@@ -48,6 +48,17 @@ button{
 button:hover{
     background-color: red;
     color: white;
+    cursor: pointer;
+}
+
+button:disabled{
+    filter: blur(1px);
+    opacity:0.6;
+}
+
+button:disabled:hover {
+    cursor: not-allowed;
+    background-color: #033a56;
 }
 
 .checkbox-field{
