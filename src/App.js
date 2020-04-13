@@ -16,8 +16,8 @@ const PizzaPage = lazy(()=>import('./containers/ProductPage/ItemPage/PizzaPage')
 const SideDishPage = lazy(()=>import('./containers/ProductPage/ItemPage/SideDishPage'));
 const BeveragePage = lazy(()=>import('./containers/ProductPage/ItemPage/BeveragePage'));
 const DessertPage = lazy(()=>import('./containers/ProductPage/ItemPage/DessertPage'));
-const RegisterPage = lazy(()=>import('./containers/AuthenticationPage/RegisterPage/RegisterPage'));
-const LoginPage = lazy(()=>import('./containers/AuthenticationPage/LoginPage/LoginPage'));
+const SignUpPage = lazy(()=>import('./containers/AuthenticationPage/SignUpPage/SignUpPage'));
+const SignInPage = lazy(()=>import('./containers/AuthenticationPage/SignInPage/SignInPage'));
 
 class App extends Component {
   render(){
@@ -31,8 +31,8 @@ class App extends Component {
             <Route path = '/category/sidedish' exact component={SideDishPage}/>
             <Route path = '/category/beverage' exact component={BeveragePage}/>
             <Route path = '/category/dessert' exact component={DessertPage}/>
-            <Route path = '/register' component={RegisterPage}/>
-            <Route path = '/login' component={LoginPage}/>
+            <Route path = '/signup' component={SignUpPage}/>
+            <Route path = '/signin' component={SignInPage}/>
           </Switch>
         </Suspense>
       </div>

@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
-import RegisterForm from '../../../components/AuthenticationForm/RegisterForm/RegisterForm'
-class RegisterPage extends Component{
+import SignUpForm from '../../../components/AuthenticationForm/SignUpForm/SignUpForm'
+class SignUpPage extends Component{
     render(){
         return(
             <div style={{backgroundColor: 'rgba(0, 123, 255, 0.09)'}}>
                 <Header/>
-                <RegisterForm/>
+                <SignUpForm/>
                 <Footer/>
             </div>
         )
     }
 }
 
-export default RegisterPage;
+export default SignUpPage;

@@ -1,8 +1,8 @@
 import React from 'react'
-import './RegisterForm.css'
+import './SignUpForm.css'
 import * as Yup from 'yup'
 import {withFormik, Form, Field, ErrorMessage} from 'formik'
-const RegisterForm = ({values}) => {
+const SignUpForm = ({values, isSubmitting}) => {
     return(
         <Form className="form-register">
             <h1>SIGN UP</h1>
@@ -46,12 +46,12 @@ const RegisterForm = ({values}) => {
             </div>
             
 
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={isSubmitting}>Submit</button>
         </Form>
     )
 }
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-const FormikRegisterForm = withFormik({
+const FormikSignUpForm = withFormik({
     mapPropsToValues(){
         return{
             email: '',
@@ -90,10 +90,17 @@ const FormikRegisterForm = withFormik({
             .required('Phone number is required!'),
     }),
 
-    handleSubmit(values){
-        console.log(values);
+    handleSubmit: (values, {resetForm, setErrors ,setSubmitting}) => {
+        setTimeout(() => {
+            if(values.email==="buithebinh1998@gmail.com") setErrors({email:'This email has been taken!'});
+            else {
+                console.log(values);
+                resetForm();
+            }
+            setSubmitting(false);
+        }, 2000);
     }
 
-})(RegisterForm)
+})(SignUpForm)
 
-export default FormikRegisterForm;
+export default FormikSignUpForm;

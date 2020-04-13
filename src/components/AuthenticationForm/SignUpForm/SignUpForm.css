@@ -1,11 +1,5 @@
-.form-login h1{
+h1, h2{
     color: #033a56;
-    align-self: center;
-}
-
-.form-login h2{
-    color: red;
-    font-style: italic;
     align-self: center;
 }
 
@@ -19,7 +13,7 @@ hr{
     width: 100%;
 }
 
-.form-login{
+.form-register{
     margin: 0 auto;
     width: 40%;
     display: flex;
@@ -39,20 +33,17 @@ hr{
     padding: 10px;
 }
 
-input:focus{
-    border: red;
-}
-
 button{
     width: 200px;
     height: 50px;
     align-self: center;
     background-color: #033a56;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 20px;
+    border:  #033a56 1px solid;
 }
 
 button:hover{

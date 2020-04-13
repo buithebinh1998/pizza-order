@@ -18,9 +18,11 @@
 
 .homepage div div{
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     font-weight: bold;
     font-size: 40px;
     color: white;
@@ -33,13 +35,16 @@
     min-width: 200px;
     min-height: 60px;
     color: white;
-    border-radius: 1px;
     font-size: 20px;
     background-color: #033a56;
     position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border: #033a56 solid 1px;
+    border-radius: 5px;
 }
 
 .homepage div button:hover{

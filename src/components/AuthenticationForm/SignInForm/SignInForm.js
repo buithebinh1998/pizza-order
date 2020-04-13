@@ -1,8 +1,8 @@
 import React from 'react'
-import './LoginForm.css'
+import './SignInForm.css'
 import * as Yup from 'yup'
 import {withFormik, Form, Field, ErrorMessage} from 'formik'
-const LoginForm = ({values}) => {
+const SignInForm = ({values, isSubmitting}) => {
     return(
         <Form className="form-login">
             <h1>SIGN IN</h1>
@@ -15,12 +15,12 @@ const LoginForm = ({values}) => {
                 <Field className="input-field" type="password" name="password" placeholder="Password"/>
                 <div className="error-message"><ErrorMessage name="password"/></div>
 
-            <button type="submit">Login</button>
+            <button type="submit" disabled={isSubmitting}>Sign In</button>
         </Form>
     )
 }
 
-const FormikLoginForm = withFormik({
+const FormikSignInForm = withFormik({
     mapPropsToValues(){
         return{
             email: '',
@@ -35,10 +35,17 @@ const FormikLoginForm = withFormik({
             .required("Password is required!"),
     }),
 
-    handleSubmit(values){
-        console.log(values);
+    handleSubmit(values, {setErrors, resetForm, setSubmitting}){
+        setTimeout(() => {
+            if(values.email!=="buithebinh1998@gmail.com") setErrors({email:'Wrong email or password!'});
+            else {
+                console.log(values);
+                resetForm();
+            }
+            setSubmitting(false);
+        }, 2000);
     }
 
-})(LoginForm)
+})(SignInForm)
 
-export default FormikLoginForm;
+export default FormikSignInForm;
