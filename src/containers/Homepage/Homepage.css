@@ -18,7 +18,7 @@
 
 .homepage div div{
     position: absolute;
-    top: 20%;
+    top: 15%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -30,24 +30,39 @@
 }
 
 .homepage div button{
-    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    min-width: 200px;
-    min-height: 60px;
+    width: 200px;
+    height: 60px;
     color: white;
     font-size: 20px;
     background-color: #033a56;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 50%;
+    top: 70%;
     left: 0;
     right: 0;
     border: #033a56 solid 1px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .homepage div button:hover{
     cursor: pointer;
     background-color: red;
+}
+
+.homepage div input{
+    width: 300px;
+    height: 40px;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 40%;
+    left: 0;
+    right: 0;
+    border: #033a56 solid 1px;
+    border-radius: 10px;
 }

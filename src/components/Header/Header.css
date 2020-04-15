@@ -1,5 +1,7 @@
 .header{
     width: 100%;
+    position: fixed;
+    z-index: 1;
     background: #033a56;
     color: white;
     display: flex;
@@ -8,7 +10,6 @@
     height: 100px;
     font-weight: bold;
     font-size: 25px;
-    font-family: 'Montserrat';
 }
 
 .header div{
@@ -48,6 +49,7 @@
 #logoname{
     margin-right: auto;
     margin-left: 0;
+    color: white;
 }
 
 a{

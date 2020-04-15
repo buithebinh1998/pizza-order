@@ -7,16 +7,21 @@ import category from '../../assets/img/category.jpg'
 import promotion from '../../assets/img/promotion.jpg'
 import voucher from '../../assets/img/voucher.jpg'
 import {NavLink} from 'react-router-dom'
+import '../../styles/globalStyle.css'
+
 const Homepage = () => {
     return(
         <div>
             <Header/>
+            <div class="spacer"></div>
             <Carosel/>
             <div className="homepage">
                 <div>
                     <img src={promotion} alt=""/>
                     <div>PROMOTION</div>
-                    <button>SEE NOW</button>
+                    <NavLink to='/promotion'>
+                        <button>SEE NOW</button>
+                    </NavLink>
                 </div>
                 <div>
                     <img src={category} alt=""/>
@@ -28,7 +33,8 @@ const Homepage = () => {
                 <div>
                     <img className="img-blur" src={voucher} alt=""/>
                     <div>VOUCHER</div>
-                    <button>SEE NOW</button>
+                    <input type="text" placeholder="Enter your voucher code"/>
+                    <button>CONFIRM</button>
                 </div>
             </div>
             <Footer/>

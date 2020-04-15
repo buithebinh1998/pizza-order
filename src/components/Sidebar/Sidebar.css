@@ -1,0 +1,40 @@
+.SideDrawer {
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    left: 0;
+    top: 100px;
+    z-index: 1;
+    opacity: 1;
+    background-color: #0078ae;
+    transition: 0.3s;
+    overflow-x: hidden;
+}
+
+.Open {
+    width: 280px;
+}
+
+.Close {
+    width: 0px;
+}
+
+.SideDrawer li{
+    list-style-type: none;
+}
+
+.SideDrawer a{
+    display: block;
+    text-align: left;
+    font-style: italic;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 50px 20px 50px 20px;
+}
+
+.SideDrawer a:hover{
+    color:red;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}

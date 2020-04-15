@@ -73,7 +73,6 @@
 .item:hover{
     background-color: #04354c;
     transition: all .4s ease;
-    cursor: pointer;
 }
 
 .item:hover .item-name, .item:hover .item-desc{

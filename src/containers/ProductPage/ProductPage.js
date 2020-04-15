@@ -7,10 +7,12 @@ import beverage from '../../assets/img/beverage.png'
 import dessert from '../../assets/img/dessert.jpg'
 import sidedish from '../../assets/img/sidedish.jpg'
 import {NavLink} from 'react-router-dom'
+import '../../styles/globalStyle.css'
 const productPage = () => {
     return(
         <div>
             <Header/>
+            <div class="spacer"></div>
             <div className="product-page">
                 <div className="product-category" style={{backgroundImage:`url(${pizza})`, backgroundSize:"cover", backgroundRepeat:"no-repeat"} }>
                     <div>PIZZA</div>

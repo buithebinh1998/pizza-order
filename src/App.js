@@ -1,14 +1,7 @@
 import React, {lazy, Suspense, Component} from 'react';
 import './App.css';
 import { Route, Switch } from "react-router-dom";
-//import Homepage from './containers/Homepage/Homepage';
-//import ProductPage from './containers/ProductPage/ProductPage';
-//import PizzaPage from './containers/ProductPage/ItemPage/PizzaPage'
-//import SideDishPage from './containers/ProductPage/ItemPage/SideDishPage'
-//import BeveragePage from './containers/ProductPage/ItemPage/BeveragePage'
-//import DessertPage from './containers/ProductPage/ItemPage/DessertPage'
-//import RegisterPage from './containers/AuthenticationPage/RegisterPage/RegisterPage'
-//import LoginPage from './containers/AuthenticationPage/LoginPage/LoginPage'
+import LoadingPage from './UI/LoadingPage/LoadingPage';
 
 const Homepage = lazy(()=>import('./containers/Homepage/Homepage'));
 const ProductPage = lazy(()=>import('./containers/ProductPage/ProductPage'));
@@ -18,12 +11,13 @@ const BeveragePage = lazy(()=>import('./containers/ProductPage/ItemPage/Beverage
 const DessertPage = lazy(()=>import('./containers/ProductPage/ItemPage/DessertPage'));
 const SignUpPage = lazy(()=>import('./containers/AuthenticationPage/SignUpPage/SignUpPage'));
 const SignInPage = lazy(()=>import('./containers/AuthenticationPage/SignInPage/SignInPage'));
+const PromotionPage = lazy(()=>import('./containers/PromotionPage/PromotionPage'));
 
 class App extends Component {
   render(){
     return (
       <div className="App">
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingPage/>}>
           <Switch>
             <Route path = '/' exact component={Homepage}/>
             <Route path = '/category' exact component={ProductPage}/>
@@ -33,6 +27,7 @@ class App extends Component {
             <Route path = '/category/dessert' exact component={DessertPage}/>
             <Route path = '/signup' component={SignUpPage}/>
             <Route path = '/signin' component={SignInPage}/>
+            <Route path = '/promotion' component={PromotionPage}/>
           </Switch>
         </Suspense>
       </div>

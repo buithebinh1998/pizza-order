@@ -23,7 +23,6 @@
 }
 
 .product-category button{
-    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     border: #033a56 solid 1px;
     width: 200px;
@@ -38,7 +37,7 @@
     margin-right: auto;
     left: 0;
     right: 0;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .product-category button:hover{

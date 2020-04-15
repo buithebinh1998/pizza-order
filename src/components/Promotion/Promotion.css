@@ -1,0 +1,55 @@
+h1{
+    color: #033a56;
+    text-align: center;
+}
+
+.promotion-list{
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.promotion-item{
+    background-image: url('../../assets/img/woodbg.png');
+    display: flex;
+    width: 70%;
+    background-color: black;
+    margin-bottom: 50px;
+}
+
+.promotion-image{
+    margin: 10px;
+}
+
+.promotion-detail{
+    margin: 10px;
+}
+
+.promotion-name{
+    color: #e51937;
+}
+
+.promotion-description{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.promotion-item button{
+    align-self: center;
+    background-color: #0078ae;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0;
+    border: #0078ae solid 1px;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+}
+
+.promotion-item button:hover{
+    background-color: red;
+    cursor: pointer;
+}
