@@ -2,6 +2,7 @@ import React from 'react'
 import './SignInForm.css'
 import * as Yup from 'yup'
 import {withFormik, Form, Field, ErrorMessage} from 'formik'
+import {NavLink} from 'react-router-dom'
 const SignInForm = ({values, isSubmitting}) => {
     return(
         <Form className="form-login">
@@ -16,6 +17,7 @@ const SignInForm = ({values, isSubmitting}) => {
                 <div className="error-message"><ErrorMessage name="password"/></div>
 
             <button type="submit" disabled={isSubmitting}>Sign In</button>
+            <div className="sign-up">Don't have account? <NavLink to = '/signup'>Sign Up.</NavLink></div>
         </Form>
     )
 }

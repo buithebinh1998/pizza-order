@@ -33,19 +33,6 @@ const SignUpForm = ({values, isSubmitting}) => {
                 <Field className="input-field" type="text" name="lastName" placeholder="Last name"/>
                 <div className="error-message"><ErrorMessage name="lastName"/></div>
 
-            <div className="checkbox-field">
-                <label style={{marginRight:'10px'}}>GENDER:</label>
-                    <Field type="checkbox" name="male" checked={values.male} />
-                    <label htmlFor="male" style={{marginRight:'10px'}}>Male</label>
-                    
-                    <Field type="checkbox" name="female" checked={values.female}/>
-                    <label htmlFor="female" style={{marginRight:'10px'}}>Female</label>
-
-                    <Field type="checkbox" name="other" checked={values.other}/>
-                    <label htmlFor="other" style={{marginRight:'10px'}}>Other</label>
-            </div>
-            
-
             <button type="submit" disabled={isSubmitting}>Submit</button>
         </Form>
     )
@@ -60,9 +47,6 @@ const FormikSignUpForm = withFormik({
             phone: '',
             firstName: '',
             lastName: '',
-            male: false,
-            female: false,
-            other: false,
         }
     },
 
