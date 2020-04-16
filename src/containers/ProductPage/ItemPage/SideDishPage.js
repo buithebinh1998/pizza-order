@@ -6,7 +6,7 @@ import imgPizza1 from '../../../assets/img/slider2.jpg'
 import {loadDataSideDish} from '../../../components/Item/SideDish'
 import NavProduct from '../NavProduct/NavProduct'
 import './ItemPage.css'
-import '../../../styles/globalStyle.css'
+
 class SideDishPage extends Component{
     render(){
         return(

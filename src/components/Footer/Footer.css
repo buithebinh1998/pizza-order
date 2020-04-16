@@ -1,26 +1,39 @@
 footer{
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: auto;
     background: linear-gradient(to right,#012333,#074969);
     color: white;
     font-weight: bold;
     text-align: center;
+    overflow-x: hidden;
 }
 
 footer div{
-    margin: 0 20px;
+    font-size: 1rem;
 }
 
-.img-corner{
-    margin-left: auto;
-    margin-right: 20px;
+footer img{
+    max-width: 100%;
+    height: auto;
 }
 
-.hotline{
-    margin-left: 300px;
-    margin-right: 0px;
-    font-size: 25px;
+@media (max-width: 768px) {
+    footer div {
+        font-size: 0.8rem;
+    }
+    footer img{
+        width: 80%;
+    }
+}
+
+@media (max-width: 433px) {
+    footer div {
+        font-size: 0.45rem;
+    }
+    footer img{
+        width: 60%;
+    }
 }

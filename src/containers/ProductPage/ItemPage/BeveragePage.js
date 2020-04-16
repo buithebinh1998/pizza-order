@@ -6,7 +6,7 @@ import imgPizza1 from '../../../assets/img/slider2.jpg'
 import {loadDataBeverage} from '../../../components/Item/Beverage'
 import NavProduct from '../NavProduct/NavProduct'
 import './ItemPage.css'
-import '../../../styles/globalStyle.css'
+
 class BeveragePage extends Component{
     render(){
         return(

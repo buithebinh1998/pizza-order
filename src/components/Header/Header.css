@@ -1,5 +1,6 @@
 .header{
-    width: 100%;
+    width: 100vw;
+    height: 100px;
     position: fixed;
     z-index: 1;
     background: #033a56;
@@ -7,54 +8,61 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 100px;
+    height: auto;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.5rem;
+}
+
+.spacer{
+    height: 100px;
+    max-width: 100%;
+}
+
+.header h2{
+    font-size: 1.5rem;
 }
 
 .header div{
-    margin: 0px 10px;
+    margin: 0 1rem;
 }
 
 .header img{
-    margin: 0px 10px;
+    margin: 0 1rem;
+    max-width: 100%;
+    height: auto;
 }
 
 #bar1, #bar2, #bar3 {
-    width: 35px;
-    height: 5px;
+    width: 2.5rem;
+    height: 0.3rem;
     background-color: white;
-    margin: 6px 0;
+    margin: 0.5rem 0;
     transition: 0.4s;
+    margin-right: 1rem;
 }
   
 #change #bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-0.5rem, 0.5rem);
+    transform: rotate(-45deg) translate(-0.5rem, 0.5rem);
 }
 
 #change #bar2 {opacity: 0;}
 
 #change #bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+    -webkit-transform: rotate(45deg) translate(-0.6rem, -0.6rem);
+    transform: rotate(45deg) translate(-0.6rem, -0.6rem);
 }
 
-#logo{
-    width: 100px;
-    height: 100px;
+.logo{
+    max-width: 100%;
+    height: auto;
     margin: 0;
-}
-
-#logoname{
-    margin-right: auto;
-    margin-left: 0;
-    color: white;
 }
 
 a{
     text-decoration: none;
     color: white;
+    margin-right: auto;
 }
     
 a:visited{
@@ -75,6 +83,117 @@ a:visited{
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .header div {
+        font-size: 1.2rem;
+        margin: 0 0.5rem;
+    }
+}
 
+@media (max-width: 576px) {
+    .header div {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    .header img{
+        margin: 0 0.05rem;
+    }
+
+    #bar1, #bar2, #bar3 {
+        width: 1.5rem;
+        height: 0.1rem;
+        background-color: white;
+        margin: 0.2rem 0;
+        transition: 0.4s;
+    }
+
+    .header img{
+        margin: 0 0.3rem;
+        max-width: 70%;
+        height: auto;
+    }
+
+    #change #bar1 {
+        -webkit-transform: rotate(-45deg) translate(-0.05rem, 0.05rem);
+        transform: rotate(-45deg) translate(-0.05rem, 0.05rem);
+    }
+    
+    #change #bar2 {opacity: 0;}
+    
+    #change #bar3 {
+        -webkit-transform: rotate(45deg) translate(-0.25rem, -0.25rem);
+        transform: rotate(45deg) translate(-0.25rem, -0.25rem);
+    }
+
+    .spacer{
+        height: 82px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 433px) {
+    .header div {
+        font-size: 0.8rem;
+        margin: 0 0.08rem;
+    }
+
+    .header img{
+        margin: 0 0.05rem;
+    }
+
+    #bar1, #bar2, #bar3 {
+        width: 1.2rem;
+        height: 0.2rem;
+        background-color: white;
+        margin: 0.05rem 0;
+        transition: 0.4s;
+        padding-right: 0.2rem;
+    }
+
+    .header img{
+        margin: 0 0.1rem;
+        max-width: 70%;
+        height: auto;
+    }
+
+    .spacer{
+        height: 78px;
+        max-width: 100%;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    .header div {
+        font-size: 0.6rem;
+        margin: 0 0.08rem;
+    }
+
+    .header img{
+        margin: 0 0.05rem;
+    }
+
+    #bar1, #bar2, #bar3 {
+        width: 1.2rem;
+        height: 0.2rem;
+        background-color: white;
+        margin: 0.05rem 0;
+        transition: 0.4s;
+        padding-right: 0.2rem;
+    }
+
+    .header img{
+        margin: 0 0.1rem;
+        max-width: 60%;
+        height: auto;
+    }
+
+    .spacer{
+        height: 50px;
+        max-width: 100%;
+    }
+    
+}
 
 

@@ -7,7 +7,7 @@ import Slide3 from "../../assets/img/slider3.jpg";
 import Slide4 from "../../assets/img/slider4.jpg";
 const carousel = props => (
   <div className="carousel">
-    <Carousel autoPlay showThumbs={false} infiniteLoop={true}>
+    <Carousel autoPlay showThumbs={false} infiniteLoop={true} showArrows={false}>
       <div>
         <img src={Slide1} alt="" />
       </div>

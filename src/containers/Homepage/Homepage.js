@@ -7,7 +7,6 @@ import category from '../../assets/img/category.jpg'
 import promotion from '../../assets/img/promotion.jpg'
 import voucher from '../../assets/img/voucher.jpg'
 import {NavLink} from 'react-router-dom'
-import '../../styles/globalStyle.css'
 
 const Homepage = () => {
     return(

@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import imgUser from "../../assets/img/header_user.png";
 import imgCart from "../../assets/img/header_cart.png";
 import logo from "../../assets/img/logoPycozza.png";
 import './Header.css'
@@ -22,15 +21,13 @@ class Header extends Component {
             <div>
                 <div className="header">
                     <NavLink to='/'>
-                        <img id="logo" src={logo} alt=""/>
+                        <img className="logo" src={logo} alt=""/>
                     </NavLink>
-                    <h2 id="logoname">PYCOZZA</h2>
-                    <img src={imgUser} alt=""/>
                     <div><NavLink to='/signup'>SIGN UP</NavLink></div>
                     <span>/</span>
                     <div><NavLink to='/signin'>SIGN IN</NavLink></div>
                     <img src={imgCart} alt=""/>
-                    <div style={{marginRight:"20px"}} id={id}
+                    <div id={id}
                         onClick={this.menuTransformHandler}>
                         <div id="bar1"></div>
                         <div id="bar2"></div>

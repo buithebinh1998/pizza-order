@@ -3,7 +3,7 @@ import SignInForm from '../../../components/AuthenticationForm/SignInForm/SignIn
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import backgroundAuthen from '../../../assets/img/bg.png'
-import '../../../styles/globalStyle.css'
+
 class SignInPage extends Component{
     render(){
         return(

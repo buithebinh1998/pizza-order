@@ -7,7 +7,7 @@ import beverage from '../../assets/img/beverage.png'
 import dessert from '../../assets/img/dessert.jpg'
 import sidedish from '../../assets/img/sidedish.jpg'
 import {NavLink} from 'react-router-dom'
-import '../../styles/globalStyle.css'
+
 const productPage = () => {
     return(
         <div>
