@@ -3,13 +3,14 @@ import SignInForm from '../../../components/AuthenticationForm/SignInForm/SignIn
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import backgroundAuthen from '../../../assets/img/bg.png'
+import './SignInPage.css'
 
 class SignInPage extends Component{
     render(){
         return(
-            <div style={{backgroundImage:`url(${backgroundAuthen})`}}>
+            <div className="SignInPage" style={{backgroundImage:`url(${backgroundAuthen})`, backgroundSize:'cover'}}>
                 <Header/>
-                <div class="spacer"></div>
+                <div id="spacer"></div>
                 <SignInForm/>
                 <Footer/>
             </div>

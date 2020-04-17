@@ -1,13 +1,14 @@
 import React from 'react'
-import './SignInForm.css'
+import '../AuthForm.css'
 import * as Yup from 'yup'
 import {withFormik, Form, Field, ErrorMessage} from 'formik'
 import {NavLink} from 'react-router-dom'
+
 const SignInForm = ({values, isSubmitting}) => {
     return(
-        <Form className="form-login">
-            <h1>SIGN IN</h1>
-            <h2>Please enter your email and password</h2>
+        <Form className="form-auth" style={{flex:'1 0 auto'}}> 
+            <h2>SIGN IN</h2>
+            <h3>Please enter your email and password</h3>
             <label>EMAIL:</label>
                 <Field className="input-field" type="email" name="email" placeholder="Email"/>
                 <div className="error-message"><ErrorMessage name="email"/></div>
@@ -18,6 +19,7 @@ const SignInForm = ({values, isSubmitting}) => {
 
             <button type="submit" disabled={isSubmitting}>Sign In</button>
             <div className="sign-up">Don't have account? <NavLink to = '/signup'>Sign Up.</NavLink></div>
+            <div className="sign-up">Forget your password? <NavLink to = '/signup'>Click here.</NavLink></div>
         </Form>
     )
 }

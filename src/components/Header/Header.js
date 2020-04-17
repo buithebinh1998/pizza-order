@@ -26,7 +26,9 @@ class Header extends Component {
                     <div><NavLink to='/signup'>SIGN UP</NavLink></div>
                     <span>/</span>
                     <div><NavLink to='/signin'>SIGN IN</NavLink></div>
-                    <img src={imgCart} alt=""/>
+                    <div style={{verticalAlign:"center"}}>
+                        <img src={imgCart} alt=""/>
+                    </div>
                     <div id={id}
                         onClick={this.menuTransformHandler}>
                         <div id="bar1"></div>

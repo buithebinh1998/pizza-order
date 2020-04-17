@@ -13,8 +13,8 @@
     font-size: 1.5rem;
 }
 
-.spacer{
-    height: 100px;
+#spacer{
+    padding-top: 100px;
     max-width: 100%;
 }
 
@@ -83,10 +83,25 @@ a:visited{
     cursor: pointer;
 }
 
+
+@media (max-width: 992px) {
+    .header div {
+        font-size: 1.4rem;
+        margin: 0 0.6rem;
+    }
+    .header span{
+        font-size: 1.4rem;
+    }
+}
+
 @media (max-width: 768px) {
     .header div {
         font-size: 1.2rem;
         margin: 0 0.5rem;
+    }
+    
+    .header span{
+        font-size: 1.2rem;
     }
 }
 
@@ -126,9 +141,12 @@ a:visited{
         transform: rotate(45deg) translate(-0.25rem, -0.25rem);
     }
 
-    .spacer{
-        height: 82px;
-        max-width: 100%;
+    #spacer{
+        padding-top: 82px;
+    }
+
+    .header span{
+        font-size: 1rem;
     }
 }
 
@@ -136,6 +154,10 @@ a:visited{
     .header div {
         font-size: 0.8rem;
         margin: 0 0.08rem;
+    }
+
+    .header span{
+        font-size: 0.8rem;
     }
 
     .header img{
@@ -157,11 +179,9 @@ a:visited{
         height: auto;
     }
 
-    .spacer{
-        height: 78px;
-        max-width: 100%;
+    #spacer{
+        padding-top: 78px;
     }
-    
 }
 
 @media (max-width: 320px) {
@@ -189,11 +209,13 @@ a:visited{
         height: auto;
     }
 
-    .spacer{
-        height: 50px;
-        max-width: 100%;
+    #spacer{
+        padding-top: 50px;
     }
     
+    .header span{
+        font-size: 0.6rem;
+    }
 }
 
 

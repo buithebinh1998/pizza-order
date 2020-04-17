@@ -12,7 +12,7 @@ class PizzaPage extends Component{
         return(
             <div>
                 <Header/>
-                <div class="spacer"></div>
+                <div id="spacer"></div>
                 <img src={imgPizza1} style={{width:"50%", height:"50%"}} alt=""/>
                 <img src={imgPizza2} style={{width:"50%", height:"50%"}} alt=""/>
                 <NavProduct/>

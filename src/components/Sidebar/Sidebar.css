@@ -1,6 +1,6 @@
 .SideDrawer {
     position: fixed;
-    width: 280px;
+    width: 20rem;
     height: 100%;
     left: 0;
     top: 100px;
@@ -12,11 +12,11 @@
 }
 
 .Open {
-    width: 280px;
+    width: 20rem;
 }
 
 .Close {
-    width: 0px;
+    width: 0rem;
 }
 
 .SideDrawer li{
@@ -29,12 +29,77 @@
     font-style: italic;
     color: white;
     font-weight: bold;
-    font-size: 30px;
-    margin: 50px 20px 50px 20px;
+    font-size: 2rem;
+    margin: 2.5rem 1.5rem 2.5rem 1.5rem;
 }
 
 .SideDrawer a:hover{
     color:red;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+@media (max-width: 992px) {
+    .Open {
+        width: 15rem;
+    }
+
+    .SideDrawer a{
+        font-size: 1.4rem;
+        margin: 1.5rem 1rem 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .Open {
+        width: 12rem;
+    }
+
+    .SideDrawer a{
+        font-size: 1.25rem;
+        margin: 1rem 0.75rem 1rem 0.75rem;
+    }
+}
+@media (max-width: 576px) {
+    .Open {
+        width: 10rem;
+    }
+
+    .SideDrawer a{
+        font-size: 1rem;
+        margin: 0.75rem 0.5rem 0.75rem 0.5rem;
+    }
+
+    .SideDrawer {
+        top: 82px;
+    }
+}
+
+@media (max-width: 433px) {
+    .Open {
+        width: 7rem;
+    }
+
+    .SideDrawer {
+        top: 78px;
+    }
+
+    .SideDrawer a{
+        font-size: 0.8rem;
+        margin: 0.75rem 0.5rem 0.75rem 0.5rem;
+    }
+}
+@media (max-width: 320px) {
+    .Open {
+        width: 6rem;
+    }
+
+    .SideDrawer {
+        top: 67px;
+    }
+
+    .SideDrawer a{
+        font-size: 0.6rem;
+        margin: 0.75rem 0.5rem 0.75rem 0.5rem;
+    }
 }

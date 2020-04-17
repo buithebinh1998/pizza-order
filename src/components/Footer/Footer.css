@@ -9,10 +9,12 @@ footer{
     font-weight: bold;
     text-align: center;
     overflow-x: hidden;
+    flex-shrink: 0;
 }
 
 footer div{
     font-size: 1rem;
+    margin: 0.3rem 0.2rem;
 }
 
 footer img{
@@ -23,6 +25,7 @@ footer img{
 @media (max-width: 768px) {
     footer div {
         font-size: 0.8rem;
+        margin: 0.2rem 0.1rem;
     }
     footer img{
         width: 80%;
@@ -32,6 +35,7 @@ footer img{
 @media (max-width: 433px) {
     footer div {
         font-size: 0.45rem;
+        margin: 0.1rem 0.05rem;
     }
     footer img{
         width: 60%;

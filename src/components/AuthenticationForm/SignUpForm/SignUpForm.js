@@ -1,12 +1,12 @@
 import React from 'react'
-import './SignUpForm.css'
+import '../AuthForm.css'
 import * as Yup from 'yup'
 import {withFormik, Form, Field, ErrorMessage} from 'formik'
 const SignUpForm = ({values, isSubmitting}) => {
     return(
-        <Form className="form-register">
-            <h1>SIGN UP</h1>
-            <h2>LOGIN INFORMATION</h2>
+        <Form className="form-auth">
+            <h2>SIGN UP</h2>
+            <h3>LOGIN INFORMATION</h3>
             <label>EMAIL:</label>
                 <Field className="input-field" type="email" name="email" placeholder="Email"/>
                 <div className="error-message"><ErrorMessage name="email"/></div>
@@ -20,7 +20,7 @@ const SignUpForm = ({values, isSubmitting}) => {
                 <div className="error-message"><ErrorMessage name="confirmPassword"/></div>
             <hr/>
 
-            <h2>ACCOUNT INFORMATION</h2>
+            <h3>ACCOUNT INFORMATION</h3>
             <label>PHONE NUMBER:</label>
                 <Field className="input-field" type="phone" name="phone" id="phone"  placeholder="Phone number"/>
                 <div className="error-message"><ErrorMessage name="phone"/></div>

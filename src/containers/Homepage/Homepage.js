@@ -12,7 +12,7 @@ const Homepage = () => {
     return(
         <div>
             <Header/>
-            <div class="spacer"></div>
+            <div id="spacer"></div>
             <Carosel/>
             <div className="homepage">
                 <div>

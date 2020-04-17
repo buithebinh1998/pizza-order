@@ -10,7 +10,7 @@ class SignUpPage extends Component{
         return(
             <div style={{backgroundImage:`url(${backgroundAuthen})`}}>
                 <Header/>
-                <div class="spacer"></div>
+                <div id="spacer"></div>
                 <SignUpForm/>
                 <Footer/>
             </div>

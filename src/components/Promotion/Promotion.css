@@ -15,15 +15,23 @@ h1{
     display: flex;
     width: 70%;
     background-color: black;
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
 }
 
 .promotion-image{
-    margin: 10px;
+    flex-basis: 40%;
+    margin: 1rem;
+    display: flex;
+    align-self: center;
+}
+
+.promotion-image img{
+    width: 100%;
+    height: auto;
 }
 
 .promotion-detail{
-    margin: 10px;
+    margin: 1rem;
 }
 
 .promotion-name{
@@ -31,7 +39,7 @@ h1{
 }
 
 .promotion-description{
-    font-size: 20px;
+    font-size: 1.5rem;
     text-align: justify;
 }
 
@@ -39,17 +47,120 @@ h1{
     align-self: center;
     background-color: #0078ae;
     color: white;
-    border-radius: 10px;
+    border-radius: 1rem;
     font-weight: bold;
-    font-size: 20px;
-    margin: 20px 0;
+    font-size: 1rem;
+    margin-top: 1rem;
     border: #0078ae solid 1px;
-    border-radius: 10px;
-    width: 200px;
-    height: 50px;
+    width: 15rem;
+    height: 3rem;
 }
 
 .promotion-item button:hover{
     background-color: red;
     cursor: pointer;
+}
+
+@media (max-width: 992px){
+    h1{
+        font-size: 1.5rem;
+    }
+    .promotion-name{
+        font-size: 1.2rem;
+    }
+
+    .promotion-detail{
+        margin: 0.8rem;
+    }
+
+    .promotion-description{
+        font-size: 1.2rem;
+    }
+
+    .promotion-item button{
+        font-size: 0.8rem;
+        width: 12rem;
+        height: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1{
+        font-size: 1.2rem;
+    }
+    .promotion-name{
+        font-size: 1rem;
+    }
+
+    .promotion-detail{
+        margin: 0.5rem;
+    }
+
+    .promotion-description{
+        font-size: 1rem;
+    }
+
+    .promotion-item button{
+        font-size: 0.6rem;
+        margin-top: 0.8rem;
+        width: 8rem;
+        height: 2rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+    h1{
+        font-size: 1rem;
+    }
+    .promotion-name{
+        font-size: 0.8rem;
+    }
+
+    .promotion-detail{
+        margin: 0.3rem;
+    }
+
+    .promotion-description{
+        font-size: 0.8rem;
+    }
+
+    .promotion-item button{
+        font-size: 0.5rem;
+        margin-top: 0.6rem;
+        width: 6rem;
+        height: 1.5rem;
+    }
+
+    .promotion-image{
+        margin: 0.2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    h1{
+        font-size: 0.8rem;
+    }
+    .promotion-name{
+        font-size: 0.6rem;
+    }
+
+    .promotion-detail{
+        margin: 0.1rem;
+    }
+
+    .promotion-description{
+        font-size: 0.6rem;
+    }
+
+    .promotion-item button{
+        font-size: 0.4rem;
+        margin-top: 0.4rem;
+        width: 5rem;
+        height: 1.25rem;
+    }
+
+    .promotion-image{
+        margin: 0.1rem;
+    }
 }

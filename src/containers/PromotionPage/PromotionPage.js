@@ -7,7 +7,7 @@ const PromotionPage = () => {
     return(
         <div style={{backgroundImage:`url(${backgroundPromotion})`}}>
             <Header/>
-            <div class="spacer"></div>
+            <div id="spacer"></div>
             <Promotion/>
             <Footer/>
         </div>

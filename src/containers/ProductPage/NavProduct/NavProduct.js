@@ -4,10 +4,10 @@ import {NavLink} from 'react-router-dom'
 const NavProduct = (props) => (
     <div className="nav-product">
         <ul>
-            <NavLink to='/category/pizza'><li>PIZZA</li></NavLink> 
-            <NavLink to='/category/sidedish'><li>SIDE DISH</li></NavLink>
-            <NavLink to='/category/beverage'><li>BEVERAGE</li></NavLink>
-            <NavLink to='/category/dessert'><li>DESSERT</li></NavLink>
+            <li><NavLink to='/category/pizza'>PIZZA</NavLink></li> 
+            <li><NavLink to='/category/sidedish'>SIDE DISH</NavLink></li>
+            <li><NavLink to='/category/beverage'>BEVERAGE</NavLink></li>
+            <li><NavLink to='/category/dessert'>DESSERT</NavLink></li>
         </ul>
     </div>
 )

@@ -12,7 +12,7 @@ const productPage = () => {
     return(
         <div>
             <Header/>
-            <div class="spacer"></div>
+            <div id="spacer"></div>
             <div className="product-page">
                 <div className="product-category" style={{backgroundImage:`url(${pizza})`, backgroundSize:"cover", backgroundRepeat:"no-repeat"} }>
                     <div>PIZZA</div>
