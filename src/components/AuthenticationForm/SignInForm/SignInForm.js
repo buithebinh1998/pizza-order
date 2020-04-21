@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom'
 
 const SignInForm = ({values, isSubmitting}) => {
     return(
-        <Form className="form-auth" style={{flex:'1 0 auto'}}> 
+        <Form className="form-auth"> 
             <h2>SIGN IN</h2>
             <h3>Please enter your email and password</h3>
             <label>EMAIL:</label>
