@@ -5,7 +5,7 @@ import imgPizza2 from '../../../assets/img/slider3.jpg'
 import imgPizza1 from '../../../assets/img/slider2.jpg'
 import './ItemPage.css'
 import NavProduct from '../NavProduct/NavProduct'
-import {loadDataPizza} from '../../../components/Item/Pizza'
+import DataPizza from './../../../components/Item/Pizza'
 
 class PizzaPage extends Component{
     render(){
@@ -17,7 +17,7 @@ class PizzaPage extends Component{
                 <img src={imgPizza2} style={{width:"50%", height:"50%"}} alt=""/>
                 <NavProduct/>
                 <div className="item-container">
-                    {loadDataPizza}
+                    <DataPizza/>
                 </div>
                 <Footer/>
             </div>
