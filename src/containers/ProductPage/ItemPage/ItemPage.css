@@ -1,5 +1,15 @@
+.category-page{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
 .item-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-basis: 80%;
+}
+
+.cart-container{
+    flex-basis: 20%;
 }

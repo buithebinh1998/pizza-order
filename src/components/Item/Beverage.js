@@ -1,15 +1,45 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './Item.css'
-import {dataBeverage} from '../../data/dataBeverage'
+import callApi from '../../utils/callApi'
+import Spinner from '../../UI/LoadingPage/Spinner';
 
-export const loadDataBeverage = dataBeverage.map(item => {
+class DataBeverage extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            dataBeverage: [],
+            loading: false
+        }
+    }
+
+    componentDidMount(){
+        callApi('https://5e9e6c40fb467500166c3f72.mockapi.io/api/v1/beverages','GET', null).then(response =>{
+            this.setState({dataBeverage:response.data, loading:true});
+        });
+    }
+
+    render(){
+        const {dataBeverage} = this.state;
+        const {loading} = this.state;
+        const loadDataBeverage = loading ? dataBeverage.map((item) => {
+            return(
+                <div className="item" key={item.id}>
+                    <div className="item-img">
+                        <img src={`https://drive.google.com/uc?export=view&id=${item.imgLink}`} alt=""/>
+                    </div>
+                    <div className="item-name">{item.name}</div>
+                    <div className="item-price">{item.price}</div>
+                    <button>VIEW DETAILS</button>
+                </div>
+            )
+        }):<Spinner/>;
+
         return(
-            <div className="item" key={item.id}>
-                <img className="item-img" src={`https://drive.google.com/uc?export=view&id=${item.imgLink}`} alt=""/>
-                <div className="item-name" style={{top:'65%'}}>{item.name}</div>
-                <div className="item-price" style={{top:'75%'}}>{item.price}</div>
-                <button style={{top:'85%'}}>ADD TO CART</button>
-            </div>
+            <>
+                {loadDataBeverage}
+            </>
         )
-    } 
-);
+    }
+}
+
+export default DataBeverage

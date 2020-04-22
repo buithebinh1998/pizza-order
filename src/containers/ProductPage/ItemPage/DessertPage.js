@@ -3,21 +3,28 @@ import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import imgPizza2 from '../../../assets/img/slider3.jpg'
 import imgPizza1 from '../../../assets/img/slider2.jpg'
-import {loadDataDessert} from '../../../components/Item/Dessert'
+import background from '../../../assets/img/bg.png'
+import DataDessert from '../../../components/Item/Dessert'
 import './ItemPage.css'
 import NavProduct from '../NavProduct/NavProduct'
+import Cart from '../../../components/Cart/Cart'
 
 class DessertPage extends Component{
     render(){
         return(
-            <div>
+            <div style={{backgroundImage:`url(${background})`}}>
                 <Header/>
                 <div id="spacer"></div>
                 <img src={imgPizza1} style={{width:"50%", height:"50%"}} alt=""/>
                 <img src={imgPizza2} style={{width:"50%", height:"50%"}} alt=""/>
                 <NavProduct/>
-                <div className="item-container">
-                    {loadDataDessert}
+                <div className="category-page">
+                    <div className="item-container">
+                        <DataDessert/>
+                    </div>
+                    <div className="cart-container">
+                        <Cart/>
+                    </div>
                 </div>
                 <Footer/>
             </div>

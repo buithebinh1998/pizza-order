@@ -1,15 +1,19 @@
 .item{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     position: relative;
 }
 
-.item img{
-    display: block;
+.item-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.item-img img{
     max-width: 100%;
     max-height: 100%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .item-name{
@@ -17,7 +21,7 @@
     position: absolute;
     font-weight: bold;
     font-size: 22px;
-    top: 60%;
+    top: 65%;
     left: 50%;
     color: #04354c;
     margin-left: auto;
@@ -44,7 +48,7 @@
     font-weight: bold;
     font-size: 22px;
     text-align: center;
-    top: 81%;
+    top: 75%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -55,7 +59,7 @@
 
 .item button{
     position: absolute;
-    top: 88%;
+    top: 85%;
     left: 50%;
     color: white;
     margin-left: auto;
