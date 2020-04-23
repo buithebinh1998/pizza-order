@@ -3,7 +3,8 @@ import '../AuthForm.css'
 import * as Yup from 'yup'
 import {withFormik, Form, Field, ErrorMessage} from 'formik'
 import {NavLink} from 'react-router-dom'
-
+import callApi from './../../../utils/callApi'
+import swal from 'sweetalert'
 const SignInForm = ({values, isSubmitting}) => {
     return(
         <Form className="form-auth"> 
@@ -28,7 +29,7 @@ const FormikSignInForm = withFormik({
     mapPropsToValues(){
         return{
             email: '',
-            password: '',
+            password: ''
         }
     },
 
@@ -39,11 +40,29 @@ const FormikSignInForm = withFormik({
             .required("Password is required!"),
     }),
 
-    handleSubmit(values, {setErrors, resetForm, setSubmitting}){
+    handleSubmit(values, {setErrors, props, resetForm, setSubmitting}){
+        let errors="";
+        callApi('https://5ea10ddbeea7760016a923e2.mockapi.io/api/v1/signin-authentication','GET', null).then(response =>{
+            errors = response.data[0].errorCode;
+        });
+
         setTimeout(() => {
-            if(values.email!=="buithebinh1998@gmail.com") setErrors({email:'Wrong email or password!'});
+            if(errors !== "404"){
+                swal({
+                    title: "SIGN UP FAILED",
+                    text: "Please check your information!",
+                    icon: "error",
+                })
+                setErrors({email:'This email has been taken!'});
+            }
             else {
-                console.log(values);
+                swal({
+                    title: "SIGN UP SUCCESFULLY!",
+                    text: "You are now ready to use Pycozza.",
+                    icon: "success",
+                    button: "Done!"
+                });
+
                 resetForm();
             }
             setSubmitting(false);

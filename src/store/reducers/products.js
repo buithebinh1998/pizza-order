@@ -1,4 +1,4 @@
-import * as types from './../action/actionTypes'
+
 
 const initialState = {
     dataPizza: [],

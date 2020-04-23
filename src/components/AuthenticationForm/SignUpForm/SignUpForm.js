@@ -1,7 +1,11 @@
 import React from 'react'
 import '../AuthForm.css'
 import * as Yup from 'yup'
+import callApi from '../../../utils/callApi'
 import {withFormik, Form, Field, ErrorMessage} from 'formik'
+import swal from 'sweetalert'
+import {withRouter} from 'react-router-dom'
+
 const SignUpForm = ({values, isSubmitting}) => {
     return(
         <Form className="form-auth">
@@ -46,7 +50,7 @@ const FormikSignUpForm = withFormik({
             confirmPassword: '',
             phone: '',
             firstName: '',
-            lastName: '',
+            lastName: ''
         }
     },
 
@@ -74,17 +78,44 @@ const FormikSignUpForm = withFormik({
             .required('Phone number is required!'),
     }),
 
-    handleSubmit: (values, {resetForm, setErrors ,setSubmitting}) => {
+    handleSubmit: (values, {resetForm, props, setErrors ,setSubmitting}) => {
+        let errorCode="";
+
+        callApi('https://5ea10ddbeea7760016a923e2.mockapi.io/api/v1/users', 'POST',{
+            email: values.email,
+            password: values.password,
+            phone: values.phone,
+            firstName: values.firstName,
+            lastName: values.lastName
+        }).then(response =>{
+            errorCode = response.data.errorCode;
+        });
+
         setTimeout(() => {
-            if(values.email==="buithebinh1998@gmail.com") setErrors({email:'This email has been taken!'});
-            else {
-                console.log(values);
-                resetForm();
+            if(errorCode === "404"){
+                swal({
+                    title: "SIGN UP FAILED",
+                    text: "Please check your information!",
+                    icon: "error",
+                })
+                setErrors({email:'This email has been taken!'});
             }
+
+            else {
+                let history = props.history;
+                swal({
+                    title: "SIGN UP SUCCESFULLY!",
+                    text: "You are now ready to use Pycozza.",
+                    icon: "success",
+                    button: "Done!"
+                });
+                resetForm();
+                history.push('/signin');
+            }
+
             setSubmitting(false);
         }, 2000);
     }
-
 })(SignUpForm)
 
-export default FormikSignUpForm;
+export default withRouter(FormikSignUpForm);

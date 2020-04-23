@@ -1,0 +1,105 @@
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    color: #033a56;
+    align-self: center;
+}
+
+section{
+    text-align: left;
+    width: 80%;
+    display: flex;
+    font-size: 1.2rem;
+    background-color: white;
+    border: none;
+    align-items: center;
+    margin: 1rem;
+}
+
+section div{
+    padding: 0 1rem;
+}
+
+section img{
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 992px){
+    section{
+        font-size: 1rem;
+        margin: 0.8rem;
+    }
+
+    section div{
+        padding: 0.2rem 0.8rem;
+    }
+
+    section img{
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px){
+    h1{
+        font-size: 1.5rem;
+    }
+
+    section{
+        font-size: 0.9rem;
+        margin: 0.7rem;
+        width: 90%;
+    }
+
+    section div{
+        padding: 0.2rem 0.7rem;
+    }
+
+    section img{
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    h1{
+        font-size: 1rem;
+    }
+
+    section{
+        font-size: 0.8rem;
+        margin: 0.6rem;
+    }
+
+    section div{
+        padding: 0.2rem 0.6rem;
+    }
+
+    section img{
+        width: 30%;
+    }
+}
+
+@media (max-width: 320px) {
+    h1{
+        font-size: 0.8rem;
+    }
+
+    section{
+        font-size: 0.6rem;
+        margin: 0.4rem;
+        width: 95%;
+    }
+
+    section div{
+        padding: 0.1rem 0.4rem;
+    }
+
+    section img{
+        width: 30%;
+    }
+}
+

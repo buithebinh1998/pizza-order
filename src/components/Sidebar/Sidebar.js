@@ -7,8 +7,8 @@ const Sidebar = (props) => {
             <li><NavLink to = '/'>HOME</NavLink></li>
             <li><NavLink to = '/category'>CATEGORY</NavLink></li>
             <li><NavLink to = '/promotion'>PROMOTION</NavLink></li>
-            <li><NavLink to = '/'>ABOUT</NavLink></li>
-            <li><NavLink to = '/'>CONTACT</NavLink></li>
+            <li><NavLink to = '/about'>ABOUT</NavLink></li>
+            <li><NavLink to = '/contact'>CONTACT</NavLink></li>
         </div>
     )
 }

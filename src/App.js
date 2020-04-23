@@ -12,6 +12,8 @@ const DessertPage = lazy(()=>import('./containers/ProductPage/ItemPage/DessertPa
 const SignUpPage = lazy(()=>import('./containers/AuthenticationPage/SignUpPage/SignUpPage'));
 const SignInPage = lazy(()=>import('./containers/AuthenticationPage/SignInPage/SignInPage'));
 const PromotionPage = lazy(()=>import('./containers/PromotionPage/PromotionPage'));
+const AboutPage = lazy(()=>import('./containers/AboutPage/AboutPage'));
+const ContactPage = lazy(()=>import('./containers/ContactPage/ContactPage'));
 
 class App extends Component {
   render(){
@@ -28,6 +30,8 @@ class App extends Component {
             <Route path = '/signup' component={SignUpPage}/>
             <Route path = '/signin' component={SignInPage}/>
             <Route path = '/promotion' component={PromotionPage}/>
+            <Route path = '/about' component={AboutPage}/>
+            <Route path = '/contact' component={ContactPage}/>
           </Switch>
         </Suspense>
       </div>
