@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './Item.css'
 import callApi from '../../utils/callApi'
 import Spinner from '../../UI/LoadingPage/Spinner';
+import PizzaModal from '../../UI/Modal/Modal'
 
 const DataPizza = () => {
     const [dataPizza, setDataPizza] = useState([]);
@@ -26,6 +27,7 @@ const DataPizza = () => {
         setPriceModal(item.price);
         console.log(item);
     }
+    
 
     const loadDataPizza = loading ? dataPizza.map(item => {
         return(
@@ -42,7 +44,10 @@ const DataPizza = () => {
 
     return (
         <>
+        <PizzaModal/>
         {loadDataPizza}
+        
+        
         </>
     )
 }
