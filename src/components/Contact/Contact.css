@@ -1,6 +1,5 @@
-article{
+.contact-article{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -14,22 +13,21 @@ h2{
     text-align: center;
 }
 
-img{
+.contact-article img{
     margin-top: 1rem;
 }
 
-a{
-    text-decoration: none;
+.contact-article a{
     color: #033a56;
     font-weight: bold;
 }
 
-a:visited{
+.contact-article a:visited{
     text-decoration: none;
     color: #033a56;
 }
 
-section{
+.contact-article section{
     width: 40rem;
     display: flex;
     flex-direction: column;
@@ -40,26 +38,26 @@ section{
     margin: 1rem;
 }
 
-section div{
-    margin: 3rem 0;
+.contact-article section div{
+    margin: 2rem 0;
 }
 
-section img{
+.contact-article section img{
     max-width: 100%;
     height: auto;
 }
 
 @media (max-width: 992px){
-    section{
+    .contact-article section{
         font-size: 1rem;
         margin: 0.8rem;
     }
 
-    section div{
-        padding: 0.2rem 0.8rem;
+    .contact-article section div{
+        margin: 1.8rem 0;
     }
 
-    section img{
+    .contact-article section img{
         width: 50%;
     }
 }
@@ -69,17 +67,17 @@ section img{
         font-size: 1.5rem;
     }
 
-    section{
+    .contact-article section{
         font-size: 0.9rem;
         margin: 0.7rem;
         width: 90%;
     }
 
-    section div{
-        padding: 0.2rem 0.7rem;
+    .contact-article section div{
+        margin: 1.6rem 0;
     }
 
-    section img{
+    .contact-article section img{
         width: 45%;
     }
 }
@@ -89,16 +87,16 @@ section img{
         font-size: 1rem;
     }
 
-    section{
+    .contact-article section{
         font-size: 0.8rem;
         margin: 0.6rem;
     }
 
-    section div{
-        padding: 0.2rem 0.6rem;
+    .contact-article section div{
+        margin: 1.4rem 0;
     }
 
-    section img{
+    .contact-article section img{
         width: 30%;
     }
 }
@@ -108,18 +106,14 @@ section img{
         font-size: 0.8rem;
     }
 
-    section{
+    .contact-article section{
         font-size: 0.6rem;
         margin: 0.4rem;
         width: 95%;
     }
 
-    section div{
-        padding: 0.1rem 0.4rem;
-    }
-
-    section img{
-        width: 30%;
+    .contact-article section div{
+        margin: 1.2rem 0;
     }
 }
 

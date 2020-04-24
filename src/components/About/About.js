@@ -5,8 +5,9 @@ import about2 from './../../assets/img/about2.png'
 import about3 from './../../assets/img/about3.png'
 const About = () => {
     return(
-        <article>
-            <h1>ABOUT PYCOZZA</h1>
+        <>
+        <h1>ABOUT PYCOZZA</h1>
+        <article className="about-article">
             <section>
                 <img src={about1} alt=""/>
                 <div><b>Why Pycozza is a Delivery Expert?</b><br/>
@@ -37,6 +38,7 @@ const About = () => {
                 </div>
             </section>
         </article>
+        </>
     );
 }
 

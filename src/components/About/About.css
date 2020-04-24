@@ -1,4 +1,4 @@
-article{
+.about-article{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,10 +6,10 @@ article{
 
 h1{
     color: #033a56;
-    align-self: center;
+    text-align: center;
 }
 
-section{
+.about-article section{
     text-align: left;
     width: 80%;
     display: flex;
@@ -20,26 +20,26 @@ section{
     margin: 1rem;
 }
 
-section div{
+.about-article section div{
     padding: 0 1rem;
 }
 
-section img{
+.about-article section img{
     max-width: 100%;
     height: auto;
 }
 
 @media (max-width: 992px){
-    section{
+    .about-article section{
         font-size: 1rem;
         margin: 0.8rem;
     }
 
-    section div{
+    .about-article section div{
         padding: 0.2rem 0.8rem;
     }
 
-    section img{
+    .about-article section img{
         width: 50%;
     }
 }
@@ -49,17 +49,17 @@ section img{
         font-size: 1.5rem;
     }
 
-    section{
+    .about-article section{
         font-size: 0.9rem;
         margin: 0.7rem;
         width: 90%;
     }
 
-    section div{
+    .about-article section div{
         padding: 0.2rem 0.7rem;
     }
 
-    section img{
+    .about-article section img{
         width: 45%;
     }
 }
@@ -69,16 +69,16 @@ section img{
         font-size: 1rem;
     }
 
-    section{
+    .about-article section{
         font-size: 0.8rem;
         margin: 0.6rem;
     }
 
-    section div{
+    .about-article section div{
         padding: 0.2rem 0.6rem;
     }
 
-    section img{
+    .about-article section img{
         width: 30%;
     }
 }
@@ -88,17 +88,17 @@ section img{
         font-size: 0.8rem;
     }
 
-    section{
+    .about-article section{
         font-size: 0.6rem;
         margin: 0.4rem;
         width: 95%;
     }
 
-    section div{
+    .about-article section div{
         padding: 0.1rem 0.4rem;
     }
 
-    section img{
+    .about-article section img{
         width: 30%;
     }
 }

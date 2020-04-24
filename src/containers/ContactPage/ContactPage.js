@@ -3,9 +3,10 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import Contact from '../../components/Contact/Contact'
 import background from '../../assets/img/bg.png'
+import './ContactPage.css'
 const ContactPage = () => {
     return(
-        <div style={{backgroundImage:`url(${background})`}}>
+        <div className="ContactPage" style={{backgroundImage:`url(${background})`}}>
             <Header/>
             <div id="spacer"></div>
             <Contact/>
