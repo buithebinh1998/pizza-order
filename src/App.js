@@ -14,6 +14,7 @@ const SignInPage = lazy(()=>import('./containers/AuthenticationPage/SignInPage/S
 const PromotionPage = lazy(()=>import('./containers/PromotionPage/PromotionPage'));
 const AboutPage = lazy(()=>import('./containers/AboutPage/AboutPage'));
 const ContactPage = lazy(()=>import('./containers/ContactPage/ContactPage'));
+const PizzaDetails = lazy(()=>import('./components/Item/ItemDetails/PizzaDetails'));
 
 class App extends Component {
   render(){
@@ -23,10 +24,16 @@ class App extends Component {
           <Switch>
             <Route path = '/' exact component={Homepage}/>
             <Route path = '/category' exact component={ProductPage}/>
-            <Route path = '/category/pizza' exact component={PizzaPage}/>
-            <Route path = '/category/sidedish' exact component={SideDishPage}/>
-            <Route path = '/category/beverage' exact component={BeveragePage}/>
-            <Route path = '/category/dessert' exact component={DessertPage}/>
+
+            <Route path = '/pizza' component={PizzaPage}/>
+            <Route path = '/pizza/:id' component={PizzaDetails}/>
+
+            <Route path = '/sidedish' component={SideDishPage}/>
+
+            <Route path = '/beverage' component={BeveragePage}/>
+
+            <Route path = '/dessert' component={DessertPage}/>
+
             <Route path = '/signup' component={SignUpPage}/>
             <Route path = '/signin' component={SignInPage}/>
             <Route path = '/promotion' component={PromotionPage}/>

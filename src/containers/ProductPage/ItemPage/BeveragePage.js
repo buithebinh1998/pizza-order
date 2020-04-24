@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import imgPizza2 from '../../../assets/img/slider3.jpg'
@@ -9,8 +9,7 @@ import NavProduct from '../NavProduct/NavProduct'
 import './ItemPage.css'
 import Cart from '../../../components/Cart/Cart'
 
-class BeveragePage extends Component{
-    render(){
+const BeveragePage = () => {
         return(
             <div style={{backgroundImage:`url(${background})`}}>
                 <Header/>
@@ -18,6 +17,10 @@ class BeveragePage extends Component{
                 <img src={imgPizza1} style={{width:"50%", height:"50%"}} alt=""/>
                 <img src={imgPizza2} style={{width:"50%", height:"50%"}} alt=""/>
                 <NavProduct/>
+                <div className="category-name">
+                    <h1>BEVERAGE</h1>
+                </div>
+
                 <div className="category-page">
                     <div className="item-container">
                         <DataBeverage/>
@@ -29,7 +32,6 @@ class BeveragePage extends Component{
                 <Footer/>
             </div>
         )
-    }
 }
 
 export default BeveragePage;

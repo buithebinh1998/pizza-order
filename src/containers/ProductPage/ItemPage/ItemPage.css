@@ -4,6 +4,13 @@
     margin: auto;
 }
 
+.category-name{
+    color: #033a56;
+    width: 90%;
+    text-align: left;
+    margin: auto;
+}
+
 .item-container{
     display: flex;
     flex-wrap: wrap;

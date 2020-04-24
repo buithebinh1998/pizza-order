@@ -20,7 +20,7 @@ const Promotion = () => {
                             * Applied when buying pizza 9 "/ 12" with same size.<br/>
                             * Free 30' delivery with orders from VND 100,000 within delivery range.<br/>
                         </div>
-                        <NavLink to ='/category/pizza'><button className="promotion-button">ORDER NOW</button></NavLink>
+                        <NavLink to ='/pizza'><button className="promotion-button">ORDER NOW</button></NavLink>
                     </div>
 
                 </div>
@@ -37,7 +37,7 @@ const Promotion = () => {
                             * Combo 129,000đ include: 1 Kid Mania Pizza 9'' + 1 Sausage + 1 Coca.<br/>
                             * Free 30' delivery with this order within delivery range.<br/>
                         </div>
-                        <NavLink to ='/category/pizza'><button className="promotion-button">ORDER NOW</button></NavLink>
+                        <NavLink to ='/pizza'><button className="promotion-button">ORDER NOW</button></NavLink>
                     </div>
 
                 </div>
