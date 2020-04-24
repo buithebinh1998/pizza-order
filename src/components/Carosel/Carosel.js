@@ -5,6 +5,7 @@ import Slide1 from "../../assets/img/slider1.jpg";
 import Slide2 from "../../assets/img/slider2.jpg";
 import Slide3 from "../../assets/img/slider3.jpg";
 import Slide4 from "../../assets/img/slider4.jpg";
+import Slide5 from "../../assets/img/slider5.jpg";
 const carousel = props => (
   <div className="carousel">
     <Carousel autoPlay showThumbs={false} infiniteLoop={true} showArrows={false}>
@@ -19,6 +20,9 @@ const carousel = props => (
       </div>
       <div>
         <img src={Slide4} alt="" />
+      </div>
+      <div>
+        <img src={Slide5} alt="" />
       </div>
     </Carousel>
   </div>

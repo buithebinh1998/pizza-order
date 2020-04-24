@@ -21,18 +21,89 @@
     background-size: 100%;
     background-position: top left;
     box-sizing: border-box;
-    width: 600px;
-    height: 600px;
+    width: 40rem;
+    height: 35rem;
     text-align: left;
     color: white;
-    padding: 21px;
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    -o-transform: translate3d(0,0,0);
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
+    padding: 2rem;
+}
+
+.pizza-details{
+    display: flex;
+}
+
+.pizza-info{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.pizza-info h1{
+    color:#0078ae;
+}
+
+.pizza-info h2{
+    color:#0078ae;
+}
+
+.pizza-img{
+    max-width: 100%;
+    height: auto;
+}
+
+.remodal-close {
+    left: 100%;
+    background: red;
+    position: absolute;
+    top: 0;
+    display: block;
+    overflow: visible;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: color .2s;
+    transition: color .2s;
+    text-decoration: none;
+    color: #95979c;
+    border: 0;
+    outline: 0;
+}
+
+.remodal-close::before {
+    content: "";
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 35px;
+    color: white;
+}
+
+.pizza-customize{
+    flex-basis: 50%;
+    box-sizing: border-box;
+}
+
+.form-pizza button{
+    margin-top: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    height: 3rem;
+    background-color: #e31837;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    border: #e31837;
+    cursor: pointer;
+}
+
+.form-pizza label{
+    font-size: 1.2rem;
 }

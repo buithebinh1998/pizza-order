@@ -4,6 +4,7 @@
     position: fixed;
     z-index: 1;
     background: #033a56;
+    opacity: 0.85;
     color: white;
     display: flex;
     justify-content: flex-end;
@@ -14,6 +15,7 @@
 }
 
 #spacer{
+    background: #033a56;
     padding-top: 100px;
     max-width: 100%;
 }

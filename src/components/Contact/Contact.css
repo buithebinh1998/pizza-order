@@ -39,7 +39,7 @@ h2{
 }
 
 .contact-article section div{
-    margin: 2rem 0;
+    margin: 1.8rem 0;
 }
 
 .contact-article section img{
@@ -54,7 +54,7 @@ h2{
     }
 
     .contact-article section div{
-        margin: 1.8rem 0;
+        margin: 1.2rem 0;
     }
 
     .contact-article section img{
@@ -67,6 +67,10 @@ h2{
         font-size: 1.5rem;
     }
 
+    h2{
+        font-size: 1.2rem;
+    }
+
     .contact-article section{
         font-size: 0.9rem;
         margin: 0.7rem;
@@ -74,7 +78,7 @@ h2{
     }
 
     .contact-article section div{
-        margin: 1.6rem 0;
+        margin: 1rem 0;
     }
 
     .contact-article section img{
@@ -87,13 +91,17 @@ h2{
         font-size: 1rem;
     }
 
+    h2{
+        font-size: 0.8rem;
+    }
+
     .contact-article section{
         font-size: 0.8rem;
         margin: 0.6rem;
     }
 
     .contact-article section div{
-        margin: 1.4rem 0;
+        margin: 0.8rem 0;
     }
 
     .contact-article section img{
@@ -106,6 +114,10 @@ h2{
         font-size: 0.8rem;
     }
 
+    h2{
+        font-size: 0.6rem;
+    }
+    
     .contact-article section{
         font-size: 0.6rem;
         margin: 0.4rem;
@@ -113,7 +125,7 @@ h2{
     }
 
     .contact-article section div{
-        margin: 1.2rem 0;
+        margin: 0.6rem 0;
     }
 }
 

@@ -4,14 +4,20 @@ import callApi from '../../utils/callApi'
 import Spinner from '../../UI/LoadingPage/Spinner';
 import PizzaModal from '../../UI/Modal/Modal'
 
+
+
 const DataPizza = () => {
     const [dataPizza, setDataPizza] = useState([]);
     const [loading, setLoading] = useState(false);
 
     const [openModal, setOpenModal] = useState(false);
-    const [nameModal, setNameModal] = useState("");
-    const [descModal, setDescModal] = useState("");
-    const [priceModal, setPriceModal] = useState("");
+
+    const [pizzaModal, setPizzaModal] = useState({
+        name: "",
+        desc: "",
+        price: "",
+        imgLink: "17f9EUTfdk6cAqa0JTZLTV4iAcfRvZTre" //set initial
+    });
 
     useEffect( () => {
         callApi('https://5e9e6c40fb467500166c3f72.mockapi.io/api/v1/pizzas','GET', null).then(response =>{
@@ -22,12 +28,17 @@ const DataPizza = () => {
 
     const openModalButton = (item) => {
         setOpenModal(true);
-        setNameModal(item.name);
-        setDescModal(item.desc);
-        setPriceModal(item.price);
-        console.log(item);
+        setPizzaModal({
+            name: item.name,
+            desc: item.desc,
+            price: item.price,
+            imgLink: item.imgLink
+        });
     }
     
+    const closeModal = () => {
+        setOpenModal(false);
+    }
 
     const loadDataPizza = loading ? dataPizza.map(item => {
         return(
@@ -44,10 +55,8 @@ const DataPizza = () => {
 
     return (
         <>
-        <PizzaModal/>
+        <PizzaModal clicked={() => closeModal()} show={openModal} pizza={pizzaModal}/>
         {loadDataPizza}
-        
-        
         </>
     )
 }
