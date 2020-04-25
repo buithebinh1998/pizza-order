@@ -41,10 +41,16 @@
 
 .pizza-info h1{
     color:#0078ae;
+    font-size: 2rem;
 }
 
 .pizza-info h2{
     color:#0078ae;
+    font-size: 1.5rem;
+}
+
+.pizza-info h3{
+    font-size: 1.2rem;
 }
 
 .pizza-img{
@@ -93,7 +99,7 @@
 
 .form-pizza button{
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: 100%;
     height: 3rem;
     background-color: #e31837;
@@ -106,4 +112,8 @@
 
 .form-pizza label{
     font-size: 1.2rem;
+}
+
+.form-pizza h2{
+    font-size: 1.5rem;
 }

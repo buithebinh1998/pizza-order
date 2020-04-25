@@ -1,8 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import './Modal.css'
 import swal from 'sweetalert'
+import {CartContext} from '../../context/CartContext/CartContext'
 
 const PizzaForm = (props) => {
+    const [cart, setCart] = useContext(CartContext);
+
     const [sizeChecked, setSizeChecked] = useState({size1:true, size2:false});
     const [crustChecked, setCrustChecked] = useState({crust1:true, crust2:false});
 
@@ -10,7 +13,6 @@ const PizzaForm = (props) => {
         if(event.target.value === "medium") setSizeChecked({size1: true, size2: false});
         else setSizeChecked({size1: false, size2: true});
     }
-
 
     const onCheckCrustChange = (event) => {
         if(event.target.value === "thin") setCrustChecked({crust1: true, crust2: false});
@@ -21,28 +23,30 @@ const PizzaForm = (props) => {
         e.preventDefault();
         let result = {
             name: props.name,
-            price: props.price
+            quantity: 1,
+            price: props.price,
         };
 
         if(sizeChecked.size1) {
             result.name += " (M)";
-            result.price = result.price.slice(0,8);
+            result.price = result.price.slice(0,3)*1000;
         }
         else{
             result.name += " (L)"
-            result.price = result.price.slice(10,19);
+            result.price = result.price.slice(11,14)*1000;
         }
 
         if(crustChecked.crust1) result.name += " Thin Crust";
         else result.name += " Thick Crust";
         
         swal({
-            title: "Add to cart succesfully!",
+            title: "Add to cart successfully!",
             icon: "success",
             button: "OK!"
         });
         props.cancel();
-        console.log(result);
+        const newCart = [...cart,result];
+        setCart(newCart);
     };
 
     return(
@@ -67,7 +71,6 @@ const PizzaForm = (props) => {
 }
 
 const ModalPizza = (props) => {
-
     return(
         <>
         <div className="backdrop" style={{
