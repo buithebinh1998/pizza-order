@@ -22,7 +22,7 @@ const DataSideDish = () => {
                 </div>
                 <div className="item-name">{item.name}</div>
                 <div className="item-price">{item.price}</div>
-                <button>VIEW DETAILS</button>
+                <button>ADD TO CART</button>
             </div>
         )
     }):<Spinner/>;

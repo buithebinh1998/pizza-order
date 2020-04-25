@@ -1,41 +1,73 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Modal.css'
-import * as Yup from 'yup'
-import {withFormik, Form, Field, ErrorMessage} from 'formik'
 import swal from 'sweetalert'
 
-const PizzaForm = ({values, isSubmitting}) => {
+const PizzaForm = (props) => {
+    const [sizeChecked, setSizeChecked] = useState({size1:true, size2:false});
+    const [crustChecked, setCrustChecked] = useState({crust1:true, crust2:false});
+
+    const onCheckSizeChange = (event) => {
+        if(event.target.value === "medium") setSizeChecked({size1: true, size2: false});
+        else setSizeChecked({size1: false, size2: true});
+    }
+
+
+    const onCheckCrustChange = (event) => {
+        if(event.target.value === "thin") setCrustChecked({crust1: true, crust2: false});
+        else setCrustChecked({crust1: false, crust2: true});
+    }
+
+    const addToCart = (e) => {
+        e.preventDefault();
+        let result = {
+            name: props.name,
+            price: props.price
+        };
+
+        if(sizeChecked.size1) {
+            result.name += " (M)";
+            result.price = result.price.slice(0,8);
+        }
+        else{
+            result.name += " (L)"
+            result.price = result.price.slice(10,19);
+        }
+
+        if(crustChecked.crust1) result.name += " Thin Crust";
+        else result.name += " Thick Crust";
+        
+        swal({
+            title: "Add to cart succesfully!",
+            icon: "success",
+            button: "OK!"
+        });
+        props.cancel();
+        console.log(result);
+    };
+
     return(
-        <Form className="form-pizza">
+        <form className="form-pizza" onSubmit={addToCart}>
             <h2 style={{color:'#0078ae', fontWeight:'bold', textAlign:'left'}}>CHOOSE PIZZA SIZE:</h2>
-            <input id="medium" value="medium" name="size" type="radio"/>
+            <input id="medium" value="medium" name="size" type="radio" checked={sizeChecked.size1} onChange={onCheckSizeChange}/>
             <label htmlFor="medium">Medium</label><br/><br/>
-            <input id="large" value="large" name="size" type="radio"/>
+
+            <input id="large" value="large" name="size" type="radio" checked={sizeChecked.size2} onChange={onCheckSizeChange}/>
             <label htmlFor="large">Large</label>
 
             <h2 style={{color:'#0078ae', fontWeight:'bold'}}>CHOOSE PIZZA CRUST:</h2>
-            <input id="thin" value="thin" name="crust" type="radio"/>
+            <input id="thin" value="thin" name="crust" type="radio" checked={crustChecked.crust1} onChange={onCheckCrustChange}/>
             <label htmlFor="thin">Think crust</label><br/><br/>
-            <input id="thick" value="thick" name="crust" type="radio"/>
+
+            <input id="thick" value="thick" name="crust" type="radio" checked={crustChecked.crust2} onChange={onCheckCrustChange}/>
             <label htmlFor="thick">Thick crust</label><br/><br/>
-            
+        
             <button>ADD TO CART</button>
-        </Form>
+        </form>
     )
 }
 
-const FormikPizzaForm = withFormik({
-    mapPropsToValues(){
-        return{
-            size: false,
-            crust: false
-        }
-    },
-
-})(PizzaForm);
-
-
 const ModalPizza = (props) => {
+
     return(
         <>
         <div className="backdrop" style={{
@@ -62,7 +94,7 @@ const ModalPizza = (props) => {
                 </div>
 
                 <div className="pizza-customize">
-                    <FormikPizzaForm/>
+                    <PizzaForm name={props.pizza.name} price={props.pizza.price} cancel={props.clicked}/>
                 </div>
                 
             </div>

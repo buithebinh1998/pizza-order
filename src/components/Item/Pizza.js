@@ -55,7 +55,7 @@ const DataPizza = () => {
 
     return (
         <>
-        <PizzaModal clicked={() => closeModal()} show={openModal} pizza={pizzaModal}/>
+        <PizzaModal clicked={closeModal} show={openModal} pizza={pizzaModal}/>
         {loadDataPizza}
         </>
     )

@@ -16,7 +16,7 @@ export const dataPizza = [
     {
         id: '3',
         imgLink: "1WSiCYyUsWbtdiWKYQo8HRh_J9XqdQGhj",
-        name: "Tropical Seafood Pizza",
+        name: "Pizzamin Sea",
         desc: "Enjoy the dose of Pizzamin Sea to be \"flooded\" in 3 floors of refreshing taste.",
         price: "149.000Đ - 229.000Đ",
     },
@@ -37,21 +37,21 @@ export const dataPizza = [
     {
         id: '6',
         imgLink: "12a1Qfg7CPIrOtqrlatzf0tSGkdtqrBWA",
-        name: "Mayonnaise Seafood Pizza",
+        name: "Ocean Mania Pizza",
         desc: "Taste of the sea - enjoy a mesmerizing seafood party amidst the hot summer days. Just one bite is enough to love it !!!",
         price: "149.000Đ - 229.000Đ",
     },
     {
         id: '7',
         imgLink: "1jyP6ZkCOmnBr7gV0MqVY-Y3oewZffMRT",
-        name: "Japanese Teriyaki Pizza",
+        name: "Teriyaki Pizza",
         desc: "Being a pizza fan, why not enjoy the unique and delicate taste, blending 2 cuisines wrapped in pieces of pizza today !!",
         price: "149.000Đ - 229.000Đ",
     },
     {
         id: '8',
         imgLink: "1xezNTz-rMJ7gCXiXKKN7HSCKmnTbmh0M",
-        name: "Tomato Sauce Seafood Pizza",
+        name: "Seafood Delight Pizza",
         desc: "Fresh seafood and tomato sauce go hand in hand, reducing anorexia!",
         price: "149.000Đ - 229.000Đ",
     },
