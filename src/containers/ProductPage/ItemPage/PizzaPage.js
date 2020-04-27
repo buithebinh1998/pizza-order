@@ -8,6 +8,7 @@ import './ItemPage.css'
 import NavProduct from '../NavProduct/NavProduct'
 import DataPizza from './../../../components/Item/Pizza'
 import Cart from '../../../components/Cart/Cart'
+import MiniCart from '../../../components/Cart/MiniCart'
 
 const PizzaPage = () => {
         return(
@@ -29,6 +30,7 @@ const PizzaPage = () => {
                         <Cart/>
                     </div>
                 </div>
+                <MiniCart/>
                 <Footer/>
             </div>
         )

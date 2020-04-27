@@ -8,6 +8,7 @@ import DataSideDish from '../../../components/Item/SideDish'
 import NavProduct from '../NavProduct/NavProduct'
 import './ItemPage.css'
 import Cart from '../../../components/Cart/Cart'
+import MiniCart from '../../../components/Cart/MiniCart'
 
 const SideDishPage = () => {
         return(
@@ -29,6 +30,7 @@ const SideDishPage = () => {
                         <Cart/>
                     </div>
                 </div>
+                <MiniCart/>
                 <Footer/>
             </div>
         )

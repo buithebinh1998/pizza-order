@@ -1,10 +1,10 @@
 import React, {useState, useContext} from 'react'
 import './Modal.css'
 import swal from 'sweetalert'
-import {CartContext} from '../../context/CartContext/CartContext'
+import {Context} from '../../context/Context/Context'
 
 const PizzaForm = (props) => {
-    const [cart, setCart] = useContext(CartContext);
+    const [context, setContext] = useContext(Context);
 
     const [sizeChecked, setSizeChecked] = useState({size1:true, size2:false});
     const [crustChecked, setCrustChecked] = useState({crust1:true, crust2:false});
@@ -17,6 +17,16 @@ const PizzaForm = (props) => {
     const onCheckCrustChange = (event) => {
         if(event.target.value === "thin") setCrustChecked({crust1: true, crust2: false});
         else setCrustChecked({crust1: false, crust2: true});
+    }
+
+    const findItemInCart = (cart, item) => { 
+        let index = -1;
+        if(cart.length>0){
+            for(let i=0; i<cart.length; i++){
+                if(cart[i].name === item.name) index=i;
+            }
+        }
+        return index;
     }
 
     const addToCart = (e) => {
@@ -45,8 +55,19 @@ const PizzaForm = (props) => {
             button: "OK!"
         });
         props.cancel();
-        const newCart = [...cart,result];
-        setCart(newCart);
+
+        const newCart = [...context.cart];
+        const index = findItemInCart(context.cart,result);
+
+        if(index===-1){
+            newCart.push(result);
+            setContext({cart:newCart});
+        }
+        else{
+            newCart[index].quantity += 1;
+            setContext({cart:newCart});
+        }
+  
     };
 
     return(

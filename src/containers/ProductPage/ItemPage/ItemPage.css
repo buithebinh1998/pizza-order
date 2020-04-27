@@ -2,6 +2,7 @@
     display: flex;
     width: 90%;
     margin: auto;
+    margin-bottom: 2rem;
 }
 
 .category-name{
@@ -9,6 +10,7 @@
     width: 90%;
     text-align: left;
     margin: auto;
+    font-size: 1.2rem;
 }
 
 .item-container{
@@ -19,4 +21,35 @@
 
 .cart-container{
     flex-basis: 20%;
+}
+
+@media (max-width: 992px) {
+    .category-page{
+        width: 95%;
+    }
+    .category-name{
+        width: 95%;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 768px) {
+    .category-name{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 576px) {
+    .item-container{
+        flex-basis: 100%;
+    }
+    .category-name{
+        font-size: 0.8rem;
+    }
+    .cart-container{
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    .category-name{
+        font-size: 0.6rem;
+    }
 }

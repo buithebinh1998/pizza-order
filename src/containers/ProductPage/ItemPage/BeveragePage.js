@@ -8,6 +8,8 @@ import DataBeverage from '../../../components/Item/Beverage'
 import NavProduct from '../NavProduct/NavProduct'
 import './ItemPage.css'
 import Cart from '../../../components/Cart/Cart'
+import MiniCart from '../../../components/Cart/MiniCart'
+
 
 const BeveragePage = () => {
         return(
@@ -29,6 +31,7 @@ const BeveragePage = () => {
                         <Cart/>
                     </div>
                 </div>
+                <MiniCart/>
                 <Footer/>
             </div>
         )

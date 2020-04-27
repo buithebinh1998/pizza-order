@@ -8,7 +8,7 @@ import DataDessert from '../../../components/Item/Dessert'
 import './ItemPage.css'
 import NavProduct from '../NavProduct/NavProduct'
 import Cart from '../../../components/Cart/Cart'
-
+import MiniCart from '../../../components/Cart/MiniCart'
 const DessertPage = () => {
         return(
             <div style={{backgroundImage:`url(${background})`}}>
@@ -28,7 +28,9 @@ const DessertPage = () => {
                         <Cart/>
                     </div>
                 </div>
+                <br/><br/><br/><br/><br/><br/><br/><br/>
                 <Footer/>
+                <MiniCart/>
             </div>
         )
 }
