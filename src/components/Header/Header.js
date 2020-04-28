@@ -8,7 +8,7 @@ import { Context } from '../../context/Context/Context';
 
 const Header = () => {
     const [menuState, setMenuState] = useState(false);
-    const [context] = useContext(Context);
+    const {cart} = useContext(Context);
 
     const menuTransformHandler = () => {
         const currentState = menuState;
@@ -28,7 +28,7 @@ const Header = () => {
                 <div><NavLink to='/signin'>SIGN IN</NavLink></div>
                 <div className="cart-header">
                     <img src={imgCart} alt=""/>
-                    <span className="cart-header-span">{context.cart.length}</span>
+                    <span className="cart-header-span">{cart.length}</span>
                 </div>
                 <div id={id}
                     onClick={menuTransformHandler}>

@@ -27,6 +27,7 @@
 .minicart-total{
     font-size: 0.8rem;
     margin-left: 1rem;
+    font-weight: bold;
 }
 
 .minicart-checkout{

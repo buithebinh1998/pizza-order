@@ -1,10 +1,9 @@
 import React, {useState, useContext} from 'react'
 import './Modal.css'
-import swal from 'sweetalert'
 import {Context} from '../../context/Context/Context'
 
 const PizzaForm = (props) => {
-    const [context, setContext] = useContext(Context);
+    const {addPizzaToCart} = useContext(Context);
 
     const [sizeChecked, setSizeChecked] = useState({size1:true, size2:false});
     const [crustChecked, setCrustChecked] = useState({crust1:true, crust2:false});
@@ -19,59 +18,14 @@ const PizzaForm = (props) => {
         else setCrustChecked({crust1: false, crust2: true});
     }
 
-    const findItemInCart = (cart, item) => { 
-        let index = -1;
-        if(cart.length>0){
-            for(let i=0; i<cart.length; i++){
-                if(cart[i].name === item.name) index=i;
-            }
-        }
-        return index;
+    const itemPizza = {
+        name: props.name,
+        quantity:1,
+        price: props.price
     }
 
-    const addToCart = (e) => {
-        e.preventDefault();
-        let result = {
-            name: props.name,
-            quantity: 1,
-            price: props.price,
-        };
-
-        if(sizeChecked.size1) {
-            result.name += " (M)";
-            result.price = result.price.slice(0,3)*1000;
-        }
-        else{
-            result.name += " (L)"
-            result.price = result.price.slice(11,14)*1000;
-        }
-
-        if(crustChecked.crust1) result.name += " Thin Crust";
-        else result.name += " Thick Crust";
-        
-        swal({
-            title: "Add to cart successfully!",
-            icon: "success",
-            button: "OK!"
-        });
-        props.cancel();
-
-        const newCart = [...context.cart];
-        const index = findItemInCart(context.cart,result);
-
-        if(index===-1){
-            newCart.push(result);
-            setContext({cart:newCart});
-        }
-        else{
-            newCart[index].quantity += 1;
-            setContext({cart:newCart});
-        }
-  
-    };
-
     return(
-        <form className="form-pizza" onSubmit={addToCart}>
+        <form className="form-pizza" onSubmit={(e) => {addPizzaToCart(itemPizza,sizeChecked.size1,crustChecked.crust1); e.preventDefault(); props.cancel()}}>
             <h2 style={{color:'#0078ae', fontWeight:'bold', textAlign:'left'}}>CHOOSE PIZZA SIZE:</h2>
             <input id="medium" value="medium" name="size" type="radio" checked={sizeChecked.size1} onChange={onCheckSizeChange}/>
             <label htmlFor="medium">Medium</label><br/><br/>

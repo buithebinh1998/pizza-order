@@ -2,7 +2,6 @@ import React, {lazy, Suspense} from 'react';
 import './App.css';
 import { Route, Switch } from "react-router-dom";
 import LoadingPage from './UI/LoadingPage/LoadingPage';
-import {WrappedContext} from './context/Context/withContext'
 
 const Homepage = lazy(()=>import('./containers/Homepage/Homepage'));
 const ProductPage = lazy(()=>import('./containers/ProductPage/ProductPage'));
@@ -17,12 +16,9 @@ const AboutPage = lazy(()=>import('./containers/AboutPage/AboutPage'));
 const ContactPage = lazy(()=>import('./containers/ContactPage/ContactPage'));
 
 const App = () =>{
-
+  
   return (
-    <WrappedContext>
-
       <div className="App">
-
         <Suspense fallback={<LoadingPage/>}>
           <Switch>
             <Route path = '/' exact component={Homepage}/>
@@ -38,10 +34,7 @@ const App = () =>{
             <Route path = '/contact' component={ContactPage}/>
           </Switch>
         </Suspense>
-
       </div>
-
-    </WrappedContext>
   );
 } 
 

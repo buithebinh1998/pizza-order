@@ -117,3 +117,140 @@
 .form-pizza h2{
     font-size: 1.5rem;
 }
+
+@media (max-width: 992px) {
+    .modal{
+        width: 35rem;
+        height: 30rem;
+        padding: 1.5rem;
+    }
+    .pizza-info h1{
+        font-size: 1.8rem;
+    }
+    .pizza-info h2{
+        font-size: 1.3rem;
+    }
+    .pizza-info h3{
+        font-size: 1rem;
+    }
+    .form-pizza button{
+        margin-top: 0.8rem;
+        font-size: 1rem;
+        height: 2.8rem;
+        border-radius: 0.5rem;
+    }
+    .form-pizza label{
+        font-size: 1rem;
+    }
+    
+    .form-pizza h2{
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 768px) {
+    .modal{
+        height: 28rem;
+        width: 30rem;
+        padding: 0.8rem;
+    }
+    .pizza-info h1{
+        font-size: 1.5rem;
+    }
+    .pizza-info h2{
+        font-size: 1.2rem;
+    }
+    .pizza-info h3{
+        font-size: 1rem;
+    }
+
+    .form-pizza label{
+        font-size: 1rem;
+    }
+    
+    .form-pizza h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal{
+        width: 25rem;
+        height: 25rem;
+        padding: 0.5rem;
+    }
+    .pizza-info h1{
+        font-size: 1.2rem;
+    }
+    .pizza-info h2{
+        font-size: 1rem;
+    }
+    .pizza-info h3{
+        font-size: 0.8rem;
+    }
+    .form-pizza button{
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        height: 2.5rem;
+        border-radius: 0.2rem;
+    }
+    .form-pizza label{
+        font-size: 0.8rem;
+    }
+    .form-pizza h2{
+        font-size: 1rem;
+    }
+    .remodal-close {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .remodal-close::before {
+        font-size: 10px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 475px) {
+    .modal{
+        width: 20rem;
+        height: 20rem;
+        padding: 0.3rem;
+    }
+    .pizza-info h1{
+        font-size: 1rem;
+    }
+    .pizza-info h2{
+        font-size: 0.8rem;
+    }
+    .pizza-info h3{
+        font-size: 0.6rem;
+    }
+    .form-pizza button{
+        margin-top: 0.5rem;
+        font-size: 0.6rem;
+        height: 2rem;
+        border-radius: 0.2rem;
+    }
+    .form-pizza label{
+        font-size: 0.6rem;
+    }
+    .form-pizza h2{
+        font-size: 0.8rem;
+    }
+    .remodal-close {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .remodal-close::before {
+        font-size: 10px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 350px){
+    .modal{
+        width: 15rem;
+        height: 20rem;
+    }
+}
