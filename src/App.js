@@ -2,6 +2,7 @@ import React, {lazy, Suspense} from 'react';
 import './App.css';
 import { Route, Switch } from "react-router-dom";
 import LoadingPage from './UI/LoadingPage/LoadingPage';
+import {WrappedContext} from './context/Context/withContext'
 
 const Homepage = lazy(()=>import('./containers/Homepage/Homepage'));
 const ProductPage = lazy(()=>import('./containers/ProductPage/ProductPage'));
@@ -14,10 +15,12 @@ const SignInPage = lazy(()=>import('./containers/AuthenticationPage/SignInPage/S
 const PromotionPage = lazy(()=>import('./containers/PromotionPage/PromotionPage'));
 const AboutPage = lazy(()=>import('./containers/AboutPage/AboutPage'));
 const ContactPage = lazy(()=>import('./containers/ContactPage/ContactPage'));
+const CartPage = lazy(()=>import('./containers/CartPage/CartPage'));
 
 const App = () =>{
-  
   return (
+    <WrappedContext>
+
       <div className="App">
         <Suspense fallback={<LoadingPage/>}>
           <Switch>
@@ -32,9 +35,11 @@ const App = () =>{
             <Route path = '/promotion' component={PromotionPage}/>
             <Route path = '/about' component={AboutPage}/>
             <Route path = '/contact' component={ContactPage}/>
+            <Route path = '/cart' component={CartPage}/>
           </Switch>
         </Suspense>
       </div>
+    </WrappedContext>
   );
 } 
 

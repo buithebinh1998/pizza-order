@@ -27,8 +27,10 @@ const Header = () => {
                 <span className="header-span">/</span>
                 <div><NavLink to='/signin'>SIGN IN</NavLink></div>
                 <div className="cart-header">
+                    <NavLink to='/cart'>
                     <img src={imgCart} alt=""/>
                     <span className="cart-header-span">{cart.length}</span>
+                    </NavLink>
                 </div>
                 <div id={id}
                     onClick={menuTransformHandler}>

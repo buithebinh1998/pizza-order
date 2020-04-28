@@ -1,16 +1,18 @@
 import React, {useContext, useEffect} from 'react'
 import './Cart.css'
 import {Context} from '../../context/Context/Context'
-const Cart = () => {
-    const {cart, saveCartToLocalStorage, increaseQuantity, removeFromCart, decreaseQuantity, setNewTotalPrice} = useContext(Context);
-    let totalPrice = 0;
+import {withRouter} from 'react-router-dom'
 
+const Cart = (props) => {
+    const {cart, increaseQuantity, handleCheckOut1, removeFromCart, decreaseQuantity, setNewTotalPrice} = useContext(Context);
+    let totalPrice = 0;
+    
     const loadCart = cart.map((item, index) => {
         const showPrice = item.price*item.quantity;
         const showPriceString = new Intl.NumberFormat('de-DE').format(showPrice); 
-        totalPrice+=item.price*item.quantity;
+        totalPrice+=showPrice;
         setNewTotalPrice(totalPrice);
-        saveCartToLocalStorage(cart);
+        
         return(
             <div className="cart-info" key={index}>
                 <div className="cart-info-name">{item.name}</div>
@@ -41,9 +43,9 @@ const Cart = () => {
                     <div className="cart-price">{Intl.NumberFormat('de-DE').format(totalPrice)+"Đ"}</div>
                 </div>
             </div>
-            <button className="cart-checkout">CHECKOUT</button>
+            <button className="cart-checkout" onClick={()=>handleCheckOut1(props)}>CHECKOUT</button>
         </div>
     )
 }
 
-export default Cart;
+export default withRouter(Cart);

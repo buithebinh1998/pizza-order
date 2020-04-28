@@ -2,7 +2,12 @@ import React, {useState} from 'react'
 import {Context} from './Context'
 import swal from 'sweetalert'
 export const WrappedContext =  (props) => {  
-    const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")));
+
+    let localCart = JSON.parse(localStorage.getItem("cart"));
+    if (localCart===null) localCart = [];
+
+    const [cart, setCart] = useState(localCart);
+
     const [totalPrice, setTotalPrice] = useState(0);
     
     const findItemInCart = (item) => { 
@@ -33,13 +38,12 @@ export const WrappedContext =  (props) => {
 
     const removeFromCart = (removeItem) => {
         const newCart = [...cart];
-        const index = findItemInCart(removeItem);
-        newCart.splice(index, 1);
-        setCart(newCart);
+        setCart(newCart.filter(item => item.name !== removeItem.name));
         swal({
             title: "Remove from cart successfully!",
             icon: "success",
-            button: "OK!"
+            button: "OK!",
+            timer: 2000
         });
     }
 
@@ -55,7 +59,8 @@ export const WrappedContext =  (props) => {
         swal({
             title: "Add to cart successfully!",
             icon: "success",
-            button: "OK!"
+            button: "OK!",
+            timer: 2000
         });
 
         const newCart = [...cart];
@@ -93,7 +98,8 @@ export const WrappedContext =  (props) => {
         swal({
             title: "Add to cart successfully!",
             icon: "success",
-            button: "OK!"
+            button: "OK!",
+            timer: 2000
         });
         const newCart = [...cart];
         const index = findItemInCart(result);
@@ -112,12 +118,30 @@ export const WrappedContext =  (props) => {
         setTotalPrice(price);
     }
 
-    const saveCartToLocalStorage = (cart) => {
-        localStorage.setItem("cart", JSON.stringify(cart));
+    const handleCheckOut1 = (props) =>{
+        if(cart.length===0){
+            swal({
+                title: "There is no items in your cart!",
+                icon: "warning",
+                buttons: "Back!",
+                timer: 2000
+            })
+        }
+        else{
+            swal({
+                title: "Are you sure to checkout your cart?",
+                icon: "warning",
+                buttons: ["Cancel", "Yes, I'm sure!"],
+                dangerMode: true
+            }).then((isConfirm)=>{
+                let history = props.history;
+                if(isConfirm) history.push('/cart');
+            });
+        }
     }
 
     return(
-        <Context.Provider value={{cart, totalPrice, findItemInCart, increaseQuantity, decreaseQuantity, removeFromCart, addToCart, addPizzaToCart, setNewTotalPrice, saveCartToLocalStorage}}>
+        <Context.Provider value={{cart, totalPrice, findItemInCart, increaseQuantity, decreaseQuantity, removeFromCart, addToCart, addPizzaToCart, setNewTotalPrice, handleCheckOut1}}>
             {props.children}
         </Context.Provider>
     );

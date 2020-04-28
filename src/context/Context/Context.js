@@ -11,4 +11,6 @@ export const Context = createContext({
     addPizzaToCart:() => {},
     setNewTotalPrice: () => {},
     saveCartToLocalStorage: () => {},
+    handleCheckOut1: () => {},
+    handleCheckOut2: () => {}
 });
