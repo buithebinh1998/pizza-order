@@ -35,7 +35,7 @@ const PizzaForm = (props) => {
 
             <h2 style={{color:'#0078ae', fontWeight:'bold'}}>CHOOSE PIZZA CRUST:</h2>
             <input id="thin" value="thin" name="crust" type="radio" checked={crustChecked.crust1} onChange={onCheckCrustChange}/>
-            <label htmlFor="thin">Think crust</label><br/><br/>
+            <label htmlFor="thin">Thin crust</label><br/><br/>
 
             <input id="thick" value="thick" name="crust" type="radio" checked={crustChecked.crust2} onChange={onCheckCrustChange}/>
             <label htmlFor="thick">Thick crust</label><br/><br/>

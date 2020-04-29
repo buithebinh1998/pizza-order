@@ -6,7 +6,7 @@ import './CartPage.css'
 import background from '../../assets/img/bg.png'
 const CartPage = () => {
     return(
-        <div style={{backgroundImage:`url(${background})`}}>
+        <div className="cart-page" style={{backgroundImage:`url(${background})`}}>
             <Header/>
             <div id="spacer"></div>
             <BigCart/>

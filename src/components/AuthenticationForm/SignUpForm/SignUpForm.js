@@ -80,13 +80,12 @@ const FormikSignUpForm = withFormik({
 
     handleSubmit: (values, {resetForm, props, setErrors ,setSubmitting}) => {
         let errorCode="";
-
+        let fullName = values.lastName+" "+values.firstName;
         callApi('https://5ea10ddbeea7760016a923e2.mockapi.io/api/v1/users', 'POST',{
             email: values.email,
             password: values.password,
             phone: values.phone,
-            firstName: values.firstName,
-            lastName: values.lastName
+            fullName: fullName,
         }).then(response =>{
             errorCode = response.data.errorCode;
         });

@@ -2,11 +2,20 @@ import React, {useState} from 'react'
 import {Context} from './Context'
 import swal from 'sweetalert'
 export const WrappedContext =  (props) => {  
-
     let localCart = JSON.parse(localStorage.getItem("cart"));
     if (localCart===null) localCart = [];
 
+    let localUser = JSON.parse(localStorage.getItem("user"));
+    if (localUser===null) localUser = [];
+
+    let localIsAuthenticated = JSON.parse(localStorage.getItem("isAuthenticated"));
+
     const [cart, setCart] = useState(localCart);
+
+    const [user, setUser] = useState(localUser);
+
+
+    const [isAuthenticated, setIsAuthenticated] = useState(localIsAuthenticated);
 
     const [totalPrice, setTotalPrice] = useState(0);
     
@@ -140,8 +149,16 @@ export const WrappedContext =  (props) => {
         }
     }
 
+    const signIn = (user) => {
+        setUser(user);
+    }
+
+    const checkAuthenticated = (isAuthenticated) => {
+        setIsAuthenticated(isAuthenticated);
+    }
+
     return(
-        <Context.Provider value={{cart, totalPrice, findItemInCart, increaseQuantity, decreaseQuantity, removeFromCart, addToCart, addPizzaToCart, setNewTotalPrice, handleCheckOut1}}>
+        <Context.Provider value={{cart, totalPrice, user, isAuthenticated, findItemInCart, increaseQuantity, decreaseQuantity, removeFromCart, addToCart, addPizzaToCart, setNewTotalPrice, handleCheckOut1, signIn, checkAuthenticated}}>
             {props.children}
         </Context.Provider>
     );

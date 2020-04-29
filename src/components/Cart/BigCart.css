@@ -1,0 +1,128 @@
+.bigcart{
+    color: red;
+    height: 30rem;
+    margin-bottom: 1rem;
+    width: 90%;
+    margin: auto;
+    background-color: white;
+}
+
+.bigcart-title{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.bigcart-total-wrap{
+    padding: 0 0.5rem;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.bigcart-price{
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.bigcart-button-wrapper{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bigcart-button{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #820014,#e31837);
+    border: 1px  black solid;
+    cursor: pointer;
+    width: 12rem;
+    height: 3rem;
+    border-radius: 0.2rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bigcart-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    color: #343434;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+.bigcart-info-name{
+    font-weight: bold;
+    text-align: left;
+    padding-left: 0.2rem;
+    flex-basis: 50%;
+}
+
+.bigcart-quantity{
+    display: flex;
+    flex-basis: 20%;
+}
+
+.bigcart-info-quantity{
+    margin: 0 0.2rem;
+}
+
+.bigcart-info-price{
+    margin-left: auto;
+}
+
+.bigcart-quantity-button{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+}
+
+.bigcart-load{
+    height: 20rem;
+    overflow-y: scroll;
+}
+
+.bigcart-remove-button{
+    font-size: 1rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .bigcart-total-wrap{
+    }
+    
+    .bigcart-button{
+    font-size: 1rem;
+    width: 12rem;
+        height: 3rem;
+    }
+    .bigcart-info{
+    font-size: 1.2rem;
+    }
+    .bigcart-quantity-button{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .bigcart-remove-button{
+        font-size: 1rem;
+        height: 1.5rem;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 320px) {
+    
+}
