@@ -60,6 +60,7 @@ const FormikSignUpForm = withFormik({
             .required('Email is required!'),
         password: Yup.string()
             .min(8, "Password must be 8 characters or longer!")
+            .max(50, "Password is too long!")
             .required("Password is required!"),
         confirmPassword: Yup.string().oneOf(
             [Yup.ref("password"), null],

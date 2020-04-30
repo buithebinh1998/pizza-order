@@ -99,6 +99,10 @@ a:visited{
     left: 65%;
 }
 
+#cart-header-link:hover {
+    color: white;
+}
+
 @media (max-width: 992px) {
     .header div {
         font-size: 1.4rem;

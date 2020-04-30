@@ -42,6 +42,10 @@
     color: #f7284d;
 }
 
+.item-navlink:hover{
+    color: white;
+}
+
 .item button{
     position: absolute;
     top: 85%;

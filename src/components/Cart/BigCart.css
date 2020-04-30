@@ -76,7 +76,8 @@
 }
 
 .bigcart-info-price{
-    margin-left: auto;
+    text-align: right;
+    flex-basis: 20%;
 }
 
 .bigcart-quantity-button{
@@ -90,6 +91,10 @@
     overflow-y: scroll;
 }
 
+.bigcart-remove-wrapper{
+    flex-basis: 10%;
+}
+
 .bigcart-remove-button{
     font-size: 1rem;
     height: 1.5rem;
@@ -98,31 +103,119 @@
 
 @media (max-width: 768px) {
     .bigcart-total-wrap{
+        font-size: 1rem;
     }
-    
     .bigcart-button{
-    font-size: 1rem;
-    width: 12rem;
-        height: 3rem;
+        font-size: 0.8rem;
+        width: 9rem;
+        height: 2.5rem;
     }
     .bigcart-info{
-    font-size: 1.2rem;
+        font-size: 1rem;
     }
     .bigcart-quantity-button{
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
     }
     .bigcart-remove-button{
-        font-size: 1rem;
-        height: 1.5rem;
+        font-size: 0.8rem;
+        height: 1.2rem;
     }
 }
 
 
 @media (max-width: 576px) {
+    .bigcart-title{
+        margin-top: 0.8rem;
+        font-size: 1rem;
+    }
+    .bigcart-total-wrap{
+        font-size: 0.8rem;
+    }
+    .bigcart-button{
+        font-size: 0.6rem;
+        width: 7rem;
+        height: 2rem;
+    }
+    .bigcart-info{
+        font-size: 0.8rem;
+    }
+    .bigcart-quantity-button{
+        width: 1rem;
+        height: 1rem;
+    }
+    .bigcart-remove-button{
+        font-size: 0.6rem;
+        height: 1rem;
+    }
+    .bigcart{
+        height: 25rem;
+        }
+    .bigcart-load{
+        height: 15rem;
+    }
+}
 
+@media (max-width: 414px) {
+    .bigcart-title{
+        margin-top: 0.6rem;
+        font-size: 0.8rem;
+    }
+    .bigcart-total-wrap{
+        font-size: 0.8rem;
+        padding: 1rem 0.3rem;
+    }
+
+    .bigcart-button{
+        font-size: 0.5rem;
+        width: 5rem;
+        height: 1.5rem;
+    }
+
+    .bigcart-info{
+        font-size: 0.6rem;
+    }
+    .bigcart-quantity-button{
+        font-size: 0.5rem;
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    .bigcart-remove-button{
+        font-size: 0.6rem;
+        height: 1rem;
+    }
 }
 
 @media (max-width: 320px) {
-    
+    .bigcart-total-wrap{
+        font-size: 0.6rem;
+        padding: 1rem 0.3rem;
+    }
+
+    .bigcart-info{
+        font-size: 0.5rem;
+    }
+}
+
+.swal-title{
+    color: #343434;
+}
+
+.swal-button--cancel{
+    background-color: #e31837;
+    color: white;
+}
+
+.swal-button--cancel:hover{
+    color: black;
+}
+
+.swal-button--confirm{
+    background-color: #04354c;
+    color: white;
+}
+
+.swal-button--confirm:hover{
+    background-color: #04354c;
+    color: white;
 }

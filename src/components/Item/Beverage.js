@@ -10,8 +10,8 @@ const DataBeverage = () => {
     const {addToCart} = useContext(Context);
 
     useEffect( () => {
-        callApi('https://5e9e6c40fb467500166c3f72.mockapi.io/api/v1/beverages','GET', null).then(response =>{
-            setDataBeverage(response.data);
+        callApi('http://ec2-52-221-224-159.ap-southeast-1.compute.amazonaws.com:8080/pycozza/product/4','GET', null).then(response =>{
+            setDataBeverage(response.data.products);
             setLoading(true);
         });
     })
@@ -23,7 +23,7 @@ const DataBeverage = () => {
                     <img src={`https://drive.google.com/uc?export=view&id=${item.imgLink}`} alt=""/>
                 </div>
                 <div className="item-name">{item.name}</div>
-                <div className="item-price">{item.price}</div>
+                <div className="item-price">{item.price+".000Đ"}</div>
                 <button onClick={(e) => {addToCart(item); e.preventDefault();}}>
                     ADD TO CART
                 </button>

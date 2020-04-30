@@ -5,7 +5,6 @@ export const Context = createContext({
     totalPrice: 0,
     user: [],
     isAuthenticated: false,
-    findItemInCart: () => {},
     increaseQuantity: () => {},
     decreaseQuantity: () => {},
     removeFromCart: () => {},

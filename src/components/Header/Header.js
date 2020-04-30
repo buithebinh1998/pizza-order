@@ -64,7 +64,7 @@ const Header = () => {
         </NavLink>
         {AuthenticationHeader}
         <div className="cart-header">
-          <NavLink to="/cart">
+          <NavLink to="/cart" id="cart-header-link">
             <img src={imgCart} alt="" />
             <span className="cart-header-span">{cart.length}</span>
           </NavLink>

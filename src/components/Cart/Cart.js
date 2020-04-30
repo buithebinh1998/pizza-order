@@ -8,7 +8,7 @@ const Cart = (props) => {
     let totalPrice = 0;
     
     const loadCart = cart.map((item, index) => {
-        const showPrice = item.price*item.quantity;
+        const showPrice = item.price*1000*item.quantity;
         const showPriceString = new Intl.NumberFormat('de-DE').format(showPrice); 
         totalPrice+=showPrice;
         setNewTotalPrice(totalPrice);

@@ -16,8 +16,8 @@
 .item-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     flex-basis: 80%;
-    justify-content: space-between;
 }
 
 .cart-container{

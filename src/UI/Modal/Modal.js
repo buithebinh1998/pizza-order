@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react'
 import './Modal.css'
 import {Context} from '../../context/Context/Context'
+import { NavLink } from 'react-router-dom';
 
 const PizzaForm = (props) => {
     const {addPizzaToCart} = useContext(Context);
@@ -20,8 +21,9 @@ const PizzaForm = (props) => {
 
     const itemPizza = {
         name: props.name,
-        quantity:1,
-        price: props.price
+        quantity: 1,
+        price: props.price,
+        maxPrice: props.maxPrice
     }
 
     return(
@@ -40,7 +42,7 @@ const PizzaForm = (props) => {
             <input id="thick" value="thick" name="crust" type="radio" checked={crustChecked.crust2} onChange={onCheckCrustChange}/>
             <label htmlFor="thick">Thick crust</label><br/><br/>
         
-            <button>ADD TO CART</button>
+            <button type="submit">ADD TO CART</button>
         </form>
     )
 }
@@ -61,18 +63,18 @@ const ModalPizza = (props) => {
           }}
         >
             <div className="pizza-details">
-                <button className="remodal-close" onClick={props.clicked}/>
+                <NavLink to='/pizza'><button className="remodal-close" onClick={props.clicked}/></NavLink>
                 <div className="pizza-info">
                     <h1>{props.pizza.name}</h1>
                     <h3>{props.pizza.desc}</h3>
                     <div>
                         <img className="pizza-img" src={`https://drive.google.com/uc?export=view&id=${props.pizza.imgLink}`} alt=""></img>
                     </div>
-                    <h2 style={{textAlign:'center'}}>{props.pizza.price}</h2>
+                    <h2 style={{textAlign:'center'}}>{props.pizza.price+".000Đ - "}{props.pizza.maxPrice+".000Đ"}</h2>
                 </div>
 
                 <div className="pizza-customize">
-                    <PizzaForm name={props.pizza.name} price={props.pizza.price} cancel={props.clicked}/>
+                    <PizzaForm id={props.pizza.id} name={props.pizza.name} price={props.pizza.price} maxPrice={props.pizza.maxPrice} cancel={props.clicked}/>
                 </div>
                 
             </div>
