@@ -182,6 +182,11 @@ export const WrappedContext = (props) => {
     setIsAuthenticated(isAuthenticated);
   };
 
+  const clearCart = () => {
+    setCart([]);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
   return (
     <Context.Provider
       value={{
@@ -199,6 +204,7 @@ export const WrappedContext = (props) => {
         handleCheckOut2,
         signIn,
         checkAuthenticated,
+        clearCart
       }}
     >
       {props.children}

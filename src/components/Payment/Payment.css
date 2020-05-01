@@ -1,0 +1,46 @@
+.payment-form{
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-select{
+    width: 50%;
+}
+
+.payment-input-field{
+    width: 50%;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+
+.payment-form button{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #820014,#e31837);
+    border: 1px #04354c solid;
+    cursor: pointer;
+    width: 12rem;
+    height: 3rem;
+    border-radius: 0.2rem;
+    margin: 2rem auto;
+    align-self: center;
+}
+
+.payment-form span{
+    margin-left: 0.5rem;
+    font-weight: bold;
+    color: #e31837;
+}
+
+.payment-form button:disabled{
+    filter: blur(1px);
+    opacity:0.6;
+}
+
+.payment-form button:disabled:hover {
+    cursor: not-allowed;
+}

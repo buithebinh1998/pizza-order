@@ -1,107 +1,137 @@
-export const TPHCM = [
+export const HoChiMinh = [
     {
-        district: 'District 1',
+        value: 'District 1',
+        label: 'District 1',
     },
     {
-        district: 'District 2',
+        value: 'District 2',
+        label: 'District 2',
     },
     {
-        district: 'District 3',
+        value: 'District 3',
+        label: 'District 3',
     },
     {
-        district: 'District 4',
+        value: 'District 4',
+        label: 'District 4',
     },
     {
-        district: 'District 5',
+        value: 'District 5',
+        label: 'District 5',
     },
     {
-        district: 'District 6',
+        value: 'District 6',
+        label: 'District 6',
     },
     {
-        district: 'District 7',
+        value: 'District 7',
+        label: 'District 7',
     },
     {
-        district: 'District 8',
+        value: 'District 8',
+        label: 'District 8',
     },
     {
-        district: 'District 9',
+        value: 'District 9',
+        label: 'District 9',
     },
     {
-        district: 'District 8',
+        value: 'District 10',
+        label: 'District 10',
     },
     {
-        district: 'District 10',
+        value: 'District 11',
+        label: 'District 11',
     },
     {
-        district: 'District 11',
+        value: 'District 12',
+        label: 'District 12',
     },
     {
-        district: 'District 12',
+        value: 'Tan Binh District',
+        label: 'Tan Binh District',
     },
     {
-        district: 'Tan Binh District',
+        value: 'Tan Phu District',
+        label: 'Tan Phu District',
     },
     {
-        district: 'Tan Phu District',
+        value: 'Binh Tan District',
+        label: 'Binh Tan District',
     },
     {
-        district: 'Binh Tan District',
+        value: 'Thu Duc District',
+        label: 'Thu Duc District',
     },
     {
-        district: 'Thu Duc District',
+        value: 'Go Vap District',
+        label: 'Go Vap District',
     },
     {
-        district: 'Go Vap District',
+        value: 'Phu Nhuan District',
+        label: 'Phu Nhuan District',
     },
     {
-        district: 'Phu Nhuan District',
+        value: 'Binh Thanh District',
+        label: 'Binh Thanh District',
     },
     {
-        district: 'Binh Thanh District',
+        value: 'Nha Be District',
+        label: 'Nha Be District',
     },
     {
-        district: 'Nha Be District',
+        value: 'Cu Chi District',
+        label: 'Cu Chi District',
     },
     {
-        district: 'Cu Chi District',
+        value: 'Can Gio District',
+        label: 'Can Gio District',
     },
     {
-        district: 'Can Gio District',
+        value: 'Binh Chanh District',
+        label: 'Binh Chanh District',
     },
     {
-        district: 'Binh Chanh District',
-    },
-    {
-        district: 'Hoc Mon District',
+        value: 'Hoc Mon District',
+        label: 'Hoc Mon District',
     }
 ]
 
 export const HaNoi = [
     {
-        district: 'Ba Dinh District',
+        value: 'Ba Dinh District',
+        label: 'Ba Dinh District',
     },
     {
-        district: 'Hoan Kiem District',
+        value: 'Hoan Kiem District',
+        label: 'Hoan Kiem District',
     },
     {
-        district: 'Hai Ba Trung District',
+        value: 'Hai Ba Trung District',
+        label: 'Hai Ba Trung District',
     },
     {
-        district: 'Dong Da District',
+        value: 'Dong Da District',
+        label: 'Dong Da District',
     },
     {
-        district: 'Cau Giay District',
+        value: 'Cau Giay District',
+        label: 'Cau Giay District',
     },
     {
-        district: 'Thanh Xuan District',
+        value: 'Thanh Xuan District',
+        label: 'Thanh Xuan District',
     },
     {
-        district: 'Hoang Mai District',
+        value: 'Hoang Mai District',
+        label: 'Hoang Mai District',
     },
     {
-        district: 'Long Bien District',
+        value: 'Long Bien District',
+        label: 'Long Bien District',
     },
     {
-        district: 'Tay Ho District',
+        value: 'Tay Ho District',
+        label: 'Tay Ho District',
     }
 ]

@@ -9,8 +9,12 @@ const DataDessert = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect( () => {
-        callApi('http://ec2-52-221-224-159.ap-southeast-1.compute.amazonaws.com:8080/pycozza/product/3','GET', null).then(response =>{
-            setDataDessert(response.data.products);
+        // callApi('https://ec2-52-221-224-159.ap-southeast-1.compute.amazonaws.com:8080/pycozza/product/3','GET', null).then(response =>{
+        //     setDataDessert(response.data.products);
+        //     setLoading(true);
+        // });
+        callApi('https://5e9e6c40fb467500166c3f72.mockapi.io/api/v1/desserts','GET', null).then(response =>{
+            setDataDessert(response.data);
             setLoading(true);
         });
     })

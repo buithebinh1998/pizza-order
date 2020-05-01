@@ -9,8 +9,13 @@ const DataSideDish = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect( () => {
-        callApi('http://ec2-52-221-224-159.ap-southeast-1.compute.amazonaws.com:8080/pycozza/product/2','GET', null).then(response =>{
-            setDataSideDish(response.data.products);
+        // callApi('https://ec2-52-221-224-159.ap-southeast-1.compute.amazonaws.com:8080/pycozza/product/2','GET', null).then(response =>{
+        //     setDataSideDish(response.data.products);
+        //     setLoading(true);
+        // });
+
+        callApi('https://5e9e6c40fb467500166c3f72.mockapi.io/api/v1/sidedishes','GET', null).then(response =>{
+            setDataSideDish(response.data);
             setLoading(true);
         });
     })

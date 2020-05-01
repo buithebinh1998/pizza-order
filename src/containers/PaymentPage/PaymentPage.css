@@ -1,0 +1,20 @@
+.payment-page{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.payment-container{
+    color:#033a56;
+    display: flex;
+    flex-basis: 80%;
+    font-size: 1.2rem;
+}
+
+.cart-container{
+    flex-basis: 20%;
+    padding-right: 1rem;
+}
+
+.payment-title{
+    color: #033a56;
+}
