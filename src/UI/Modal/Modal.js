@@ -1,9 +1,11 @@
 import React, {useState, useContext} from 'react'
 import './Modal.css'
 import {Context} from '../../context/Context/Context'
-import { NavLink } from 'react-router-dom';
+import { NavLink , withRouter} from 'react-router-dom';
+
 
 const PizzaForm = (props) => {
+    
     const {addPizzaToCart} = useContext(Context);
 
     const [sizeChecked, setSizeChecked] = useState({size1:true, size2:false});
@@ -26,8 +28,15 @@ const PizzaForm = (props) => {
         maxPrice: props.maxPrice
     }
 
+    const submitPizza = (e) => {
+        addPizzaToCart(itemPizza,sizeChecked.size1,crustChecked.crust1); 
+        e.preventDefault(); 
+        props.cancel(); 
+        props.history.push('/pizza');
+    }
+
     return(
-        <form className="form-pizza" onSubmit={(e) => {addPizzaToCart(itemPizza,sizeChecked.size1,crustChecked.crust1); e.preventDefault(); props.cancel()}}>
+        <form className="form-pizza" onSubmit={submitPizza}>
             <h2 style={{color:'#0078ae', fontWeight:'bold', textAlign:'left'}}>CHOOSE PIZZA SIZE:</h2>
             <input id="medium" value="medium" name="size" type="radio" checked={sizeChecked.size1} onChange={onCheckSizeChange}/>
             <label htmlFor="medium">Medium</label><br/><br/>
@@ -48,6 +57,7 @@ const PizzaForm = (props) => {
 }
 
 const ModalPizza = (props) => {
+    let history = props.history;
     return(
         <>
         <div className="backdrop" style={{
@@ -74,7 +84,7 @@ const ModalPizza = (props) => {
                 </div>
 
                 <div className="pizza-customize">
-                    <PizzaForm id={props.pizza.id} name={props.pizza.name} price={props.pizza.price} maxPrice={props.pizza.maxPrice} cancel={props.clicked}/>
+                    <PizzaForm id={props.pizza.id} history={history} name={props.pizza.name} price={props.pizza.price} maxPrice={props.pizza.maxPrice} cancel={props.clicked}/>
                 </div>
                 
             </div>
@@ -83,4 +93,4 @@ const ModalPizza = (props) => {
     )
 }  
 
-export default ModalPizza;
+export default withRouter(ModalPizza);

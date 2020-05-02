@@ -15,7 +15,7 @@ const PaymentPage = () => {
                 <div className="payment-container">
                     <Payment/>
                 </div>
-                <div className="cart-container">
+                <div className="paymentcart-container">
                     <CartPayment/>
                 </div>
             </div>

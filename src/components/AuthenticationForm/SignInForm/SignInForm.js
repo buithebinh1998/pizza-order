@@ -26,21 +26,21 @@ const SignInForm = (props) => {
         initialValues={{ email: "", password: "" }}
         validationSchema={signInSchema}
         onSubmit={(values, { setSubmitting }) => {
-          let errors = "";
           let dataUser = [];
           callApi(
-            "https://5ea10ddbeea7760016a923e2.mockapi.io/api/v1/signin-authentication",
+            "https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/user/signin",
             "POST",
             {
               email: values.email,
               password: values.password,
             }
           ).then((response) => {
-            errors = response.data.errorCode;
-            dataUser = response.data.data;
+            dataUser = response.data;
+            console.log(response);
+            console.log(dataUser);
           });
           setTimeout(() => {
-            if (errors === "404") {
+            if (dataUser=== "") {
               swal({
                 title: "SIGN IN FAILED",
                 text: "You have typed wrong email or password!",

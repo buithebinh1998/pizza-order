@@ -80,19 +80,17 @@ const FormikSignUpForm = withFormik({
     }),
 
     handleSubmit: (values, {resetForm, props, setErrors ,setSubmitting}) => {
-        let errorCode="";
+        let status=0;
         let fullName = values.lastName+" "+values.firstName;
-        callApi('https://5ea10ddbeea7760016a923e2.mockapi.io/api/v1/users', 'POST',{
-            email: values.email,
-            password: values.password,
-            phone: values.phone,
-            fullName: fullName,
+        callApi('https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/user/signup', 'POST',{
+            email: values.email, password:values.password, phone: values.phone, fullName: fullName
         }).then(response =>{
-            errorCode = response.data.errorCode;
+            console.log(response);
+            status = response.data.status;
         });
 
         setTimeout(() => {
-            if(errorCode === "404"){
+            if(status === 409){
                 swal({
                     title: "SIGN UP FAILED",
                     text: "Please check your information!",
