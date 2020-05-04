@@ -182,18 +182,17 @@ export const WrappedContext = (props) => {
   const clearCart = () => {
     setCart([]);
     localStorage.setItem("cart", JSON.stringify(cart));
-  }
+  };
 
   const removeAllFromCart = () => {
-    if(cart.length===0){
+    if (cart.length === 0) {
       swal({
         title: "No items to be removed!",
         icon: "warning",
         buttons: "Back!",
         timer: 3000,
       });
-    }
-    else {
+    } else {
       clearCart();
       swal({
         title: "Remove all from cart successfully!",
@@ -202,7 +201,7 @@ export const WrappedContext = (props) => {
         timer: 3000,
       });
     }
-  }
+  };
 
   const checkVoucher = () => {
     swal({
@@ -212,8 +211,7 @@ export const WrappedContext = (props) => {
       button: "Back!",
       timer: 3000,
     });
-  }
-
+  };
 
   return (
     <Context.Provider
@@ -234,7 +232,7 @@ export const WrappedContext = (props) => {
         checkAuthenticated,
         clearCart,
         removeAllFromCart,
-        checkVoucher
+        checkVoucher,
       }}
     >
       {props.children}
