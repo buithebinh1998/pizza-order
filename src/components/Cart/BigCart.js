@@ -4,7 +4,7 @@ import {Context} from '../../context/Context/Context'
 import {withRouter} from 'react-router-dom'
 
 const BigCart = (props) => {
-    const {cart, increaseQuantity, removeFromCart, decreaseQuantity, setNewTotalPrice, handleCheckOut2} = useContext(Context);
+    const {cart, increaseQuantity, removeFromCart, decreaseQuantity, setNewTotalPrice, handleCheckOut2, removeAllFromCart} = useContext(Context);
     let totalPrice = 0;
     
 
@@ -37,7 +37,11 @@ const BigCart = (props) => {
     return(
         <div className="bigcart">
             <div>
-            <div className="bigcart-title">REVIEW CART</div>
+                <div className="bigcart-header">
+                    <div></div>
+                    <div className="bigcart-title">REVIEW CART</div>
+                    <button className="bigcart-remove-button" onClick={removeAllFromCart}>Remove all</button>
+                </div>
                 <hr/>
                 <div className="bigcart-load">
                     {loadCart}

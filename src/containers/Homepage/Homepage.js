@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Header from '../../components/Header/Header'
 import Carosel from '../../components/Carosel/Carosel'
 import Footer from '../../components/Footer/Footer'
@@ -7,8 +7,10 @@ import category from '../../assets/img/category.jpg'
 import promotion from '../../assets/img/promotion.jpg'
 import voucher from '../../assets/img/voucher.jpg'
 import {NavLink} from 'react-router-dom'
+import { Context } from "../../context/Context/Context";
 
 const Homepage = () => {
+    const { checkVoucher } = useContext(Context);
     return(
         <div>
             <Header/>
@@ -33,7 +35,7 @@ const Homepage = () => {
                     <img className="img-blur" src={voucher} alt=""/>
                     <div>VOUCHER</div>
                     <input type="text" placeholder="Enter your voucher code"/>
-                    <button>CONFIRM</button>
+                    <button onClick={checkVoucher}>CONFIRM</button>
                 </div>
             </div>
             <Footer/>

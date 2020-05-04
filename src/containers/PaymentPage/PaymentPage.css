@@ -20,4 +20,38 @@
 
 .payment-title{
     color: #033a56;
+    font-size: 2rem;
+}
+
+
+@media (max-width: 768px){
+    .payment-page{
+        flex-direction: column-reverse;
+    }
+
+    .payment-title{
+        font-size: 1.5rem;
+    }
+
+    .payment-container{
+        color:#033a56;
+        display: flex;
+        font-size: 1.2rem;
+        flex-basis: 100%;
+    }
+
+    .paymentcart-container{
+        flex-basis:100%;
+        padding-right: 0rem;
+    }
+}
+
+@media (max-width: 414px){
+    .payment-title{
+        font-size: 1.2rem;
+    }
+
+    .payment-container{
+        font-size: 1rem;
+    }
 }

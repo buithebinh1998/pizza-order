@@ -2,11 +2,23 @@ import React, {useContext, useEffect} from 'react'
 import './CartPayment.css'
 import {Context} from '../../context/Context/Context'
 import {withRouter} from 'react-router-dom'
+import swal from 'sweetalert'
 const CartPayment = (props) => {
     const {cart, setNewTotalPrice, removeFromCart} = useContext(Context);
     let totalPrice = 0;
     let history = props.history;
-    if(cart.length===0) history.push('/category');
+    const checkCartPayment = () => {
+        if(cart.length===1) {
+            swal({
+                title: "Your cart is empty!",
+                text: 'Redirecting to Category page!',
+                icon: 'warning',
+                timer: 3000
+            })
+            setTimeout(() => {history.push('/category')}, 3000);
+        }
+    }
+    
     const loadCart = cart.map((item, index) => {
         const showPrice = item.price*1000*item.quantity;
         const showPriceString = new Intl.NumberFormat('de-DE').format(showPrice); 
@@ -22,7 +34,7 @@ const CartPayment = (props) => {
                     
                     <div className="paycart-info-price">{showPriceString+"Đ"}</div>
                 </div>
-                <button className="paycart-remove-button" onClick={() => removeFromCart(item)}>Remove</button>
+                <button className="paycart-remove-button" onClick={() => {removeFromCart(item); checkCartPayment();}}>Remove</button>
             </div>
         )
     });

@@ -36,8 +36,6 @@ const SignInForm = (props) => {
             }
           ).then((response) => {
             dataUser = response.data;
-            console.log(response);
-            console.log(dataUser);
           });
           setTimeout(() => {
             if (dataUser=== "") {
@@ -45,7 +43,7 @@ const SignInForm = (props) => {
                 title: "SIGN IN FAILED",
                 text: "You have typed wrong email or password!",
                 icon: "error",
-                timer: 2000,
+                timer: 3000,
               });
             } else {
               let history = props.history;
@@ -53,7 +51,7 @@ const SignInForm = (props) => {
                 title: "SIGN IN SUCCESFULLY!",
                 icon: "success",
                 button: "Done!",
-                timer: 2000,
+                timer: 3000,
               });
               checkAuthenticated(true);
               signIn(dataUser);

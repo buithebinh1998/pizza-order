@@ -34,7 +34,7 @@ const Header = () => {
             swal({
                 title: "LOG OUT SUCCESSFULLY!",
                 icon: "success",
-                timer: 2000
+                timer: 3000
             });
             localStorage.setItem("user", JSON.stringify([]));
             localStorage.setItem("isAuthenticated", JSON.stringify(false));

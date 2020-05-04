@@ -117,7 +117,43 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+    .paycart{
+        height: 20rem;
+    }
+    
+    .paycart-load{
+        height: 15rem;
+    }
+    
+    .pay-total-wrap{
+        bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 414px){
+    .paycart-title{
+        font-size: 0.8rem; 
+    }
+
+    .paycart{
+        height: 18rem;
+    }
+    
+    .paycart-load{
+        height: 12rem;
+    }
+    
+    .pay-total-wrap{
+        font-size: 0.8rem;
+    }
+    .paycart-info{
+        font-size: 0.8rem;
+        margin-right: 0.2rem;
+    }
+    .paycart-remove-button{
+        font-size: 0.6rem;
+    }
 }
 
 .swal-title {

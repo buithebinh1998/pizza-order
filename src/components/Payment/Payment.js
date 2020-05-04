@@ -75,7 +75,7 @@ const Payment = (props) => {
                 onSubmit={(values, { setSubmitting }) => {
                     let data = {cart: [], totalPrice: 0, orderUserInfomation: []};
                     data.cart = cart;
-                    data.totalPrice = totalPrice;
+                    data.totalPrice = totalPrice/1000;
                     data.orderUserInfomation.fullName = user.fullName;
                     data.orderUserInfomation.phone = user.phone;
                     data.orderUserInfomation.address = values.street + ", " + selectedDistrict.label + ", " + selectedProvince.label;
@@ -91,7 +91,7 @@ const Payment = (props) => {
                             title: 'Error location!',
                             text:'You have not choose province or district!',
                             icon: 'error',
-                            timer: 2000
+                            timer: 3000
                         });
                         setSubmitting(false);
                     }
@@ -100,7 +100,7 @@ const Payment = (props) => {
                             title: 'Payment via ATM under maintenance!',
                             text:'Please select Cash-On-Delivery, sorry for this inconvenience!',
                             icon: 'error',
-                            timer: 2000,
+                            timer: 3000,
                         });
                         setSubmitting(false);
                     }
@@ -111,12 +111,12 @@ const Payment = (props) => {
                                 title: 'Your order is confirmed!',
                                 text:'Please wait for at least 20 minutes until delivery.',
                                 icon: 'success',
-                                timer: 2000
+                                timer: 5000
                             });
                             setSubmitting(false);
                             clearCart();
                             history.push('/');
-                        }, 2000);
+                        }, 5000);
                     }
                 }}
             >
@@ -140,7 +140,7 @@ const Payment = (props) => {
                         </div>
 
                         <div className="payment-example">
-                            Fill in the address number together with street you want us to deliver to.
+                            Fill in the address number together with street you want us to deliver to.<br/>
                             Example: 250 Cong Hoa
                         </div>
                     
@@ -169,12 +169,12 @@ const Payment = (props) => {
                 initialValues={{street: "", fullName:"", phone: "", note: ""}}
                 validationSchema={unfilledPaymentSchema}
                 onSubmit={(values, { setSubmitting }) => {
-                    let data = {cart: [], totalPrice: 0, orderUserInfomation: []};
+                    let data = {cart: [], totalPrice: 0, orderUserInformation: []};
                     data.cart = cart;
-                    data.totalPrice = totalPrice;
-                    data.orderUserInfomation.fullName = values.fullName;
-                    data.orderUserInfomation.phone = values.phone;
-                    data.orderUserInfomation.address = values.street + ", " + selectedDistrict.label + ", " + selectedProvince.label;
+                    data.totalPrice = totalPrice/1000;
+                    data.orderUserInformation.fullName = values.fullName;
+                    data.orderUserInformation.phone = values.phone;
+                    data.orderUserInformation.address = values.street + ", " + selectedDistrict.label + ", " + selectedProvince.label;
                     data.note = values.note;
                     data.email = null;
                     data.orderTime = getOrderTime();
@@ -207,7 +207,7 @@ const Payment = (props) => {
                                 title: 'Your order is confirmed!',
                                 text:'Please wait for at least 20 minutes until delivery.',
                                 icon: 'success',
-                                timer: 2000
+                                timer: 5000
                             });
                             setSubmitting(false);
                             clearCart();
