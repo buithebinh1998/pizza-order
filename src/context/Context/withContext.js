@@ -203,6 +203,7 @@ export const WrappedContext = (props) => {
     }
   };
 
+
   const checkVoucher = () => {
     swal({
       title: "Wrong voucher code!",
@@ -232,7 +233,7 @@ export const WrappedContext = (props) => {
         checkAuthenticated,
         clearCart,
         removeAllFromCart,
-        checkVoucher,
+        checkVoucher
       }}
     >
       {props.children}

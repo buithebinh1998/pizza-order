@@ -1,0 +1,55 @@
+#table {
+    display:table;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-collapse:collapse;
+    font-size: 1rem;
+    background-color: whitesmoke;
+}
+
+.row  {
+    display: table-row;   
+}
+
+.row.main{
+    color: #04354c;
+    font-weight: bold;
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 3rem;
+    border: black solid 1px;
+    padding: 0.5rem 0;
+}
+
+.cell.id{
+    width: 3rem;
+}
+
+.cell.orderCart{
+    width: 20rem;
+}
+
+.cell.totalPrice{
+    width: 10rem;
+    font-weight: bold;
+}
+
+.cell.orderTime{
+    width: 10rem;
+}
+
+.cell.isDone{
+    width: 8rem;
+}
+
+.cell.paymentMethod{
+    width: 8rem;
+}
+
+.cell.address{
+    width: 20rem;
+}

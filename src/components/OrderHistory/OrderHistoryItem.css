@@ -1,0 +1,20 @@
+.order-history-cart-item{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.order-history-cart-name{
+    font-weight: bold;
+}
+
+.order-history-cart-total-wrapper{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.order-history-cart-price{
+    margin-left: auto;
+}

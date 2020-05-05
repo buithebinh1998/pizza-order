@@ -23,8 +23,10 @@ const Header = () => {
 
   const AuthenticationHeader = isAuthenticated ? (
     <>
-      <div>{user.fullName}</div>
-      <span>/</span>
+      <div>
+        <NavLink to='/order-history'>{user.fullName}</NavLink>
+      </div>
+      <span className="header-span">/</span>
       <div>
         <a
           href="/"

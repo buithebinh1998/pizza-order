@@ -18,6 +18,7 @@ const AboutPage = lazy(()=>import('./containers/AboutPage/AboutPage'));
 const ContactPage = lazy(()=>import('./containers/ContactPage/ContactPage'));
 const CartPage = lazy(()=>import('./containers/CartPage/CartPage'));
 const PaymentPage = lazy(()=>import('./containers/PaymentPage/PaymentPage'));
+const OrderHistoryPage = lazy(()=>import('./containers/OrderHistoryPage/OrderHistoryPage'));
 
 const App = () =>{
   return (
@@ -41,6 +42,7 @@ const App = () =>{
             <Route path = '/contact' component={ContactPage}/>
             <Route path = '/cart' component={CartPage}/>
             <Route path = '/payment' component={PaymentPage}/>
+            <Route path = '/order-history' component={OrderHistoryPage}/>
           </Switch>
         </Suspense>
       </div>

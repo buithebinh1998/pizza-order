@@ -15,6 +15,8 @@ const CartPayment = (props) => {
                 icon: 'warning',
                 timer: 3000
             })
+            const newCart = []; 
+            localStorage.setItem("cart", JSON.stringify(newCart));
             setTimeout(() => {history.push('/category')}, 3000);
         }
     }

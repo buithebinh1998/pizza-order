@@ -85,7 +85,6 @@ const FormikSignUpForm = withFormik({
         callApi('https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/user/signup', 'POST',{
             email: values.email, password:values.password, phone: values.phone, fullName: fullName
         }).then(response =>{
-            console.log(response);
             status = response.data.status;
         });
 

@@ -1,0 +1,16 @@
+.order-history-page-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.order-history-title{
+    font-size: 1.5rem;
+    color: #04354c;
+}
+
+.order-history-message{
+    font-size:1.2rem;
+    color: #e31837;
+}
