@@ -203,7 +203,6 @@ export const WrappedContext = (props) => {
     }
   };
 
-
   const checkVoucher = () => {
     swal({
       title: "Wrong voucher code!",
@@ -212,6 +211,34 @@ export const WrappedContext = (props) => {
       button: "Back!",
       timer: 3000,
     });
+  };
+
+  const dateFormat = (date) => {
+    if (date.length === 1) date = "0" + date;
+    return date;
+  };
+
+  const getOrderTime = () => {
+    let today = new Date();
+    let date = dateFormat(today.getDate().toString());
+    let month = dateFormat((today.getMonth() + 1).toString());
+    let year = dateFormat(today.getFullYear().toString());
+    let hour = dateFormat(today.getHours().toString());
+    let minute = dateFormat(today.getMinutes().toString());
+    let second = dateFormat(today.getSeconds().toString());
+    let orderTime =
+      date +
+      "-" +
+      month +
+      "-" +
+      year +
+      " " +
+      hour +
+      ":" +
+      minute +
+      ":" +
+      second;
+    return orderTime;
   };
 
   return (
@@ -233,7 +260,8 @@ export const WrappedContext = (props) => {
         checkAuthenticated,
         clearCart,
         removeAllFromCart,
-        checkVoucher
+        checkVoucher,
+        getOrderTime,
       }}
     >
       {props.children}

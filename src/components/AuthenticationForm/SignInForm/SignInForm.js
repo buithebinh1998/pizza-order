@@ -3,10 +3,11 @@ import "../AuthForm.css";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { NavLink } from "react-router-dom";
-import callApi from "./../../../utils/callApi";
+import axios from 'axios'
 import { withRouter } from "react-router-dom";
 import swal from "sweetalert";
 import { Context } from "../../../context/Context/Context";
+
 const SignInForm = (props) => {
   const { isAuthenticated, checkAuthenticated, signIn, cart } = useContext(
     Context
@@ -33,16 +34,19 @@ const SignInForm = (props) => {
       validationSchema={signInSchema}
       onSubmit={(values, { setSubmitting }) => {
         let dataUser = [];
-        callApi(
-          "https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/user/signin",
-          "POST",
-          {
-            email: values.email,
-            password: values.password,
-          }
-        ).then((response) => {
+        axios.post("https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/user/signin",
+        {
+          email: values.email,
+          password: values.password,
+        }) 
+        .then((response) => {
+          console.log(response.data);
           dataUser = response.data;
+        })
+        .catch((error) => {
+          console.log(error);
         });
+
         setTimeout(() => {
           if (dataUser === "") {
             swal({

@@ -20,7 +20,6 @@
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    width: 3rem;
     border: black solid 1px;
     padding: 0.5rem 0;
 }
@@ -52,4 +51,122 @@
 
 .cell.address{
     width: 20rem;
+}
+
+@media (max-width: 992px) {
+    #table {
+        font-size: 0.9rem;
+    }
+    .cell.id{
+        width: 2.5rem;
+    }
+    
+    .cell.orderCart{
+        width: 15rem;
+    }
+    
+    .cell.totalPrice{
+        width: 6rem;
+    }
+    
+    .cell.orderTime{
+        width: 10rem;
+    }
+    
+    .cell.isDone{
+        width: 5rem;
+    }
+    
+    .cell.paymentMethod{
+        width: 5rem;
+    }
+    
+    .cell.address{
+        width: 12rem;
+    }    
+
+    .cell {
+        padding: 0.3rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #table {
+        font-size: 0.8rem;
+    }
+    .cell.id{
+        width: 2rem;
+    }
+    
+    .cell.orderCart{
+        width: 12rem;
+    }
+    
+    .cell.totalPrice{
+        width: 5rem;
+    }
+    
+    .cell.orderTime{
+        width: 8rem;
+    }
+    
+    .cell.isDone{
+        width: 4rem;
+    }
+    
+    .cell.paymentMethod{
+        width: 4rem;
+    }
+    
+    .cell.address{
+        width: 10rem;
+    }    
+
+    .cell {
+        padding: 0.3rem 0;
+    }
+}
+
+@media (max-width: 414px) {
+    #table {
+        font-size: 0.6rem;
+    }
+
+    .cell.id{
+        width: 3rem;
+    }
+    
+    .cell.orderCart{
+        width: 8rem;
+    }
+    
+    .cell.totalPrice{
+        width: 4rem;
+    }
+    
+    .cell.orderTime{
+        width: 6rem;
+    }
+    
+    .cell.isDone{
+        width: 3rem;
+    }
+    
+    .cell.paymentMethod{
+        width: 3rem;
+    }
+    
+    .cell.address{
+        width: 8rem;
+    }    
+
+    .cell {
+        padding: 0.1rem 0;
+    }
+}
+
+@media (max-width: 320px) {
+    #table {
+        font-size: 0.5rem;
+    }
 }

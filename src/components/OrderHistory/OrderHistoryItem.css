@@ -18,3 +18,22 @@
 .order-history-cart-price{
     margin-left: auto;
 }
+
+@media (max-width: 992px) {
+    .order-history-cart-item{
+        margin-bottom: 0.8rem;
+        padding: 0 0.8rem;
+    }
+}
+@media (max-width: 768px) {
+    .order-history-cart-item{
+        margin-bottom: 0.6rem;
+        padding: 0 0.6rem;
+    }
+}
+@media (max-width: 414px) {
+    .order-history-cart-item{
+        margin-bottom: 0.4rem;
+        padding: 0 0.4rem;
+    }
+}

@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import './Item.css'
-import callApi from '../../utils/callApi'
+
 import Spinner from '../../UI/LoadingPage/Spinner';
 import PizzaModal from '../../UI/Modal/Modal'
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 
 const DataPizza = () => {
     const [dataPizza, setDataPizza] = useState([]);
@@ -20,15 +21,22 @@ const DataPizza = () => {
     });
 
     useEffect( () => {
-        callApi('https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/product/1','GET', null).then(response =>{
-            setDataPizza(response.data.products);
-            setLoading(true);
-        });
-        // callApi('https://5e9e6c40fb467500166c3f72.mockapi.io/api/v1/pizzas','GET', null).then(response =>{
-        //     setDataPizza(response.data);
-        //     setLoading(true);
-        // });
-    });
+        let mounted = true;
+        if(mounted){
+            axios.get('https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/product/1', {crossdomain:true})
+            .then(response =>{
+                setDataPizza(response.data.products);
+                setLoading(true);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+        }
+        return () => mounted = false;
+        
+    }, []);
+
+    
 
     const openModalButton = (item) => {
         setOpenModal(true);

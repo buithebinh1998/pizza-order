@@ -10,7 +10,7 @@ const Footer = () => (
             <div>HOTLINE DELIVERY</div>
             </div>
             <div className="img-container">
-                <a href="tel:1900-2727"><img src={tel} alt=""/></a>
+                <a href="tel:1900-2707"><img src={tel} alt=""/></a>
             </div>
         </div>
         

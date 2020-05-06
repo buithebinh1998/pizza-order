@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./OrderHistory.css";
-import callApi from "../../utils/callApi";
+import axios from 'axios'
 import OrderHistoryItem from "./OrderHistoryItem";
 import { Context } from "../../context/Context/Context";
 
@@ -10,12 +10,12 @@ const OrderHistory = () => {
 
   useEffect(() => {
     if (!orderHistory) {
-      callApi(
-        `https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/email?email=${user.email}`,
-        "GET",
-        null
-      ).then((response) => {
+      axios.get(`https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/email?email=${user.email}`)
+      .then((response) => {
         setOrderHistory(response.data.orders);
+      })
+      .catch(error=>{
+        console.log(error);
       });
     }
   });

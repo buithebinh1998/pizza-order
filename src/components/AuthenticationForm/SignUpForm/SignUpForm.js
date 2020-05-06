@@ -1,7 +1,7 @@
 import React from 'react'
 import '../AuthForm.css'
 import * as Yup from 'yup'
-import callApi from '../../../utils/callApi'
+import axios from 'axios'
 import {withFormik, Form, Field, ErrorMessage} from 'formik'
 import swal from 'sweetalert'
 import {withRouter} from 'react-router-dom'
@@ -82,10 +82,14 @@ const FormikSignUpForm = withFormik({
     handleSubmit: (values, {resetForm, props, setErrors ,setSubmitting}) => {
         let status=0;
         let fullName = values.lastName+" "+values.firstName;
-        callApi('https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/user/signup', 'POST',{
+        axios.post("https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/user/signup",{
             email: values.email, password:values.password, phone: values.phone, fullName: fullName
-        }).then(response =>{
+        })
+        .then((response) => {
             status = response.data.status;
+        })
+        .catch((error) => {
+            console.log(error);
         });
 
         setTimeout(() => {

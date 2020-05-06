@@ -19,4 +19,5 @@ export const Context = createContext({
     clearCart: () => {},
     removeAllFromCart: () => {},
     checkVoucher: () => {},
+    getOrderTime: () => {}
 });

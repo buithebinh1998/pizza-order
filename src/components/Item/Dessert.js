@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react'
 import './Item.css'
-import callApi from '../../utils/callApi'
+import axios from 'axios'
 import Spinner from '../../UI/LoadingPage/Spinner';
 import { Context } from '../../context/Context/Context';
 
@@ -9,15 +9,20 @@ const DataDessert = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect( () => {
-        callApi('https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/product/3','GET', null).then(response =>{
-            setDataDessert(response.data.products);
-            setLoading(true);
-        });
-        // callApi('https://5e9e6c40fb467500166c3f72.mockapi.io/api/v1/desserts','GET', null).then(response =>{
-        //     setDataDessert(response.data);
-        //     setLoading(true);
-        // });
-    })
+        let mounted = true;
+        if(mounted){
+            axios.get('https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/product/3', {crossdomain:true})
+            .then(response =>{
+                setDataDessert(response.data.products);
+                setLoading(true);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+        }
+        return () => mounted = false;
+    }, [])
+
     const {addToCart} = useContext(Context);
 
     const loadDataDessert = loading ? dataDessert.map(item => {

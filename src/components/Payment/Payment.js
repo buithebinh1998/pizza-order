@@ -10,7 +10,7 @@ import "./Payment.css";
 import callApi from "../../utils/callApi";
 
 const Payment = (props) => {
-  const { isAuthenticated, cart, user, totalPrice, clearCart } = useContext(
+  const { isAuthenticated, cart, user, totalPrice, clearCart, getOrderTime } = useContext(
     Context
   );
   let history = props.history;
@@ -48,23 +48,6 @@ const Payment = (props) => {
     if (event.target.value === "COD")
       setPaymentMethod({ method1: true, method2: false });
     else setPaymentMethod({ method1: false, method2: true });
-  };
-
-  const getOrderTime = () => {
-    let today = new Date();
-    let orderTime =
-      today.getDate() +
-      "-" +
-      (today.getMonth() + 1) +
-      "-" +
-      today.getFullYear() +
-      " " +
-      today.getHours() +
-      ":" +
-      today.getMinutes() +
-      ":" +
-      today.getSeconds();
-    return orderTime;
   };
 
   const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;

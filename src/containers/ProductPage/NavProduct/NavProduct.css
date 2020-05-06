@@ -16,12 +16,12 @@
     padding-left: 0;
 }
 
-a{
+.nav-product a{
     color: white;
     text-decoration: none;
 }
 
-a:hover{
+.nav-product a:hover{
     color:red;
     cursor: pointer;
 }
