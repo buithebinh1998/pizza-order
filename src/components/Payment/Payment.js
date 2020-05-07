@@ -10,7 +10,7 @@ import "./Payment.css";
 import axios from "axios";
 
 const Payment = (props) => {
-  const {
+  const {                                              
     isAuthenticated,
     cart,
     user,
