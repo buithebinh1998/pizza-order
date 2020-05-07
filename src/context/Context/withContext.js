@@ -10,7 +10,7 @@ export const WrappedContext = (props) => {
 
   let localToken = localStorage.getItem("token");
   if (localToken === null) localToken = "";
-  
+
   let localIsAuthenticated = JSON.parse(
     localStorage.getItem("isAuthenticated")
   );
@@ -27,7 +27,7 @@ export const WrappedContext = (props) => {
 
   const setNewToken = (token) => {
     setToken(token);
-  }
+  };
 
   const findItemInCart = (item) => {
     let index = -1;
@@ -272,7 +272,7 @@ export const WrappedContext = (props) => {
         removeAllFromCart,
         checkVoucher,
         getOrderTime,
-        setNewToken
+        setNewToken,
       }}
     >
       {props.children}

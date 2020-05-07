@@ -7,12 +7,17 @@ import { Context } from "../../context/Context/Context";
 import { HoChiMinh, HaNoi } from "../../constants/dataProvince";
 import Select from "react-select";
 import "./Payment.css";
-import axios from 'axios'
+import axios from "axios";
 
 const Payment = (props) => {
-  const { isAuthenticated, cart, user, totalPrice, clearCart, getOrderTime} = useContext(
-    Context
-  );
+  const {
+    isAuthenticated,
+    cart,
+    user,
+    totalPrice,
+    clearCart,
+    getOrderTime,
+  } = useContext(Context);
   let history = props.history;
   let province = [
     { value: "HoChiMinh", label: "Ho Chi Minh" },
@@ -71,8 +76,8 @@ const Payment = (props) => {
         initialValues={{ street: "" }}
         validationSchema={filledPaymentSchema}
         onSubmit={(values, { setSubmitting }) => {
-          const orderCart= cart; 
-          const orderUserInformation= {};
+          const orderCart = cart;
+          const orderUserInformation = {};
           let orderTotalPrice = totalPrice / 1000;
           orderUserInformation.fullName = user.fullName;
           orderUserInformation.phone = user.phone;
@@ -111,19 +116,30 @@ const Payment = (props) => {
             });
             setSubmitting(false);
           } else {
-            axios.post("https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/add",
-              {
-                cart: orderCart,
-                email: orderEmail,
-                note: orderNote,
-                orderTime: orderTime,
-                orderUserInformation: orderUserInformation,
-                paymentMethod: orderPaymentMethod,
-                totalPrice: orderTotalPrice
-              }, 
-            ).then(() => {
-              console.log({orderCart, orderNote, orderEmail, orderTime, orderUserInformation, orderPaymentMethod, orderTotalPrice});
-            });
+            axios
+              .post(
+                "https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/add",
+                {
+                  cart: orderCart,
+                  email: orderEmail,
+                  note: orderNote,
+                  orderTime: orderTime,
+                  orderUserInformation: orderUserInformation,
+                  paymentMethod: orderPaymentMethod,
+                  totalPrice: orderTotalPrice,
+                }
+              )
+              .then(() => {
+                console.log({
+                  orderCart,
+                  orderNote,
+                  orderEmail,
+                  orderTime,
+                  orderUserInformation,
+                  orderPaymentMethod,
+                  orderTotalPrice,
+                });
+              });
             setTimeout(() => {
               swal({
                 title: "Your order is confirmed!",
@@ -241,8 +257,8 @@ const Payment = (props) => {
         initialValues={{ street: "", fullName: "", phone: "", note: "" }}
         validationSchema={unfilledPaymentSchema}
         onSubmit={(values, { setSubmitting }) => {
-          const orderCart= cart; 
-          const orderUserInformation= {};
+          const orderCart = cart;
+          const orderUserInformation = {};
           let orderTotalPrice = totalPrice / 1000;
           orderUserInformation.fullName = values.fullName;
           orderUserInformation.phone = values.phone;
@@ -281,19 +297,30 @@ const Payment = (props) => {
             });
             setSubmitting(false);
           } else {
-            axios.post("https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/add",
-              {
-                cart: orderCart,
-                email: orderEmail,
-                note: orderNote,
-                orderTime: orderTime,
-                orderUserInformation: orderUserInformation,
-                paymentMethod: orderPaymentMethod,
-                totalPrice: orderTotalPrice
-              }
-            ).then(() => {
-              console.log({orderCart, orderNote, orderEmail, orderTime, orderUserInformation, orderPaymentMethod, orderTotalPrice});
-            });
+            axios
+              .post(
+                "https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/add",
+                {
+                  cart: orderCart,
+                  email: orderEmail,
+                  note: orderNote,
+                  orderTime: orderTime,
+                  orderUserInformation: orderUserInformation,
+                  paymentMethod: orderPaymentMethod,
+                  totalPrice: orderTotalPrice,
+                }
+              )
+              .then(() => {
+                console.log({
+                  orderCart,
+                  orderNote,
+                  orderEmail,
+                  orderTime,
+                  orderUserInformation,
+                  orderPaymentMethod,
+                  orderTotalPrice,
+                });
+              });
             setTimeout(() => {
               swal({
                 title: "Your order is confirmed!",
@@ -418,8 +445,6 @@ const Payment = (props) => {
       </Formik>
     </>
   );
-
-  
 
   return (
     <div className="payment-form">

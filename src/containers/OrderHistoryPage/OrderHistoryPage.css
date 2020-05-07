@@ -1,52 +1,52 @@
-.order-history-page-wrapper{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow-y: auto;
+.order-history-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
 }
 
-.order-history-title{
-    font-size: 1.5rem;
-    color: #04354c;
+.order-history-title {
+  font-size: 1.5rem;
+  color: #04354c;
 }
 
-.order-history-message{
-    font-size:1.2rem;
-    color: #e31837;
+.order-history-message {
+  font-size: 1.2rem;
+  color: #e31837;
 }
 
 @media (max-width: 992px) {
-    .order-history-title{
-        font-size: 1.25rem;
-    }
-    .order-history-message{
-        font-size: 1rem;
-    }
+  .order-history-title {
+    font-size: 1.25rem;
+  }
+  .order-history-message {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .order-history-title{
-        font-size: 1rem;
-    }
-    .order-history-message{
-        font-size: 0.8rem;
-    }
+  .order-history-title {
+    font-size: 1rem;
+  }
+  .order-history-message {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 414px) {
-    .order-history-title{
-        font-size: 0.8rem;
-    }
-    .order-history-message{
-        font-size: 0.6rem;
-    }
+  .order-history-title {
+    font-size: 0.8rem;
+  }
+  .order-history-message {
+    font-size: 0.6rem;
+  }
 }
 
 @media (max-width: 320px) {
-    .order-history-title{
-        font-size: 0.6rem;
-    }
-    .order-history-message{
-        font-size: 0.4rem;
-    }
+  .order-history-title {
+    font-size: 0.6rem;
+  }
+  .order-history-message {
+    font-size: 0.4rem;
+  }
 }

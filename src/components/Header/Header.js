@@ -5,7 +5,7 @@ import "./Header.css";
 import { NavLink } from "react-router-dom";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import { Context } from "../../context/Context/Context";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 
 const Header = () => {
   const [menuState, setMenuState] = useState(false);
@@ -24,7 +24,7 @@ const Header = () => {
   const AuthenticationHeader = isAuthenticated ? (
     <>
       <div>
-        <NavLink to='/order-history'>{user.fullName}</NavLink>
+        <NavLink to="/order-history">{user.fullName}</NavLink>
       </div>
       <span className="header-span">/</span>
       <div>
@@ -34,9 +34,9 @@ const Header = () => {
             checkAuthenticated(false);
             e.preventDefault();
             swal({
-                title: "LOG OUT SUCCESSFULLY!",
-                icon: "success",
-                timer: 3000
+              title: "LOG OUT SUCCESSFULLY!",
+              icon: "success",
+              timer: 3000,
             });
             localStorage.setItem("user", JSON.stringify([]));
             localStorage.setItem("isAuthenticated", JSON.stringify(false));

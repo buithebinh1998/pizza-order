@@ -1,167 +1,166 @@
-h1{
-    color: #033a56;
-    text-align: center;
+h1 {
+  color: #033a56;
+  text-align: center;
 }
 
-.promotion-list{
-    display: flex;
-    justify-content: center;
-    color: white;
-    flex-wrap: wrap;
+.promotion-list {
+  display: flex;
+  justify-content: center;
+  color: white;
+  flex-wrap: wrap;
 }
 
-.promotion-item{
-    background-image: url('../../assets/img/woodbg.png');
-    display: flex;
-    width: 70%;
-    background-color: black;
-    margin-bottom: 3rem;
+.promotion-item {
+  background-image: url("../../assets/img/woodbg.png");
+  display: flex;
+  width: 70%;
+  background-color: black;
+  margin-bottom: 3rem;
 }
 
-.promotion-image{
-    flex-basis: 40%;
-    margin: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.promotion-image {
+  flex-basis: 40%;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.promotion-image img{
-    max-width: 100%;
-    max-height: 100%;
+.promotion-image img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.promotion-detail{
-    margin: 1rem;
+.promotion-detail {
+  margin: 1rem;
 }
 
-.promotion-name{
-    color: #e51937;
+.promotion-name {
+  color: #e51937;
 }
 
-.promotion-description{
+.promotion-description {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.promotion-item button {
+  align-self: center;
+  background-color: #0078ae;
+  color: white;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border: #0078ae solid 1px;
+  width: 15rem;
+  height: 3rem;
+}
+
+.promotion-item button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  h1 {
     font-size: 1.5rem;
-    text-align: justify;
-}
+  }
+  .promotion-name {
+    font-size: 1.2rem;
+  }
 
-.promotion-item button{
-    align-self: center;
-    background-color: #0078ae;
-    color: white;
-    border-radius: 1rem;
-    font-weight: bold;
-    font-size: 1rem;
-    margin-top: 1rem;
-    border: #0078ae solid 1px;
-    width: 15rem;
-    height: 3rem;
-}
+  .promotion-detail {
+    margin: 0.8rem;
+  }
 
-.promotion-item button:hover{
-    background-color: red;
-    cursor: pointer;
-}
+  .promotion-description {
+    font-size: 1.2rem;
+  }
 
-@media (max-width: 992px){
-    h1{
-        font-size: 1.5rem;
-    }
-    .promotion-name{
-        font-size: 1.2rem;
-    }
-
-    .promotion-detail{
-        margin: 0.8rem;
-    }
-
-    .promotion-description{
-        font-size: 1.2rem;
-    }
-
-    .promotion-item button{
-        font-size: 0.8rem;
-        width: 12rem;
-        height: 2.5rem;
-    }
+  .promotion-item button {
+    font-size: 0.8rem;
+    width: 12rem;
+    height: 2.5rem;
+  }
 }
 
 @media (max-width: 768px) {
-    h1{
-        font-size: 1.2rem;
-    }
-    .promotion-name{
-        font-size: 1rem;
-    }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .promotion-name {
+    font-size: 1rem;
+  }
 
-    .promotion-detail{
-        margin: 0.5rem;
-    }
+  .promotion-detail {
+    margin: 0.5rem;
+  }
 
-    .promotion-description{
-        font-size: 1rem;
-    }
+  .promotion-description {
+    font-size: 1rem;
+  }
 
-    .promotion-item button{
-        font-size: 0.6rem;
-        margin-top: 0.8rem;
-        width: 8rem;
-        height: 2rem;
-    }
-
+  .promotion-item button {
+    font-size: 0.6rem;
+    margin-top: 0.8rem;
+    width: 8rem;
+    height: 2rem;
+  }
 }
 
 @media (max-width: 576px) {
-    h1{
-        font-size: 1rem;
-    }
-    .promotion-name{
-        font-size: 0.8rem;
-    }
+  h1 {
+    font-size: 1rem;
+  }
+  .promotion-name {
+    font-size: 0.8rem;
+  }
 
-    .promotion-detail{
-        margin: 0.3rem;
-    }
+  .promotion-detail {
+    margin: 0.3rem;
+  }
 
-    .promotion-description{
-        font-size: 0.8rem;
-    }
+  .promotion-description {
+    font-size: 0.8rem;
+  }
 
-    .promotion-item button{
-        font-size: 0.5rem;
-        margin-top: 0.6rem;
-        width: 6rem;
-        height: 1.5rem;
-    }
+  .promotion-item button {
+    font-size: 0.5rem;
+    margin-top: 0.6rem;
+    width: 6rem;
+    height: 1.5rem;
+  }
 
-    .promotion-image{
-        margin: 0.2rem;
-    }
+  .promotion-image {
+    margin: 0.2rem;
+  }
 }
 
 @media (max-width: 320px) {
-    h1{
-        font-size: 0.8rem;
-    }
-    .promotion-name{
-        font-size: 0.6rem;
-    }
+  h1 {
+    font-size: 0.8rem;
+  }
+  .promotion-name {
+    font-size: 0.6rem;
+  }
 
-    .promotion-detail{
-        margin: 0.1rem;
-    }
+  .promotion-detail {
+    margin: 0.1rem;
+  }
 
-    .promotion-description{
-        font-size: 0.6rem;
-    }
+  .promotion-description {
+    font-size: 0.6rem;
+  }
 
-    .promotion-item button{
-        font-size: 0.4rem;
-        margin-top: 0.4rem;
-        width: 5rem;
-        height: 1.25rem;
-    }
+  .promotion-item button {
+    font-size: 0.4rem;
+    margin-top: 0.4rem;
+    width: 5rem;
+    height: 1.25rem;
+  }
 
-    .promotion-image{
-        margin: 0.1rem;
-    }
+  .promotion-image {
+    margin: 0.1rem;
+  }
 }

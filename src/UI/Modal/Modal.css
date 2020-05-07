@@ -1,256 +1,256 @@
-.backdrop{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal{
-    background: url('../../assets/img/popup_bg_wood.png');
-    position: fixed;
-    top: 10%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    z-index: 1200;
-    transition: all 0.3s ease-out;
-    vertical-align: top;
-    background-size: 100%;
-    background-position: top left;
-    box-sizing: border-box;
-    width: 40rem;
-    height: 35rem;
-    text-align: left;
-    color: white;
-    padding: 2rem;
+.modal {
+  background: url("../../assets/img/popup_bg_wood.png");
+  position: fixed;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1200;
+  transition: all 0.3s ease-out;
+  vertical-align: top;
+  background-size: 100%;
+  background-position: top left;
+  box-sizing: border-box;
+  width: 40rem;
+  height: 35rem;
+  text-align: left;
+  color: white;
+  padding: 2rem;
 }
 
-.pizza-details{
-    display: flex;
+.pizza-details {
+  display: flex;
 }
 
-.pizza-info{
-    flex-basis: 50%;
-    display: flex;
-    flex-direction: column;
-    margin-right: 1rem;
+.pizza-info {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
 }
 
-.pizza-info h1{
-    color:#0078ae;
-    font-size: 2rem;
+.pizza-info h1 {
+  color: #0078ae;
+  font-size: 2rem;
 }
 
-.pizza-info h2{
-    color:#0078ae;
-    font-size: 1.5rem;
+.pizza-info h2 {
+  color: #0078ae;
+  font-size: 1.5rem;
 }
 
-.pizza-info h3{
-    font-size: 1.2rem;
+.pizza-info h3 {
+  font-size: 1.2rem;
 }
 
-.pizza-img{
-    max-width: 100%;
-    height: auto;
+.pizza-img {
+  max-width: 100%;
+  height: auto;
 }
 
 .remodal-close {
-    left: 100%;
-    background: red;
-    position: absolute;
-    top: 0;
-    display: block;
-    overflow: visible;
-    width: 2rem;
-    height: 2rem;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    -webkit-transition: color .2s;
-    transition: color .2s;
-    text-decoration: none;
-    color: #95979c;
-    border: 0;
-    outline: 0;
+  left: 100%;
+  background: red;
+  position: absolute;
+  top: 0;
+  display: block;
+  overflow: visible;
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  text-decoration: none;
+  color: #95979c;
+  border: 0;
+  outline: 0;
 }
 
 .remodal-close::before {
-    content: "";
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 35px;
-    color: white;
+  content: "";
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 35px;
+  color: white;
 }
 
-.pizza-customize{
-    flex-basis: 50%;
-    box-sizing: border-box;
+.pizza-customize {
+  flex-basis: 50%;
+  box-sizing: border-box;
 }
 
-.form-pizza button{
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    width: 100%;
-    height: 3rem;
-    background-color: #e31837;
-    color: white;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    border: #e31837;
-    cursor: pointer;
+.form-pizza button {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 3rem;
+  background-color: #e31837;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  border: #e31837;
+  cursor: pointer;
 }
 
-.form-pizza label{
-    font-size: 1.2rem;
+.form-pizza label {
+  font-size: 1.2rem;
 }
 
-.form-pizza h2{
-    font-size: 1.5rem;
+.form-pizza h2 {
+  font-size: 1.5rem;
 }
 
 @media (max-width: 992px) {
-    .modal{
-        width: 35rem;
-        height: 30rem;
-        padding: 1.5rem;
-    }
-    .pizza-info h1{
-        font-size: 1.8rem;
-    }
-    .pizza-info h2{
-        font-size: 1.3rem;
-    }
-    .pizza-info h3{
-        font-size: 1rem;
-    }
-    .form-pizza button{
-        margin-top: 0.8rem;
-        font-size: 1rem;
-        height: 2.8rem;
-        border-radius: 0.5rem;
-    }
-    .form-pizza label{
-        font-size: 1rem;
-    }
-    
-    .form-pizza h2{
-        font-size: 1.2rem;
-    }
+  .modal {
+    width: 35rem;
+    height: 30rem;
+    padding: 1.5rem;
+  }
+  .pizza-info h1 {
+    font-size: 1.8rem;
+  }
+  .pizza-info h2 {
+    font-size: 1.3rem;
+  }
+  .pizza-info h3 {
+    font-size: 1rem;
+  }
+  .form-pizza button {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    height: 2.8rem;
+    border-radius: 0.5rem;
+  }
+  .form-pizza label {
+    font-size: 1rem;
+  }
+
+  .form-pizza h2 {
+    font-size: 1.2rem;
+  }
 }
 @media (max-width: 768px) {
-    .modal{
-        height: 28rem;
-        width: 30rem;
-        padding: 0.8rem;
-    }
-    .pizza-info h1{
-        font-size: 1.5rem;
-    }
-    .pizza-info h2{
-        font-size: 1.2rem;
-    }
-    .pizza-info h3{
-        font-size: 1rem;
-    }
+  .modal {
+    height: 28rem;
+    width: 30rem;
+    padding: 0.8rem;
+  }
+  .pizza-info h1 {
+    font-size: 1.5rem;
+  }
+  .pizza-info h2 {
+    font-size: 1.2rem;
+  }
+  .pizza-info h3 {
+    font-size: 1rem;
+  }
 
-    .form-pizza label{
-        font-size: 1rem;
-    }
-    
-    .form-pizza h2{
-        font-size: 1.2rem;
-    }
+  .form-pizza label {
+    font-size: 1rem;
+  }
+
+  .form-pizza h2 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 576px) {
-    .modal{
-        width: 25rem;
-        height: 25rem;
-        padding: 0.5rem;
-    }
-    .pizza-info h1{
-        font-size: 1.2rem;
-    }
-    .pizza-info h2{
-        font-size: 1rem;
-    }
-    .pizza-info h3{
-        font-size: 0.8rem;
-    }
-    .form-pizza button{
-        margin-top: 0.5rem;
-        font-size: 0.8rem;
-        height: 2.5rem;
-        border-radius: 0.2rem;
-    }
-    .form-pizza label{
-        font-size: 0.8rem;
-    }
-    .form-pizza h2{
-        font-size: 1rem;
-    }
-    .remodal-close {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
+  .modal {
+    width: 25rem;
+    height: 25rem;
+    padding: 0.5rem;
+  }
+  .pizza-info h1 {
+    font-size: 1.2rem;
+  }
+  .pizza-info h2 {
+    font-size: 1rem;
+  }
+  .pizza-info h3 {
+    font-size: 0.8rem;
+  }
+  .form-pizza button {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    height: 2.5rem;
+    border-radius: 0.2rem;
+  }
+  .form-pizza label {
+    font-size: 0.8rem;
+  }
+  .form-pizza h2 {
+    font-size: 1rem;
+  }
+  .remodal-close {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 
-    .remodal-close::before {
-        font-size: 10px;
-        line-height: 30px;
-    }
+  .remodal-close::before {
+    font-size: 10px;
+    line-height: 30px;
+  }
 }
 
 @media (max-width: 475px) {
-    .modal{
-        width: 20rem;
-        height: 20rem;
-        padding: 0.3rem;
-    }
-    .pizza-info h1{
-        font-size: 1rem;
-    }
-    .pizza-info h2{
-        font-size: 0.8rem;
-    }
-    .pizza-info h3{
-        font-size: 0.6rem;
-    }
-    .form-pizza button{
-        margin-top: 0.5rem;
-        font-size: 0.6rem;
-        height: 2rem;
-        border-radius: 0.2rem;
-    }
-    .form-pizza label{
-        font-size: 0.6rem;
-    }
-    .form-pizza h2{
-        font-size: 0.8rem;
-    }
-    .remodal-close {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
+  .modal {
+    width: 20rem;
+    height: 20rem;
+    padding: 0.3rem;
+  }
+  .pizza-info h1 {
+    font-size: 1rem;
+  }
+  .pizza-info h2 {
+    font-size: 0.8rem;
+  }
+  .pizza-info h3 {
+    font-size: 0.6rem;
+  }
+  .form-pizza button {
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+  }
+  .form-pizza label {
+    font-size: 0.6rem;
+  }
+  .form-pizza h2 {
+    font-size: 0.8rem;
+  }
+  .remodal-close {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 
-    .remodal-close::before {
-        font-size: 10px;
-        line-height: 30px;
-    }
+  .remodal-close::before {
+    font-size: 10px;
+    line-height: 30px;
+  }
 }
 
-@media (max-width: 350px){
-    .modal{
-        width: 15rem;
-        height: 20rem;
-    }
+@media (max-width: 350px) {
+  .modal {
+    width: 15rem;
+    height: 20rem;
+  }
 }

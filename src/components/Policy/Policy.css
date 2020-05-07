@@ -1,0 +1,42 @@
+h1 {
+  color: #033a56;
+  text-align: center;
+}
+
+.policy-detail {
+  font-size: 1.2rem;
+  text-align: justify;
+  padding: 0 4rem;
+}
+
+.policy-detail a {
+  color: #033a56;
+  font-weight: bold;
+}
+
+.policy-detail a:visited {
+  text-decoration: none;
+  color: #033a56;
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .policy-detail {
+    font-size: 1rem;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 0.8rem;
+  }
+
+  .policy-detail {
+    font-size: 0.6rem;
+    padding: 0 1rem;
+  }
+}

@@ -3,16 +3,20 @@ import "../AuthForm.css";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { NavLink } from "react-router-dom";
-import axios from 'axios'
+import axios from "axios";
 import { withRouter } from "react-router-dom";
 import swal from "sweetalert";
 import { Context } from "../../../context/Context/Context";
-import * as jwt_decode from 'jwt-decode';
+import * as jwt_decode from "jwt-decode";
 
 const SignInForm = (props) => {
-  const { isAuthenticated, checkAuthenticated, signIn, cart, setNewToken} = useContext(
-    Context
-  );
+  const {
+    isAuthenticated,
+    checkAuthenticated,
+    signIn,
+    cart,
+    setNewToken,
+  } = useContext(Context);
 
   const signInSchema = Yup.object().shape({
     email: Yup.string()
@@ -34,47 +38,51 @@ const SignInForm = (props) => {
       initialValues={{ email: "", password: "" }}
       validationSchema={signInSchema}
       onSubmit={(values, { setSubmitting }) => {
-        axios.post("https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/api/login",
-        {
-          email: values.email,
-          password: values.password,
-        },{crossdomain: true}) 
-        .then((response) => {
-          setNewToken(response.data);
-          let newToken = response.data;
-          let decodedUser = jwt_decode(response.data);
-          setTimeout(() => {
-            let history = props.history;
-            swal({
-              title: "SIGN IN SUCCESFULLY!",
-              icon: "success",
-              button: "Done!",
-              timer: 3000,
-            });
-            checkAuthenticated(true);
-            signIn(decodedUser);
-            if (cart.length === 0) history.push("/");
-            else history.push("/payment");
-            localStorage.setItem("token", newToken);
-            localStorage.setItem("user", JSON.stringify(decodedUser));
-            localStorage.setItem("isAuthenticated", JSON.stringify(true));
-            setSubmitting(false);
-          }, 2000);
-        })
-        .catch((error) => {
-          if (error.response.status === 400) {
+        axios
+          .post(
+            "https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/api/login",
+            {
+              email: values.email,
+              password: values.password,
+            },
+            { crossdomain: true }
+          )
+          .then((response) => {
+            setNewToken(response.data);
+            let newToken = response.data;
+            let decodedUser = jwt_decode(response.data);
             setTimeout(() => {
+              let history = props.history;
               swal({
-                title: "SIGN IN FAILED",
-                text: "You have typed wrong email or password!",
-                icon: "error",
+                title: "SIGN IN SUCCESFULLY!",
+                icon: "success",
+                button: "Done!",
                 timer: 3000,
               });
+              checkAuthenticated(true);
+              signIn(decodedUser);
+              if (cart.length === 0) history.push("/");
+              else history.push("/payment");
+              localStorage.setItem("token", newToken);
+              localStorage.setItem("user", JSON.stringify(decodedUser));
+              localStorage.setItem("isAuthenticated", JSON.stringify(true));
               setSubmitting(false);
             }, 2000);
-          }
-          return Promise.reject(error.response);
-        });
+          })
+          .catch((error) => {
+            if (error.response.status === 400) {
+              setTimeout(() => {
+                swal({
+                  title: "SIGN IN FAILED",
+                  text: "You have typed wrong email or password!",
+                  icon: "error",
+                  timer: 3000,
+                });
+                setSubmitting(false);
+              }, 2000);
+            }
+            return Promise.reject(error.response);
+          });
       }}
     >
       {({ isSubmitting }) => (

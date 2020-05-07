@@ -1,21 +1,21 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import BigCart from "../../components/Cart/BigCart";
-import "./CartPage.css";
+import Policy from "../../components/Policy/Policy";
 import background from "../../assets/img/bg.png";
-const CartPage = () => {
+import "./PolicyPage.css";
+const PolicyPage = () => {
   return (
     <div
-      className="cart-page"
+      className="PolicyPage"
       style={{ backgroundImage: `url(${background})` }}
     >
       <Header />
       <div id="spacer"></div>
-      <BigCart />
+      <Policy />
       <Footer />
     </div>
   );
 };
 
-export default CartPage;
+export default PolicyPage;

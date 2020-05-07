@@ -1,105 +1,104 @@
-.about-article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.about-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h1{
-    color: #033a56;
-    text-align: center;
+h1 {
+  color: #033a56;
+  text-align: center;
 }
 
-.about-article section{
-    text-align: left;
-    width: 80%;
-    display: flex;
-    font-size: 1.2rem;
-    background-color: white;
-    border: none;
-    align-items: center;
-    margin: 1rem;
+.about-article section {
+  text-align: left;
+  width: 80%;
+  display: flex;
+  font-size: 1.2rem;
+  background-color: white;
+  border: none;
+  align-items: center;
+  margin: 1rem;
 }
 
-.about-article section div{
-    padding: 0 1rem;
+.about-article section div {
+  padding: 0 1rem;
 }
 
-.about-article section img{
-    max-width: 100%;
-    height: auto;
+.about-article section img {
+  max-width: 100%;
+  height: auto;
 }
 
-@media (max-width: 992px){
-    .about-article section{
-        font-size: 1rem;
-        margin: 0.8rem;
-    }
+@media (max-width: 992px) {
+  .about-article section {
+    font-size: 1rem;
+    margin: 0.8rem;
+  }
 
-    .about-article section div{
-        padding: 0.2rem 0.8rem;
-    }
+  .about-article section div {
+    padding: 0.2rem 0.8rem;
+  }
 
-    .about-article section img{
-        width: 50%;
-    }
+  .about-article section img {
+    width: 50%;
+  }
 }
 
-@media (max-width: 768px){
-    h1{
-        font-size: 1.5rem;
-    }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 
-    .about-article section{
-        font-size: 0.9rem;
-        margin: 0.7rem;
-        width: 90%;
-    }
+  .about-article section {
+    font-size: 0.9rem;
+    margin: 0.7rem;
+    width: 90%;
+  }
 
-    .about-article section div{
-        padding: 0.2rem 0.7rem;
-    }
+  .about-article section div {
+    padding: 0.2rem 0.7rem;
+  }
 
-    .about-article section img{
-        width: 45%;
-    }
+  .about-article section img {
+    width: 45%;
+  }
 }
 
 @media (max-width: 576px) {
-    h1{
-        font-size: 1rem;
-    }
+  h1 {
+    font-size: 1rem;
+  }
 
-    .about-article section{
-        font-size: 0.8rem;
-        margin: 0.6rem;
-    }
+  .about-article section {
+    font-size: 0.8rem;
+    margin: 0.6rem;
+  }
 
-    .about-article section div{
-        padding: 0.2rem 0.6rem;
-    }
+  .about-article section div {
+    padding: 0.2rem 0.6rem;
+  }
 
-    .about-article section img{
-        width: 30%;
-    }
+  .about-article section img {
+    width: 30%;
+  }
 }
 
 @media (max-width: 320px) {
-    h1{
-        font-size: 0.8rem;
-    }
+  h1 {
+    font-size: 0.8rem;
+  }
 
-    .about-article section{
-        font-size: 0.6rem;
-        margin: 0.4rem;
-        width: 95%;
-    }
+  .about-article section {
+    font-size: 0.6rem;
+    margin: 0.4rem;
+    width: 95%;
+  }
 
-    .about-article section div{
-        padding: 0.1rem 0.4rem;
-    }
+  .about-article section div {
+    padding: 0.1rem 0.4rem;
+  }
 
-    .about-article section img{
-        width: 30%;
-    }
+  .about-article section img {
+    width: 30%;
+  }
 }
-
