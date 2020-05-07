@@ -5,6 +5,7 @@ export const Context = createContext({
     totalPrice: 0,
     user: [],
     isAuthenticated: false,
+    token: "",
     increaseQuantity: () => {},
     decreaseQuantity: () => {},
     removeFromCart: () => {},
@@ -19,5 +20,6 @@ export const Context = createContext({
     clearCart: () => {},
     removeAllFromCart: () => {},
     checkVoucher: () => {},
-    getOrderTime: () => {}
+    getOrderTime: () => {},
+    setNewToken: () => {}
 });

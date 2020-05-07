@@ -40,6 +40,7 @@ const Header = () => {
             });
             localStorage.setItem("user", JSON.stringify([]));
             localStorage.setItem("isAuthenticated", JSON.stringify(false));
+            localStorage.setItem("token", JSON.stringify(""));
           }}
         >
           LOG OUT

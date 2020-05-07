@@ -39,17 +39,17 @@ const PizzaForm = (props) => {
         <form className="form-pizza" onSubmit={submitPizza}>
             <h2 style={{color:'#0078ae', fontWeight:'bold', textAlign:'left'}}>CHOOSE PIZZA SIZE:</h2>
             <input id="medium" value="medium" name="size" type="radio" checked={sizeChecked.size1} onChange={onCheckSizeChange}/>
-            <label htmlFor="medium">Medium</label><br/><br/>
+            <label htmlFor="medium">Medium ({props.price + ".000Đ"})</label><br/><br/>
 
             <input id="large" value="large" name="size" type="radio" checked={sizeChecked.size2} onChange={onCheckSizeChange}/>
-            <label htmlFor="large">Large</label>
+            <label htmlFor="large">Large ({props.maxPrice + ".000Đ"})</label>
 
             <h2 style={{color:'#0078ae', fontWeight:'bold'}}>CHOOSE PIZZA CRUST:</h2>
             <input id="thin" value="thin" name="crust" type="radio" checked={crustChecked.crust1} onChange={onCheckCrustChange}/>
-            <label htmlFor="thin">Thin crust</label><br/><br/>
+            <label htmlFor="thin">Thin crust (+0Đ)</label><br/><br/>
 
             <input id="thick" value="thick" name="crust" type="radio" checked={crustChecked.crust2} onChange={onCheckCrustChange}/>
-            <label htmlFor="thick">Thick crust</label><br/><br/>
+            <label htmlFor="thick">Thick crust (+0Đ)</label><br/><br/>
         
             <button type="submit">ADD TO CART</button>
         </form>

@@ -7,9 +7,10 @@ import axios from 'axios'
 import { withRouter } from "react-router-dom";
 import swal from "sweetalert";
 import { Context } from "../../../context/Context/Context";
+import * as jwt_decode from 'jwt-decode';
 
 const SignInForm = (props) => {
-  const { isAuthenticated, checkAuthenticated, signIn, cart } = useContext(
+  const { isAuthenticated, checkAuthenticated, signIn, cart, setNewToken} = useContext(
     Context
   );
 
@@ -33,29 +34,16 @@ const SignInForm = (props) => {
       initialValues={{ email: "", password: "" }}
       validationSchema={signInSchema}
       onSubmit={(values, { setSubmitting }) => {
-        let dataUser = [];
-        axios.post("https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/user/signin",
+        axios.post("https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/api/login",
         {
           email: values.email,
           password: values.password,
-        }) 
+        },{crossdomain: true}) 
         .then((response) => {
-          console.log(response.data);
-          dataUser = response.data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-
-        setTimeout(() => {
-          if (dataUser === "") {
-            swal({
-              title: "SIGN IN FAILED",
-              text: "You have typed wrong email or password!",
-              icon: "error",
-              timer: 3000,
-            });
-          } else {
+          setNewToken(response.data);
+          let newToken = response.data;
+          let decodedUser = jwt_decode(response.data);
+          setTimeout(() => {
             let history = props.history;
             swal({
               title: "SIGN IN SUCCESFULLY!",
@@ -64,14 +52,29 @@ const SignInForm = (props) => {
               timer: 3000,
             });
             checkAuthenticated(true);
-            signIn(dataUser);
+            signIn(decodedUser);
             if (cart.length === 0) history.push("/");
             else history.push("/payment");
-            localStorage.setItem("user", JSON.stringify(dataUser));
+            localStorage.setItem("token", newToken);
+            localStorage.setItem("user", JSON.stringify(decodedUser));
             localStorage.setItem("isAuthenticated", JSON.stringify(true));
+            setSubmitting(false);
+          }, 2000);
+        })
+        .catch((error) => {
+          if (error.response.status === 400) {
+            setTimeout(() => {
+              swal({
+                title: "SIGN IN FAILED",
+                text: "You have typed wrong email or password!",
+                icon: "error",
+                timer: 3000,
+              });
+              setSubmitting(false);
+            }, 2000);
           }
-          setSubmitting(false);
-        }, 2000);
+          return Promise.reject(error.response);
+        });
       }}
     >
       {({ isSubmitting }) => (

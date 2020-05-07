@@ -8,6 +8,9 @@ export const WrappedContext = (props) => {
   let localUser = JSON.parse(localStorage.getItem("user"));
   if (localUser === null) localUser = [];
 
+  let localToken = localStorage.getItem("token");
+  if (localToken === null) localToken = "";
+  
   let localIsAuthenticated = JSON.parse(
     localStorage.getItem("isAuthenticated")
   );
@@ -19,6 +22,12 @@ export const WrappedContext = (props) => {
   const [isAuthenticated, setIsAuthenticated] = useState(localIsAuthenticated);
 
   const [totalPrice, setTotalPrice] = useState(0);
+
+  const [token, setToken] = useState(localToken);
+
+  const setNewToken = (token) => {
+    setToken(token);
+  }
 
   const findItemInCart = (item) => {
     let index = -1;
@@ -248,6 +257,7 @@ export const WrappedContext = (props) => {
         totalPrice,
         user,
         isAuthenticated,
+        token,
         increaseQuantity,
         decreaseQuantity,
         removeFromCart,
@@ -262,6 +272,7 @@ export const WrappedContext = (props) => {
         removeAllFromCart,
         checkVoucher,
         getOrderTime,
+        setNewToken
       }}
     >
       {props.children}

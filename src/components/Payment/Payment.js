@@ -7,10 +7,10 @@ import { Context } from "../../context/Context/Context";
 import { HoChiMinh, HaNoi } from "../../constants/dataProvince";
 import Select from "react-select";
 import "./Payment.css";
-import callApi from "../../utils/callApi";
+import axios from 'axios'
 
 const Payment = (props) => {
-  const { isAuthenticated, cart, user, totalPrice, clearCart, getOrderTime } = useContext(
+  const { isAuthenticated, cart, user, totalPrice, clearCart, getOrderTime} = useContext(
     Context
   );
   let history = props.history;
@@ -111,9 +111,7 @@ const Payment = (props) => {
             });
             setSubmitting(false);
           } else {
-            callApi(
-              "https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/add",
-              "POST",
+            axios.post("https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/add",
               {
                 cart: orderCart,
                 email: orderEmail,
@@ -122,7 +120,7 @@ const Payment = (props) => {
                 orderUserInformation: orderUserInformation,
                 paymentMethod: orderPaymentMethod,
                 totalPrice: orderTotalPrice
-              }
+              }, 
             ).then(() => {
               console.log({orderCart, orderNote, orderEmail, orderTime, orderUserInformation, orderPaymentMethod, orderTotalPrice});
             });
@@ -283,9 +281,7 @@ const Payment = (props) => {
             });
             setSubmitting(false);
           } else {
-            callApi(
-              "https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/add",
-              "POST",
+            axios.post("https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/add",
               {
                 cart: orderCart,
                 email: orderEmail,

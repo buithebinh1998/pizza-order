@@ -6,13 +6,19 @@ import { Context } from "../../context/Context/Context";
 
 const OrderHistory = () => {
   const [orderHistory, setOrderHistory] = useState();
-  const {user} = useContext(Context);
+  const {user, token} = useContext(Context);
 
   useEffect(() => {
     if (!orderHistory) {
-      axios.get(`https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/email?email=${user.email}`)
+      axios.get(
+        `https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/order/email?email=${user.email}`, 
+        {headers: {
+          Authorization: `Bearer ${token}`,
+        }}
+      )
       .then((response) => {
         setOrderHistory(response.data.orders);
+        
       })
       .catch(error=>{
         console.log(error);
