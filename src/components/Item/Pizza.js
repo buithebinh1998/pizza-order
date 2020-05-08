@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./Item.css";
-
+import LazyLoad from 'react-lazyload'
 import Spinner from "../../UI/LoadingPage/Spinner";
 import PizzaModal from "../../UI/Modal/Modal";
-import {NavLink} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 
 const DataPizza = () => {
+
   const [dataPizza, setDataPizza] = useState([]);
   const [loading, setLoading] = useState(false);
- 
+  const NewSpinner = () => { return(<div className="item"><Spinner/></div>)}
   const [openModal, setOpenModal] = useState(false);
 
   const [pizzaModal, setPizzaModal] = useState({
@@ -19,7 +20,7 @@ const DataPizza = () => {
     maxPrice: "",
     imgLink: "17f9EUTfdk6cAqa0JTZLTV4iAcfRvZTre", //set initial
   });
-
+  
   useEffect(() => {
     let mounted = true;
     if (mounted) {
@@ -55,30 +56,45 @@ const DataPizza = () => {
     setOpenModal(false);
   };
 
-  const loadDataPizza = loading ? (
-    dataPizza.map((item) => {
-      return (
-        <div className="item" key={item.id}>
+  const Post = ({id, name, imgLink, price, maxPrice, item}) => (
+    <>
+      <div className="item" key={id}>
+        <div className="item-name">{name}</div>
+        <LazyLoad once={true} placeholder={<NewSpinner/>}>
           <div className="item-img">
             <img
-              src={`https://drive.google.com/uc?export=view&id=${item.imgLink}`}
+              src={`https://drive.google.com/uc?export=view&id=${imgLink}`}
               alt=""
             />
           </div>
-          <div className="item-name">{item.name}</div>
-          <div className="item-price">
-            {item.price + ".000Đ - "}
-            {item.maxPrice + ".000Đ"}
-          </div>
-          
-          <NavLink to ={`/pizza/${item.id}`}>
-            <button onClick={() => openModalButton(item)}>VIEW DETAILS</button>
-          </NavLink>
+        </LazyLoad>
+        <div className="item-price">
+          {price + ".000Đ - "}
+          {maxPrice + ".000Đ"}
         </div>
+
+        <NavLink to={`/pizza/${id}`}>
+          <button onClick={() => openModalButton(item)}>VIEW DETAILS</button>
+        </NavLink>
+      </div>
+    </>
+  );
+
+  const loadDataPizza = loading ? (
+    dataPizza.map((item) => {
+      return (
+        <LazyLoad
+          key={item.id}
+          height={200}
+          offset={[-200, 200]}
+          placeholder={<NewSpinner/>}
+        >
+          <Post key={item.id} item={item} {...item} />
+        </LazyLoad>
       );
     })
   ) : (
-    <Spinner />
+    <Spinner/>
   );
 
   return (

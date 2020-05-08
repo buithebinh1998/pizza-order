@@ -8,7 +8,7 @@ import Slide5 from "../../assets/img/slider5.jpg";
 const carousel = (props) => {
   return (
     <div className="carousel">
-      <Carousel autoPlay showThumbs={false} infiniteLoop={true}>
+      <Carousel autoPlay showThumbs={false} infiniteLoop={true} emulateTouch={true}>
         <div>
           <img src={Slide2} alt="" />
         </div>

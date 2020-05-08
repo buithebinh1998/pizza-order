@@ -40,7 +40,7 @@ const OrderHistory = () => {
           <div className="cell orderTime">Order Time</div>
           <div className="cell address">Address</div>
           <div className="cell paymentMethod">Payment</div>
-          <div className="cell isDone">Done</div>
+          <div className="cell isDone">Status</div>
         </div>
         {orderHistory &&
           orderHistory.map((item, index) => (

@@ -31,7 +31,7 @@ const OrderHistoryItem = (props) => {
       <div className="cell orderTime">{props.orderTime}</div>
       <div className="cell address">{props.address}</div>
       <div className="cell paymentMethod">{props.paymentMethod}</div>
-      <div className="cell isDone">Yes</div>
+      <div className="cell isDone">Delivered</div>
     </div>
   );
 };
