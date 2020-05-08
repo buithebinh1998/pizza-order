@@ -3,7 +3,6 @@ import "./Item.css";
 import LazyLoad from 'react-lazyload'
 import Spinner from "../../UI/LoadingPage/Spinner";
 import PizzaModal from "../../UI/Modal/Modal";
-import { NavLink } from "react-router-dom";
 import axios from "axios";
 
 const DataPizza = () => {
@@ -58,7 +57,7 @@ const DataPizza = () => {
 
   const Post = ({id, name, imgLink, price, maxPrice, item}) => (
     <>
-      <div className="item" key={id}>
+      <div className="item" style={{cursor:'pointer'}} key={id} onClick={() => openModalButton(item)}>
         <div className="item-name">{name}</div>
         <LazyLoad once={true} placeholder={<NewSpinner/>}>
           <div className="item-img">
@@ -73,9 +72,8 @@ const DataPizza = () => {
           {maxPrice + ".000Đ"}
         </div>
 
-        <NavLink to={`/pizza/${id}`}>
-          <button onClick={() => openModalButton(item)}>VIEW DETAILS</button>
-        </NavLink>
+        <button onClick={() => openModalButton(item)}>VIEW DETAILS</button>
+        
       </div>
     </>
   );

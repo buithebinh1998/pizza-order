@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./Modal.css";
 import { Context } from "../../context/Context/Context";
-import { NavLink, withRouter } from "react-router-dom";
+
 
 const PizzaForm = (props) => {
   const { addPizzaToCart } = useContext(Context);
@@ -35,7 +35,6 @@ const PizzaForm = (props) => {
     addPizzaToCart(itemPizza, sizeChecked.size1, crustChecked.crust1);
     e.preventDefault();
     props.cancel();
-    props.history.push("/pizza");
     setCrustChecked({ crust1: true, crust2: false });
     setSizeChecked({ size1: true, size2: false });
   };
@@ -78,7 +77,7 @@ const PizzaForm = (props) => {
         checked={crustChecked.crust1}
         onChange={onCheckCrustChange}
       />
-      <label htmlFor="thin">Thin crust (+0Đ)</label>
+      <label htmlFor="thin">Thin crust</label>
       <br />
       <br />
 
@@ -90,17 +89,19 @@ const PizzaForm = (props) => {
         checked={crustChecked.crust2}
         onChange={onCheckCrustChange}
       />
-      <label htmlFor="thick">Thick crust (+0Đ)</label>
+      <label htmlFor="thick">Thick crust</label>
       <br />
       <br />
 
-      <button type="submit">ADD TO CART</button>
+      <div style={{display:'flex', justifyContent:'center'}}>
+        <button type="submit">ADD TO CART</button>
+      </div>
     </form>
   );
 };
 
 const ModalPizza = (props) => {
-  let history = props.history;
+  
   return (
     <>
       <div
@@ -119,11 +120,11 @@ const ModalPizza = (props) => {
         }}
       >
         <div className="pizza-details">
-          <NavLink to="/pizza">
+          
             <button className="remodal-close" onClick={props.clicked} />
-          </NavLink>
+          
           <div className="pizza-info">
-            <h1>{props.pizza.name}</h1>
+            <h1 style={{textAlign:'left'}}>{props.pizza.name}</h1>
             <h3>{props.pizza.desc}</h3>
             <div>
               <img
@@ -141,7 +142,6 @@ const ModalPizza = (props) => {
           <div className="pizza-customize">
             <PizzaForm
               id={props.pizza.id}
-              history={history}
               name={props.pizza.name}
               price={props.pizza.price}
               maxPrice={props.pizza.maxPrice}
@@ -154,4 +154,4 @@ const ModalPizza = (props) => {
   );
 };
 
-export default withRouter(ModalPizza);
+export default ModalPizza;

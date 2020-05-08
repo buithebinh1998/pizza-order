@@ -20,7 +20,7 @@ const Promotion = () => {
             </h2>
             <div className="promotion-description">
               * Applied when buying pizza 9 "/ 12" with same size.
-              <br />
+              <br/>
               * Free 30' delivery with orders from VND 100,000 within delivery
               range.
               <br />

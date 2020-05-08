@@ -59,6 +59,13 @@ const Header = () => {
     </>
   );
 
+  const cartCount = (cart) => {
+    let count = 0;
+    if(cart.length===0) return 0;
+    for(let i=0; i<cart.length; i++) count+=cart[i].quantity;
+    return count;
+  }
+
   return (
     <div>
       <div className="header">
@@ -69,7 +76,7 @@ const Header = () => {
         <div className="cart-header">
           <NavLink to="/cart" id="cart-header-link">
             <img src={imgCart} alt="" />
-            <span className="cart-header-span">{cart.length}</span>
+            <span className="cart-header-span">{cartCount(cart)}</span>
           </NavLink>
         </div>
         <div id={id} onClick={menuTransformHandler}>
