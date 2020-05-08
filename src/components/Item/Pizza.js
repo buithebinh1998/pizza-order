@@ -7,8 +7,11 @@ import axios from "axios";
 
 const DataPizza = () => {
 
-  const [dataPizza, setDataPizza] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [pizzaRequest, setPizzaRequest] = useState({
+    loading: false,
+    dataPizza: null,
+  });
+  
   const NewSpinner = () => { return(<div className="item"><Spinner/></div>)}
   const [openModal, setOpenModal] = useState(false);
 
@@ -21,23 +24,24 @@ const DataPizza = () => {
   });
   
   useEffect(() => {
-    let mounted = true;
-    if (mounted) {
+    setPizzaRequest({ loading: false });
       axios
         .get(
           "https://ec2-52-221-225-178.ap-southeast-1.compute.amazonaws.com:8080/pycozza/product/1",
           { crossdomain: true }
         )
         .then((response) => {
-          setDataPizza(response.data.products);
-          setLoading(true);
+          setPizzaRequest({
+            loading : true,
+            dataPizza : response.data.products
+          });
         })
         .catch((error) => {
           console.log(error);
         });
-    }
-    return () => (mounted = false);
   }, []);
+
+  const { loading, dataPizza } = pizzaRequest;
 
   const openModalButton = (item) => {
     setOpenModal(true);
