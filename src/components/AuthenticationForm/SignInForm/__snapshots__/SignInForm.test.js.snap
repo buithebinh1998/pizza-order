@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SignInForm/ > snapshots default render 1`] = `
+exports[`<SignInForm/> snapshots default render 1`] = `
 <Formik
   initialValues={
     Object {
@@ -65,7 +65,6 @@ exports[`<SignInForm/ > snapshots default render 1`] = `
           "transforms": Array [
             [Function],
           ],
-          "type": "string",
         },
         "password": StringSchema {
           "_blacklist": RefSet {
@@ -98,14 +97,12 @@ exports[`<SignInForm/ > snapshots default render 1`] = `
           "transforms": Array [
             [Function],
           ],
-          "type": "string",
         },
       },
       "tests": Array [],
       "transforms": Array [
         [Function],
       ],
-      "type": "object",
     }
   }
 />

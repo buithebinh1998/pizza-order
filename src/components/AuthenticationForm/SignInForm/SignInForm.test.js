@@ -8,7 +8,7 @@ jest.mock('react-router-dom', () => ({
 .mock('formik', ()=>({
     Formik: 'Formik'
 }))
-describe("<SignInForm/ >", () => {
+describe("<SignInForm/>", () => {
   testSnapshots(SignInForm, [
     {
       props: {

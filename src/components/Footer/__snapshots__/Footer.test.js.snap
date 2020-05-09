@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer / > snapshots default render 1`] = `
+<footer>
+  <div>
+    © 2020 PYCOZZA VIETNAM COMPANY |
+     
+    <NavLink
+      to="/policy"
+    >
+      PRIVACY POLICY
+    </NavLink>
+     
+  </div>
+  <div>
+    <div
+      className="hotline"
+    >
+      <div>
+        HOTLINE DELIVERY
+      </div>
+    </div>
+    <div
+      className="img-container"
+    >
+      <a
+        href="tel:1900-2707"
+      >
+        <img
+          alt=""
+          src="assets"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    className="img-container-corner"
+  >
+    <img
+      alt=""
+      src="assets"
+    />
+  </div>
+</footer>
+`;
