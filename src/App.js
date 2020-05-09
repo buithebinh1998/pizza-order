@@ -46,7 +46,7 @@ const App = (props) => {
             <Route path="/" exact component={Homepage} />
             <Route path="/category" exact component={ProductPage} />
             <Route path="/pizza" component={PizzaPage} />
-            <Route path={`/pizza/id`} component={Modal} />
+            <Route path={`/pizza/:id`} component={Modal} />
 
             <Route path="/sidedish" component={SideDishPage} />
             <Route path="/beverage" component={BeveragePage} />

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./Modal.css";
 import { Context } from "../../context/Context/Context";
-
+import {withRouter} from 'react-router-dom'
 
 const PizzaForm = (props) => {
   const { addPizzaToCart } = useContext(Context);
@@ -101,22 +101,23 @@ const PizzaForm = (props) => {
 };
 
 const ModalPizza = (props) => {
-  
+  const showModal = props.location.state && props.location.state.isShowModal ? props.location.state.isShowModal : props.show 
+  const pizza = props.location.state && props.location.state.pizza ? props.location.state.pizza : props.pizza
   return (
     <>
       <div
         className="backdrop"
         style={{
-          display: props.show ? "block" : "none",
-          opacity: props.show ? "1" : "0",
+          display: showModal ? "block" : "none",
+          opacity: showModal ? "1" : "0",
         }}
       ></div>
 
       <div
         className="modal"
         style={{
-          display: props.show ? "block" : "none",
-          opacity: props.show ? "1" : "0",
+          display: showModal ? "block" : "none",
+          opacity: showModal ? "1" : "0",
         }}
       >
         <div className="pizza-details">
@@ -124,27 +125,27 @@ const ModalPizza = (props) => {
             <button className="remodal-close" onClick={props.clicked} />
           
           <div className="pizza-info">
-            <h1 style={{textAlign:'left'}}>{props.pizza.name}</h1>
-            <h3>{props.pizza.desc}</h3>
+            <h1 style={{textAlign:'left'}}>{pizza.name}</h1>
+            <h3>{pizza.desc}</h3>
             <div>
               <img
                 className="pizza-img"
-                src={`https://drive.google.com/uc?export=view&id=${props.pizza.imgLink}`}
+                src={`https://drive.google.com/uc?export=view&id=${pizza.imgLink}`}
                 alt=""
               ></img>
             </div>
             <h2 style={{ textAlign: "center" }}>
-              {props.pizza.price + ".000Đ - "}
-              {props.pizza.maxPrice + ".000Đ"}
+              {pizza.price + ".000Đ - "}
+              {pizza.maxPrice + ".000Đ"}
             </h2>
           </div>
 
           <div className="pizza-customize">
             <PizzaForm
-              id={props.pizza.id}
-              name={props.pizza.name}
-              price={props.pizza.price}
-              maxPrice={props.pizza.maxPrice}
+              id={pizza.id}
+              name={pizza.name}
+              price={pizza.price}
+              maxPrice={pizza.maxPrice}
               cancel={props.clicked}
             />
           </div>
@@ -154,4 +155,4 @@ const ModalPizza = (props) => {
   );
 };
 
-export default ModalPizza;
+export default withRouter(ModalPizza);
