@@ -27,6 +27,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
+    "test:coverage": "jest --maxWorkers=2 --coverage",
+    "test:ci": "jest --maxWorkers=2 --coverage --bail",
+    "test:watch": "jest --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

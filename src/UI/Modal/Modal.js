@@ -126,7 +126,7 @@ const ModalPizza = (props) => {
           
           <div className="pizza-info">
             <h1 style={{textAlign:'left'}}>{pizza.name}</h1>
-            <h3>{pizza.desc}</h3>
+            <h3>{pizza.description}</h3>
             <div>
               <img
                 className="pizza-img"

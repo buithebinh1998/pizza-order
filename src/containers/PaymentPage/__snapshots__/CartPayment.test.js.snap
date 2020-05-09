@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartPayment/ > snapshots default render 1`] = `
+<div
+  className="paycart"
+>
+  <div>
+    <div
+      className="paycart-title"
+    >
+      ORDER INFORMATION
+    </div>
+    <div
+      className="paycart-load"
+    />
+    <div
+      className="pay-total-wrap"
+    >
+      <div
+        className="paycart-total"
+      >
+        Total:
+      </div>
+      <div
+        className="paycart-price"
+      >
+        0Đ
+      </div>
+    </div>
+  </div>
+</div>
+`;

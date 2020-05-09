@@ -60,7 +60,7 @@ const DataPizza = props => {
       maxPrice: item.maxPrice,
       imgLink: item.imgLink
     });
-    const { id, name, desc, price, maxPrice, imgLink } = item;
+    const { id, name, description, price, maxPrice, imgLink } = item;
 
     history.push({
       pathname: `/pizza/${item.id}`,
@@ -69,7 +69,7 @@ const DataPizza = props => {
         pizza: {
           id,
           name,
-          desc,
+          description,
           price,
           maxPrice,
           imgLink

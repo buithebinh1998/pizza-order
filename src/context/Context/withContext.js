@@ -25,6 +25,7 @@ export const WrappedContext = (props) => {
 
   const [token, setToken] = useState(localToken);
 
+ 
   const setNewToken = (token) => {
     setToken(token);
   };

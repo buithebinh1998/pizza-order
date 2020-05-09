@@ -1,4 +1,4 @@
-import { testSnapshots } from "../../utils/test";
+import { testSnapshots } from "../../utils/test.util";
 
 import About from "./About";
 
