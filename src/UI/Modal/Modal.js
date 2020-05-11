@@ -125,8 +125,8 @@ const ModalPizza = (props) => {
             <button className="remodal-close" onClick={props.clicked} />
           
           <div className="pizza-info">
-            <h1 style={{textAlign:'left'}}>{pizza.name}</h1>
-            <h3>{pizza.description}</h3>
+            <h1 style={{textAlign:'center'}}>{pizza.name}</h1>
+            <h3 style={{textAlign:'justify'}}>{pizza.description}</h3>
             <div>
               <img
                 className="pizza-img"

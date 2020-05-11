@@ -43,7 +43,7 @@ const OrderHistory = () => {
           <div className="cell isDone">Status</div>
         </div>
         {orderHistory &&
-          orderHistory.map((item, index) => (
+          orderHistory.reverse().map((item, index) => (
             <OrderHistoryItem
               key={index}
               id={index}
