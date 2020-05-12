@@ -65,6 +65,7 @@ exports[`<SignInForm/> snapshots default render 1`] = `
           "transforms": Array [
             [Function],
           ],
+          "type": "string",
         },
         "password": StringSchema {
           "_blacklist": RefSet {
@@ -97,12 +98,14 @@ exports[`<SignInForm/> snapshots default render 1`] = `
           "transforms": Array [
             [Function],
           ],
+          "type": "string",
         },
       },
       "tests": Array [],
       "transforms": Array [
         [Function],
       ],
+      "type": "object",
     }
   }
 />

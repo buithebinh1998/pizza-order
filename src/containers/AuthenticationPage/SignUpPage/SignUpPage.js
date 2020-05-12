@@ -4,8 +4,8 @@ import Footer from "../../../components/Footer/Footer";
 import SignUpForm from "../../../components/AuthenticationForm/SignUpForm/SignUpForm";
 import backgroundAuthen from "../../../assets/img/bg.png";
 
-class SignUpPage extends Component {
-  render() {
+const SignUpPage = () => {
+  
     return (
       <div style={{ backgroundImage: `url(${backgroundAuthen})` }}>
         <Header />
@@ -14,7 +14,6 @@ class SignUpPage extends Component {
         <Footer />
       </div>
     );
-  }
 }
 
 export default SignUpPage;

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OrderHistory / > snapshots default render 1`] = `
+<div>
+  <div
+    id="table"
+  >
+    <div
+      className="row main"
+    >
+      <div
+        className="cell id"
+      >
+        ID
+      </div>
+      <div
+        className="cell orderCart"
+      >
+        Cart
+      </div>
+      <div
+        className="cell totalPrice"
+      >
+        Total Price
+      </div>
+      <div
+        className="cell orderTime"
+      >
+        Order Time
+      </div>
+      <div
+        className="cell address"
+      >
+        Address
+      </div>
+      <div
+        className="cell paymentMethod"
+      >
+        Payment
+      </div>
+      <div
+        className="cell isDone"
+      >
+        Status
+      </div>
+    </div>
+  </div>
+</div>
+`;

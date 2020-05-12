@@ -5,7 +5,7 @@ import Slide2 from "../../assets/img/slider2.jpg";
 import Slide3 from "../../assets/img/slider3.jpg";
 import Slide4 from "../../assets/img/slider4.jpg";
 import Slide5 from "../../assets/img/slider5.jpg";
-const carousel = (props) => {
+const carousel = () => {
   return (
     <div className="carousel">
       <Carousel autoPlay showThumbs={false} infiniteLoop={true} emulateTouch={true}>

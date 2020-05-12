@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Carosel / > snapshots default render 1`] = `
+<div
+  className="carousel"
+>
+  <div
+    className="carousel-root"
+    tabIndex={0}
+  >
+    <div
+      className="carousel carousel-slider"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <button
+        aria-label="previous slide / item"
+        className="control-arrow control-prev"
+        onClick={[Function]}
+        type="button"
+      />
+      <div
+        className="slider-wrapper axis-horizontal"
+        style={Object {}}
+      >
+        <ul
+          className="slider animated"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "MozTransform": "translate3d(-100%,0,0)",
+              "MozTransitionDuration": "350ms",
+              "MsTransform": "translate3d(-100%,0,0)",
+              "MsTransitionDuration": "350ms",
+              "OTransform": "translate3d(-100%,0,0)",
+              "OTransitionDuration": "350ms",
+              "WebkitTransform": "translate3d(-100%,0,0)",
+              "WebkitTransitionDuration": "350ms",
+              "msTransform": "translate3d(-100%,0,0)",
+              "msTransitionDuration": "350ms",
+              "transform": "translate3d(-100%,0,0)",
+              "transitionDuration": "350ms",
+            }
+          }
+        >
+          <li
+            className="slide"
+            onClick={[Function]}
+          >
+            <div>
+              <img
+                alt=""
+                src="assets"
+              />
+            </div>
+          </li>
+          <li
+            className="slide selected"
+            onClick={[Function]}
+          >
+            <div>
+              <img
+                alt=""
+                src="assets"
+              />
+            </div>
+          </li>
+          <li
+            className="slide"
+            onClick={[Function]}
+          >
+            <div>
+              <img
+                alt=""
+                src="assets"
+              />
+            </div>
+          </li>
+          <li
+            className="slide"
+            onClick={[Function]}
+          >
+            <div>
+              <img
+                alt=""
+                src="assets"
+              />
+            </div>
+          </li>
+          <li
+            className="slide"
+            onClick={[Function]}
+          >
+            <div>
+              <img
+                alt=""
+                src="assets"
+              />
+            </div>
+          </li>
+          <li
+            className="slide selected"
+            onClick={[Function]}
+          >
+            <div>
+              <img
+                alt=""
+                src="assets"
+              />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button
+        aria-label="next slide / item"
+        className="control-arrow control-next"
+        onClick={[Function]}
+        type="button"
+      />
+      <ul
+        className="control-dots"
+      >
+        <li
+          aria-label="slide item 1"
+          className="dot selected"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+          value={0}
+        />
+        <li
+          aria-label="slide item 2"
+          className="dot"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+          value={1}
+        />
+        <li
+          aria-label="slide item 3"
+          className="dot"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+          value={2}
+        />
+        <li
+          aria-label="slide item 4"
+          className="dot"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+          value={3}
+        />
+      </ul>
+      <p
+        className="carousel-status"
+      >
+        1 of 4
+      </p>
+    </div>
+  </div>
+</div>
+`;
