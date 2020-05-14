@@ -86,7 +86,7 @@ const SignUpForm = ({ values, isSubmitting }) => {
     </Form>
   );
 };
-const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+const phoneRegExp = /(09|03|05|07|08|01[2|6|8|9])+([0-9]{8})\b/;
 const FormikSignUpForm = withFormik({
   mapPropsToValues() {
     return {
@@ -120,7 +120,7 @@ const FormikSignUpForm = withFormik({
     phone: Yup.string()
       .matches(phoneRegExp, "Phone number is not valid!")
       .min(10, "Your phone number is too short!")
-      .max(13, "Your phone number is too long!")
+      .max(11, "Your phone number is too long!")
       .required("Phone number is required!"),
   }),
 

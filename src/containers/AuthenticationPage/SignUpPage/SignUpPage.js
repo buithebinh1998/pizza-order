@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer/Footer";
 import SignUpForm from "../../../components/AuthenticationForm/SignUpForm/SignUpForm";
